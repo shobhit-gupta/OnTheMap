@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE1731C51DF7C2C700978508 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C41DF7C2C700978508 /* Color.swift */; };
+		EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C81DF7D28000978508 /* UIStackView+Separator.m */; };
+		EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731CB1DF7EBF000978508 /* ViewConstants.swift */; };
 		EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204F9E1DF6E05400D855BA /* AppDelegate.swift */; };
-		EE204FA11DF6E05400D855BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FA01DF6E05400D855BA /* ViewController.swift */; };
+		EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FA01DF6E05400D855BA /* LoginViewController.swift */; };
 		EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA21DF6E05400D855BA /* Main.storyboard */; };
 		EE204FA61DF6E05400D855BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA51DF6E05400D855BA /* Assets.xcassets */; };
 		EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */; };
@@ -34,9 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE1731C41DF7C2C700978508 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheMap-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE1731C71DF7D28000978508 /* UIStackView+Separator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStackView+Separator.h"; sourceTree = "<group>"; };
+		EE1731C81DF7D28000978508 /* UIStackView+Separator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStackView+Separator.m"; sourceTree = "<group>"; };
+		EE1731CB1DF7EBF000978508 /* ViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		EE204F9B1DF6E05400D855BA /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE204F9E1DF6E05400D855BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE204FA01DF6E05400D855BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE204FA01DF6E05400D855BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE204FA31DF6E05400D855BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE204FA51DF6E05400D855BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE204FA81DF6E05400D855BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +82,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE1731C21DF7C28E00978508 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE1731CE1DF7EEA000978508 /* Models */,
+				EE1731CF1DF7EEAB00978508 /* Views */,
+				EE1731CD1DF7EE8800978508 /* Controllers */,
+				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
+				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
+				EE1731CB1DF7EBF000978508 /* ViewConstants.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		EE1731C31DF7C29B00978508 /* UIKitCustomization */ = {
+			isa = PBXGroup;
+			children = (
+				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
+				EE1731C41DF7C2C700978508 /* Color.swift */,
+			);
+			name = UIKitCustomization;
+			sourceTree = "<group>";
+		};
+		EE1731CA1DF7D61000978508 /* CVStackViewSeparator */ = {
+			isa = PBXGroup;
+			children = (
+				EE1731C71DF7D28000978508 /* UIStackView+Separator.h */,
+				EE1731C81DF7D28000978508 /* UIStackView+Separator.m */,
+			);
+			name = CVStackViewSeparator;
+			sourceTree = "<group>";
+		};
+		EE1731CD1DF7EE8800978508 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE204FA01DF6E05400D855BA /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EE1731CE1DF7EEA000978508 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EE1731CF1DF7EEAB00978508 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE1731C31DF7C29B00978508 /* UIKitCustomization */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		EE204F921DF6E05400D855BA = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +159,7 @@
 		EE204F9D1DF6E05400D855BA /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
-				EE204FA01DF6E05400D855BA /* ViewController.swift */,
+				EE1731C21DF7C28E00978508 /* Classes */,
 				EE204FA21DF6E05400D855BA /* Main.storyboard */,
 				EE204FA51DF6E05400D855BA /* Assets.xcassets */,
 				EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */,
@@ -194,6 +255,7 @@
 					EE204F9A1DF6E05400D855BA = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = AR27PDZ76S;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					EE204FAE1DF6E05500D855BA = {
@@ -262,7 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE204FA11DF6E05400D855BA /* ViewController.swift in Sources */,
+				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
+				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
+				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
+				EE1731C51DF7C2C700978508 /* Color.swift in Sources */,
 				EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,11 +480,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AR27PDZ76S;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.from101.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap/OnTheMap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,11 +496,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AR27PDZ76S;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.from101.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap/OnTheMap-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -514,6 +584,7 @@
 				EE204FC51DF6E05500D855BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE204FC61DF6E05500D855BA /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +593,7 @@
 				EE204FC81DF6E05500D855BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE204FC91DF6E05500D855BA /* Build configuration list for PBXNativeTarget "OnTheMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +602,7 @@
 				EE204FCB1DF6E05500D855BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
