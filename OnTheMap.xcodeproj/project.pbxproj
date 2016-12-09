@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE1731C51DF7C2C700978508 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C41DF7C2C700978508 /* Color.swift */; };
+		EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C41DF7C2C700978508 /* Convenience - Color.swift */; };
 		EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C81DF7D28000978508 /* UIStackView+Separator.m */; };
 		EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731CB1DF7EBF000978508 /* ViewConstants.swift */; };
+		EE1731D11DF832B500978508 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731D01DF832B500978508 /* MapViewController.swift */; };
+		EE1731D31DF832CD00978508 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731D21DF832CD00978508 /* ListViewController.swift */; };
+		EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */; };
+		EE1731E11DF874EB00978508 /* Convenience - BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */; };
+		EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */; };
+		EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */; };
+		EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */; };
 		EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204F9E1DF6E05400D855BA /* AppDelegate.swift */; };
 		EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FA01DF6E05400D855BA /* LoginViewController.swift */; };
 		EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA21DF6E05400D855BA /* Main.storyboard */; };
@@ -37,11 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE1731C41DF7C2C700978508 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EE1731C41DF7C2C700978508 /* Convenience - Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - Color.swift"; sourceTree = "<group>"; };
 		EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE1731C71DF7D28000978508 /* UIStackView+Separator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStackView+Separator.h"; sourceTree = "<group>"; };
 		EE1731C81DF7D28000978508 /* UIStackView+Separator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStackView+Separator.m"; sourceTree = "<group>"; };
 		EE1731CB1DF7EBF000978508 /* ViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		EE1731D01DF832B500978508 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EE1731D21DF832CD00978508 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItem.swift; sourceTree = "<group>"; };
+		EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - BarButtonItem.swift"; sourceTree = "<group>"; };
+		EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemDelegate.swift; sourceTree = "<group>"; };
+		EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemController.swift; sourceTree = "<group>"; };
+		EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemControllerProtocol.swift; sourceTree = "<group>"; };
 		EE204F9B1DF6E05400D855BA /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE204F9E1DF6E05400D855BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE204FA01DF6E05400D855BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -95,15 +109,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		EE1731C31DF7C29B00978508 /* UIKitCustomization */ = {
-			isa = PBXGroup;
-			children = (
-				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
-				EE1731C41DF7C2C700978508 /* Color.swift */,
-			);
-			name = UIKitCustomization;
-			sourceTree = "<group>";
-		};
 		EE1731CA1DF7D61000978508 /* CVStackViewSeparator */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				EE204FA01DF6E05400D855BA /* LoginViewController.swift */,
+				EE1731D01DF832B500978508 /* MapViewController.swift */,
+				EE1731D21DF832CD00978508 /* ListViewController.swift */,
+				EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */,
+				EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -131,9 +140,38 @@
 		EE1731CF1DF7EEAB00978508 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE1731C31DF7C29B00978508 /* UIKitCustomization */,
+				EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */,
+				EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		EE1731D61DF859ED00978508 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EE204FA21DF6E05400D855BA /* Main.storyboard */,
+				EE204FA51DF6E05400D855BA /* Assets.xcassets */,
+				EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		EE1731DD1DF873F200978508 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE1731E21DF8777400978508 /* Convenience */,
+				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EE1731E21DF8777400978508 /* Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				EE1731C41DF7C2C700978508 /* Convenience - Color.swift */,
+				EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */,
+			);
+			name = Convenience;
 			sourceTree = "<group>";
 		};
 		EE204F921DF6E05400D855BA = {
@@ -159,10 +197,9 @@
 		EE204F9D1DF6E05400D855BA /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				EE1731DD1DF873F200978508 /* Extensions */,
 				EE1731C21DF7C28E00978508 /* Classes */,
-				EE204FA21DF6E05400D855BA /* Main.storyboard */,
-				EE204FA51DF6E05400D855BA /* Assets.xcassets */,
-				EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */,
+				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
 			);
 			path = OnTheMap;
@@ -325,10 +362,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
+				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
+				EE1731E11DF874EB00978508 /* Convenience - BarButtonItem.swift in Sources */,
+				EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
+				EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */,
 				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
-				EE1731C51DF7C2C700978508 /* Color.swift in Sources */,
+				EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */,
+				EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */,
+				EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */,
 				EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */,
+				EE1731D31DF832CD00978508 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

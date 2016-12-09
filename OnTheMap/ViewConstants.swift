@@ -17,4 +17,11 @@ struct ViewConstants {
         }
     }
     
+    struct Assets {
+        
+        struct Icons {
+            static let refresh = ""
+        }
+    }
+    
 }
