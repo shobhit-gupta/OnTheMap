@@ -14,7 +14,7 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationItem(with: &otmNavigationItemController)
+        createOTMNavigationItemController(&otmNavigationItemController)
     }
 
 

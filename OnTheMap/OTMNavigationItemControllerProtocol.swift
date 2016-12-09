@@ -8,21 +8,17 @@
 
 
 protocol OTMNavigationItemControllerProtocol {
-    func setupNavigationItem(with controller: inout OTMNavigationItemController?)
-    func setupNavigationItem(with controller: inout OTMNavigationItemController?, parent: UIViewController)
+    var otmNavigationItemController: OTMNavigationItemController? { get }
+    func createOTMNavigationItemController(_ controller: inout OTMNavigationItemController?)
 }
 
 
 extension OTMNavigationItemControllerProtocol where Self: UIViewController {
     
-    func setupNavigationItem(with controller: inout OTMNavigationItemController?, parent: UIViewController) {
+    func createOTMNavigationItemController(_ controller: inout OTMNavigationItemController?) {
         if controller == nil {
-            controller = OTMNavigationItemController(withParent: parent)
+            controller = OTMNavigationItemController(withParent: self)
         }
-    }
-    
-    func setupNavigationItem(with controller: inout OTMNavigationItemController?) {
-        setupNavigationItem(with: &controller, parent: self)
     }
     
     
