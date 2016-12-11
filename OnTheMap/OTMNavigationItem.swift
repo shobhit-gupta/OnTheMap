@@ -27,14 +27,22 @@ class OTMNavigationItem: UINavigationItem {
         if let delegate = delegate {
             
             if delegate.shouldDisplayLogoutButton() {
+                
                 leftBarButtonItem = UIBarButtonItem(barButtonItemData:
-                    BarButtonItemData(with: [.title : "Logout", .target : delegate, .action : #selector(delegate.logoutButtonPressed)]))
+                    BarButtonItemData(with: [.title : "Logout",
+                                             .target : delegate,
+                                             .action : #selector(delegate.logoutButtonPressed)]))
                 
             }
             
             rightBarButtonItems = UIBarButtonItem.getBarButtonItems(withDictionaries: [
-                [.image : #imageLiteral(resourceName: "RefreshIcon"), .target : delegate, .action : #selector(delegate.refreshButtonPressed)],
-                [.image : #imageLiteral(resourceName: "PinIcon"), .target : delegate, .action : #selector(delegate.pinButtonPressed)]
+                [.image : #imageLiteral(resourceName: "RefreshIcon"),
+                 .target : delegate,
+                 .action : #selector(delegate.refreshButtonPressed)],
+                
+                [.image : #imageLiteral(resourceName: "PinIcon"),
+                 .target : delegate,
+                 .action : #selector(delegate.pinButtonPressed)]
             ])
             
         }

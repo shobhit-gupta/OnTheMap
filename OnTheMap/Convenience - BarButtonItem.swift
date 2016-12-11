@@ -68,7 +68,7 @@ extension UIBarButtonItem {
     
     
     class func getBarButtonItems(withDictionaries dictionaries: [[BarButtonItemKeys : Any]]) -> [UIBarButtonItem] {
-        return getBarButtonItems(withBarButtonItemsData: dictionaries.map() {
+        return getBarButtonItems(withBarButtonItemsData: dictionaries.map {
             BarButtonItemData(with: $0)
         })
     }
