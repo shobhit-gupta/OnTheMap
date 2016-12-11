@@ -17,6 +17,12 @@
 		EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */; };
 		EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */; };
 		EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */; };
+		EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */; };
+		EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17322E1DFBC21C00978508 /* Convenience - Array.swift */; };
+		EE1732311DFBC92C00978508 /* Convenience - MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732301DFBC92C00978508 /* Convenience - MKMapView.swift */; };
+		EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */; };
+		EE1732381DFBF93400978508 /* Random - Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732371DFBF93400978508 /* Random - Basic.swift */; };
+		EE17323E1DFC1B0F00978508 /* Random - CG.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17323D1DFC1B0F00978508 /* Random - CG.swift */; };
 		EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204F9E1DF6E05400D855BA /* AppDelegate.swift */; };
 		EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FA01DF6E05400D855BA /* LoginViewController.swift */; };
 		EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA21DF6E05400D855BA /* Main.storyboard */; };
@@ -56,6 +62,12 @@
 		EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemDelegate.swift; sourceTree = "<group>"; };
 		EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemController.swift; sourceTree = "<group>"; };
 		EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemControllerProtocol.swift; sourceTree = "<group>"; };
+		EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMMapViewAnnotation.swift; sourceTree = "<group>"; };
+		EE17322E1DFBC21C00978508 /* Convenience - Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - Array.swift"; sourceTree = "<group>"; };
+		EE1732301DFBC92C00978508 /* Convenience - MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - MKMapView.swift"; sourceTree = "<group>"; };
+		EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - MKMapView.swift"; sourceTree = "<group>"; };
+		EE1732371DFBF93400978508 /* Random - Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - Basic.swift"; sourceTree = "<group>"; };
+		EE17323D1DFC1B0F00978508 /* Random - CG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - CG.swift"; sourceTree = "<group>"; };
 		EE204F9B1DF6E05400D855BA /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE204F9E1DF6E05400D855BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE204FA01DF6E05400D855BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +154,7 @@
 			children = (
 				EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */,
 				EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */,
+				EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -156,13 +169,15 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		EE1731DD1DF873F200978508 /* Extensions */ = {
+		EE1731DD1DF873F200978508 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				EE1732361DFBE75900978508 /* Utilities */,
+				EE1732321DFBE15B00978508 /* Testing */,
 				EE1731E21DF8777400978508 /* Convenience */,
 				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
 			);
-			name = Extensions;
+			name = Reusable;
 			sourceTree = "<group>";
 		};
 		EE1731E21DF8777400978508 /* Convenience */ = {
@@ -170,8 +185,35 @@
 			children = (
 				EE1731C41DF7C2C700978508 /* Convenience - Color.swift */,
 				EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */,
+				EE17322E1DFBC21C00978508 /* Convenience - Array.swift */,
+				EE1732301DFBC92C00978508 /* Convenience - MKMapView.swift */,
 			);
 			name = Convenience;
+			sourceTree = "<group>";
+		};
+		EE1732321DFBE15B00978508 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				EE1732331DFBE4CC00978508 /* Random */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
+		EE1732331DFBE4CC00978508 /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */,
+			);
+			name = Random;
+			sourceTree = "<group>";
+		};
+		EE1732361DFBE75900978508 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EE1732371DFBF93400978508 /* Random - Basic.swift */,
+				EE17323D1DFC1B0F00978508 /* Random - CG.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		EE204F921DF6E05400D855BA = {
@@ -197,7 +239,7 @@
 		EE204F9D1DF6E05400D855BA /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				EE1731DD1DF873F200978508 /* Extensions */,
+				EE1731DD1DF873F200978508 /* Reusable */,
 				EE1731C21DF7C28E00978508 /* Classes */,
 				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
@@ -362,13 +404,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
+				EE1732311DFBC92C00978508 /* Convenience - MKMapView.swift in Sources */,
+				EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */,
+				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
+				EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */,
 				EE1731E11DF874EB00978508 /* Convenience - BarButtonItem.swift in Sources */,
 				EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
 				EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */,
+				EE1732381DFBF93400978508 /* Random - Basic.swift in Sources */,
 				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
 				EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */,
+				EE17323E1DFC1B0F00978508 /* Random - CG.swift in Sources */,
 				EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */,
 				EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */,
 				EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */,

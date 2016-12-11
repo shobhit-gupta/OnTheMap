@@ -221,6 +221,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DG3-pR-F8X" customClass="OTMNavigationItem" customModule="OnTheMap" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="mapView" destination="qiA-4w-nXf" id="JKD-3H-1Vw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dQ-eR-Njk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
