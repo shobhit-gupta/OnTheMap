@@ -19,7 +19,6 @@
 		EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */; };
 		EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */; };
 		EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17322E1DFBC21C00978508 /* Convenience - Array.swift */; };
-		EE1732311DFBC92C00978508 /* Convenience - MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732301DFBC92C00978508 /* Convenience - MKMapView.swift */; };
 		EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */; };
 		EE1732381DFBF93400978508 /* Random - Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732371DFBF93400978508 /* Random - Basic.swift */; };
 		EE17323E1DFC1B0F00978508 /* Random - CG.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17323D1DFC1B0F00978508 /* Random - CG.swift */; };
@@ -64,7 +63,6 @@
 		EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemControllerProtocol.swift; sourceTree = "<group>"; };
 		EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMMapViewAnnotation.swift; sourceTree = "<group>"; };
 		EE17322E1DFBC21C00978508 /* Convenience - Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - Array.swift"; sourceTree = "<group>"; };
-		EE1732301DFBC92C00978508 /* Convenience - MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - MKMapView.swift"; sourceTree = "<group>"; };
 		EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - MKMapView.swift"; sourceTree = "<group>"; };
 		EE1732371DFBF93400978508 /* Random - Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - Basic.swift"; sourceTree = "<group>"; };
 		EE17323D1DFC1B0F00978508 /* Random - CG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - CG.swift"; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				EE1731C41DF7C2C700978508 /* Convenience - Color.swift */,
 				EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */,
 				EE17322E1DFBC21C00978508 /* Convenience - Array.swift */,
-				EE1732301DFBC92C00978508 /* Convenience - MKMapView.swift */,
 			);
 			name = Convenience;
 			sourceTree = "<group>";
@@ -404,7 +401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
-				EE1732311DFBC92C00978508 /* Convenience - MKMapView.swift in Sources */,
 				EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
