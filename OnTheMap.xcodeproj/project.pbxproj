@@ -29,6 +29,7 @@
 		EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */; };
 		EE204FB41DF6E05500D855BA /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FB31DF6E05500D855BA /* OnTheMapTests.swift */; };
 		EE204FBF1DF6E05500D855BA /* OnTheMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FBE1DF6E05500D855BA /* OnTheMapUITests.swift */; };
+		EE209F011DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		EE204FBA1DF6E05500D855BA /* OnTheMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE204FBE1DF6E05500D855BA /* OnTheMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapUITests.swift; sourceTree = "<group>"; };
 		EE204FC01DF6E05500D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - UITableViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				EE1731C41DF7C2C700978508 /* Convenience - Color.swift */,
 				EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */,
 				EE17322E1DFBC21C00978508 /* Convenience - Array.swift */,
+				EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */,
 			);
 			name = Convenience;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */,
 				EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */,
 				EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */,
+				EE209F011DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift in Sources */,
 				EE1731D31DF832CD00978508 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

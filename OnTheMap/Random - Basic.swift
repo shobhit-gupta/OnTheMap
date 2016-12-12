@@ -46,7 +46,15 @@ public extension Int {
     }
     
     
-    public static func random(range: Range<Int>) -> Int {
+    public static func random(in range: CountableRange<Int>) -> Int {
+        switch (_wordSize) {
+        case 32: return Int(Int32.random(lower: Int32(range.lowerBound), upper: Int32(range.upperBound)))
+        case 64: return Int(Int64.random(lower: Int64(range.lowerBound), upper: Int64(range.upperBound)))
+        default: return range.lowerBound
+        }
+    }
+    
+    public static func random(in range: CountableClosedRange<Int>) -> Int {
         switch (_wordSize) {
         case 32: return Int(Int32.random(lower: Int32(range.lowerBound), upper: Int32(range.upperBound)))
         case 64: return Int(Int64.random(lower: Int64(range.lowerBound), upper: Int64(range.upperBound)))

@@ -252,7 +252,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="AddPinIcon" id="hhW-st-pcl">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="PinIcon" id="hhW-st-pcl">
                                             <rect key="frame" x="15" y="9" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -261,7 +261,6 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="fij-Ye-2nw" id="Tad-KV-6vw"/>
                             <outlet property="delegate" destination="fij-Ye-2nw" id="SFO-Tn-ICt"/>
                         </connections>
                     </tableView>
@@ -291,11 +290,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddPinIcon" width="24" height="24"/>
         <image name="ListViewDeselectedIcon" width="75" height="50"/>
         <image name="ListViewSelectedIcon" width="75" height="50"/>
         <image name="MapViewDeslectedIcon" width="75" height="50"/>
         <image name="MapViewSelectedIcon" width="75" height="50"/>
+        <image name="PinIcon" width="24" height="24"/>
         <image name="UdacityBanner" width="200" height="35"/>
     </resources>
 </document>
