@@ -156,7 +156,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="headerStackView" destination="jbQ-Yy-oDT" id="6RU-ge-s3a"/>
+                        <outlet property="mainStackView" destination="jbQ-Yy-oDT" id="Ccv-eD-iPS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,27 +9,30 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var headerStackView: UIStackView!
+    
+    @IBOutlet weak var mainStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        headerStackView.separatorColor = ViewConstants.StackView.Separator.color
-        headerStackView.separatorThickness = ViewConstants.StackView.Separator.thickness
+        beautifyView()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
-    override func viewDidLayoutSubviews() {
-        headerStackView.separatorLength = (headerStackView.axis == .vertical ? headerStackView.frame.width : headerStackView.frame.height) - 40
-    }
 
 }
 
+
+extension LoginViewController {
+    
+    func beautifyView() {
+        mainStackView.separatorColor = ViewConstants.StackView.Separator.color
+        mainStackView.separatorThickness = ViewConstants.StackView.Separator.thickness
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        mainStackView.separatorLength = (mainStackView.axis == .vertical ? mainStackView.frame.width : mainStackView.frame.height) - 40
+    }
+    
+}
