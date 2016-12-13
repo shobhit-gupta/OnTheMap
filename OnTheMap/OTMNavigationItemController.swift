@@ -42,12 +42,13 @@ class OTMNavigationItemController: OTMNavigationItemDelegate {
     
     func shouldDisplayLogoutButton() -> Bool {
         // TODO: Depending upon the login mechanism return an appropriate value
-        return true
+        return Bool.randomWithLikeliness(likeliness: 0.5)
     }
     
     
     func logoutButtonPressed() {
         // TODO: Logout
+        parent.dismiss(animated: false, completion: nil)
     }
     
     
