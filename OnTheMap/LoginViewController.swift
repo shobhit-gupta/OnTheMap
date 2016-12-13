@@ -20,6 +20,11 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func signIn(_ sender: Any) {
+        performSegue(withIdentifier: "ShowMapTableTabbedView", sender: nil)
+    }
+    
+    
 }
 
 
@@ -34,5 +39,11 @@ extension LoginViewController {
     override func viewDidLayoutSubviews() {
         mainStackView.separatorLength = (mainStackView.axis == .vertical ? mainStackView.frame.width : mainStackView.frame.height) - 40
     }
+    
+}
+
+
+extension LoginViewController {
+    
     
 }

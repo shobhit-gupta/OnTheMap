@@ -34,7 +34,7 @@ class OTMNavigationItemController: OTMNavigationItemDelegate {
     func pinButtonPressed() {
         // TODO: Modally present Information Posting View
         print("pinButtonPressed")
-        if let controller = parent.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
+        if let controller = parent.storyboard?.instantiateViewController(withIdentifier: "InformationPostingView") {
             parent.present(controller, animated: true, completion: nil)
         }
     }

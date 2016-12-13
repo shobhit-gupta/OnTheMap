@@ -30,6 +30,7 @@
 		EE204FB41DF6E05500D855BA /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FB31DF6E05500D855BA /* OnTheMapTests.swift */; };
 		EE204FBF1DF6E05500D855BA /* OnTheMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FBE1DF6E05500D855BA /* OnTheMapUITests.swift */; };
 		EE209F011DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */; };
+		EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		EE204FBE1DF6E05500D855BA /* OnTheMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapUITests.swift; sourceTree = "<group>"; };
 		EE204FC01DF6E05500D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				EE1731D21DF832CD00978508 /* ListViewController.swift */,
 				EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */,
 				EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */,
+				EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
 				EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
+				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
 				EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */,
 				EE1731E11DF874EB00978508 /* Convenience - BarButtonItem.swift in Sources */,
