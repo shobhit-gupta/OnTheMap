@@ -10,20 +10,34 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var rootStackView: UIStackView!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         beautifyView()
-        
     }
     
 
     @IBAction func signIn(_ sender: Any) {
+        // TODO: 
+        // 1. Perform Sign In
+        // 2. If successful, perform segue to Map and Table Tabbed View
+        // 3. If not, present alert view specifying whether it was
+        //      3.1. a failed network connection
+        //      3.2. an incoorect email or password
         performSegue(withIdentifier: "ShowMapTableTabbedView", sender: nil)
     }
     
+    
+    @IBAction func signUp(_ sender: Any) {
+        if let url = URL(string: "https://www.udacity.com/account/auth#!/signup") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
     
 }
 
@@ -31,19 +45,18 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     func beautifyView() {
-        mainStackView.separatorColor = ViewConstants.StackView.Separator.color
-        mainStackView.separatorThickness = ViewConstants.StackView.Separator.thickness
+        rootStackView.separatorColor = ViewConstants.StackView.Separator.color
+        rootStackView.separatorThickness = ViewConstants.StackView.Separator.thickness
     }
     
     
     override func viewDidLayoutSubviews() {
-        mainStackView.separatorLength = (mainStackView.axis == .vertical ? mainStackView.frame.width : mainStackView.frame.height) - 40
+        rootStackView.separatorLength = (rootStackView.axis == .vertical ? rootStackView.frame.width : rootStackView.frame.height) - 40
     }
     
 }
 
 
-extension LoginViewController {
-    
+extension LoginViewController: UITextFieldDelegate {
     
 }
