@@ -48,6 +48,26 @@
                ReferencedContainer = "container:OnTheMap.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EEB827541E0293BD00880D62"
+               BuildableName = "OnTheMapKitTests.xctest"
+               BlueprintName = "OnTheMapKitTests"
+               ReferencedContainer = "container:OnTheMap.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EEB827771E0294AD00880D62"
+               BuildableName = "CustomViewsTests.xctest"
+               BlueprintName = "CustomViewsTests"
+               ReferencedContainer = "container:OnTheMap.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
