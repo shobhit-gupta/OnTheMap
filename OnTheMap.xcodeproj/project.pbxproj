@@ -135,10 +135,6 @@
 		EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
 		EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - CALayer.swift"; sourceTree = "<group>"; };
-		EEB8274F1E0293BD00880D62 /* OnTheMapKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnTheMapKit.h; sourceTree = "<group>"; };
-		EEB827501E0293BD00880D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEB8275C1E0293BD00880D62 /* OnTheMapKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapKitTests.swift; sourceTree = "<group>"; };
-		EEB8275E1E0293BD00880D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEB827701E0294AD00880D62 /* CustomViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB827721E0294AD00880D62 /* CustomViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViews.h; sourceTree = "<group>"; };
 		EEB827731E0294AD00880D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -290,6 +286,7 @@
 				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
 			);
 			name = Reusable;
+			path = OnTheMap;
 			sourceTree = "<group>";
 		};
 		EE1731E21DF8777400978508 /* Convenience */ = {
@@ -332,11 +329,10 @@
 		EE204F921DF6E05400D855BA = {
 			isa = PBXGroup;
 			children = (
+				EE1731DD1DF873F200978508 /* Reusable */,
 				EE204F9D1DF6E05400D855BA /* OnTheMap */,
 				EE204FB21DF6E05500D855BA /* OnTheMapTests */,
 				EE204FBD1DF6E05500D855BA /* OnTheMapUITests */,
-				EEB8274E1E0293BD00880D62 /* OnTheMapKit */,
-				EEB8275B1E0293BD00880D62 /* OnTheMapKitTests */,
 				EEB827711E0294AD00880D62 /* CustomViews */,
 				EEB8277E1E0294AE00880D62 /* CustomViewsTests */,
 				EE204F9C1DF6E05400D855BA /* Products */,
@@ -360,7 +356,6 @@
 		EE204F9D1DF6E05400D855BA /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				EE1731DD1DF873F200978508 /* Reusable */,
 				EE1731C21DF7C28E00978508 /* Classes */,
 				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
@@ -384,24 +379,6 @@
 				EE204FC01DF6E05500D855BA /* Info.plist */,
 			);
 			path = OnTheMapUITests;
-			sourceTree = "<group>";
-		};
-		EEB8274E1E0293BD00880D62 /* OnTheMapKit */ = {
-			isa = PBXGroup;
-			children = (
-				EEB8274F1E0293BD00880D62 /* OnTheMapKit.h */,
-				EEB827501E0293BD00880D62 /* Info.plist */,
-			);
-			path = OnTheMapKit;
-			sourceTree = "<group>";
-		};
-		EEB8275B1E0293BD00880D62 /* OnTheMapKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				EEB8275C1E0293BD00880D62 /* OnTheMapKitTests.swift */,
-				EEB8275E1E0293BD00880D62 /* Info.plist */,
-			);
-			path = OnTheMapKitTests;
 			sourceTree = "<group>";
 		};
 		EEB827711E0294AD00880D62 /* CustomViews */ = {
