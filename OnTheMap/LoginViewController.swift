@@ -39,6 +39,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
+    func hasUserGivenRequiredInfo() -> Bool {
+        return emailTextField.hasText && passwordTextField.hasText
+    }
+    
 }
 
 
@@ -57,6 +62,41 @@ extension LoginViewController {
 }
 
 
+
+extension LoginViewController: OrderedViewsForKeyboard {
+    
+    var viewTags: CountableClosedRange<Int> {
+        return 1...2
+    }
+    
+    var containingView: UIView {
+        return view
+    }
+    
+    
+    func haveValidInputForView(withTag tag: Int) -> Bool {
+        switch tag {
+        case 1:
+            return emailTextField.hasText
+        case 2:
+            return passwordTextField.hasText
+        default:
+            return false
+        }
+        
+    }
+
+
+}
+
+
+
 extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return viewShouldReturn(textField) { (view) in
+            self.signIn(view)
+        }
+    }
     
 }

@@ -1,5 +1,5 @@
 //
-//  Convenience - UITableViewDataSource.swift
+//  ArrayTableViewDataSource.swift
 //  OnTheMap
 //
 //  Created by Shobhit Gupta on 11/12/16.

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B4378A7F64B4B0893D517E6 /* Pods_OnTheMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91037634ADC71122243C740 /* Pods_OnTheMapTests.framework */; };
-		84FD7938B95EBEBA29013B8A /* Pods_OnTheMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72C8E98F00F1AE33F1A50CE /* Pods_OnTheMapUITests.framework */; };
 		9DDD6CEF9DE80ED9DE2ACF39 /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C184482DEB0F0C7AC3D80E36 /* Pods_OnTheMap.framework */; };
 		EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C41DF7C2C700978508 /* Convenience - Color.swift */; };
 		EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C81DF7D28000978508 /* UIStackView+Separator.m */; };
@@ -30,48 +28,18 @@
 		EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA21DF6E05400D855BA /* Main.storyboard */; };
 		EE204FA61DF6E05400D855BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA51DF6E05400D855BA /* Assets.xcassets */; };
 		EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */; };
-		EE204FB41DF6E05500D855BA /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FB31DF6E05500D855BA /* OnTheMapTests.swift */; };
-		EE204FBF1DF6E05500D855BA /* OnTheMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FBE1DF6E05500D855BA /* OnTheMapUITests.swift */; };
-		EE209F011DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */; };
+		EE209F011DFD7FE100C82F5C /* ArrayTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */; };
 		EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */; };
 		EE7EEE521E019B4B007522A4 /* Convenience - CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */; };
-		EEB827791E0294AD00880D62 /* CustomViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB827701E0294AD00880D62 /* CustomViews.framework */; };
-		EEB827801E0294AE00880D62 /* CustomViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8277F1E0294AE00880D62 /* CustomViewsTests.swift */; };
 		EEB827821E0294AE00880D62 /* CustomViews.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB827721E0294AD00880D62 /* CustomViews.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEB827851E0294AE00880D62 /* CustomViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB827701E0294AD00880D62 /* CustomViews.framework */; };
 		EEB827861E0294AE00880D62 /* CustomViews.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEB827701E0294AD00880D62 /* CustomViews.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EEB827911E02955C00880D62 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB827901E02955C00880D62 /* TextField.swift */; };
+		EEB827961E02B21600880D62 /* Convenience - String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB827951E02B21600880D62 /* Convenience - String.swift */; };
+		EEB828131E040B7600880D62 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB828121E040B7600880D62 /* TextField.swift */; };
+		EEB828181E04105700880D62 /* OrderedViewsForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB828171E04105700880D62 /* OrderedViewsForKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EE204FB01DF6E05500D855BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EE204F931DF6E05400D855BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EE204F9A1DF6E05400D855BA;
-			remoteInfo = OnTheMap;
-		};
-		EE204FBB1DF6E05500D855BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EE204F931DF6E05400D855BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EE204F9A1DF6E05400D855BA;
-			remoteInfo = OnTheMap;
-		};
-		EEB8277A1E0294AD00880D62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EE204F931DF6E05400D855BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EEB8276F1E0294AD00880D62;
-			remoteInfo = CustomViews;
-		};
-		EEB8277C1E0294AE00880D62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EE204F931DF6E05400D855BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EE204F9A1DF6E05400D855BA;
-			remoteInfo = OnTheMap;
-		};
 		EEB827831E0294AE00880D62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EE204F931DF6E05400D855BA /* Project object */;
@@ -126,22 +94,15 @@
 		EE204FA51DF6E05400D855BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE204FA81DF6E05400D855BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE204FAA1DF6E05400D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE204FAF1DF6E05500D855BA /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE204FB31DF6E05500D855BA /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
-		EE204FB51DF6E05500D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE204FBA1DF6E05500D855BA /* OnTheMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE204FBE1DF6E05500D855BA /* OnTheMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapUITests.swift; sourceTree = "<group>"; };
-		EE204FC01DF6E05500D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewDataSource.swift; sourceTree = "<group>"; };
 		EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
 		EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - CALayer.swift"; sourceTree = "<group>"; };
 		EEB827701E0294AD00880D62 /* CustomViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB827721E0294AD00880D62 /* CustomViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViews.h; sourceTree = "<group>"; };
 		EEB827731E0294AD00880D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEB827781E0294AD00880D62 /* CustomViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEB8277F1E0294AE00880D62 /* CustomViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewsTests.swift; sourceTree = "<group>"; };
-		EEB827811E0294AE00880D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEB827901E02955C00880D62 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = CustomViews/TextField.swift; sourceTree = "<group>"; };
+		EEB827951E02B21600880D62 /* Convenience - String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - String.swift"; sourceTree = "<group>"; };
+		EEB828121E040B7600880D62 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		EEB828171E04105700880D62 /* OrderedViewsForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedViewsForKeyboard.swift; sourceTree = "<group>"; };
 		F91037634ADC71122243C740 /* Pods_OnTheMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTheMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA08DB472FAA92F223D24C30 /* Pods-OnTheMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2A24FFF9FFD1A6FA3BA72A /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,34 +118,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE204FAC1DF6E05500D855BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B4378A7F64B4B0893D517E6 /* Pods_OnTheMapTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EE204FB71DF6E05500D855BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84FD7938B95EBEBA29013B8A /* Pods_OnTheMapUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EEB8276C1E0294AD00880D62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEB827751E0294AD00880D62 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEB827791E0294AD00880D62 /* CustomViews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,26 +216,26 @@
 		EE1731DD1DF873F200978508 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				EEB8278D1E0294B500880D62 /* CustomViews */,
+				EEB8280B1E040A1500880D62 /* Protocols & Extensions */,
 				EE1732361DFBE75900978508 /* Utilities */,
 				EE1732321DFBE15B00978508 /* Testing */,
-				EE1731E21DF8777400978508 /* Convenience */,
+				EE1731E21DF8777400978508 /* Convenience Extensions */,
 				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
 			);
 			name = Reusable;
 			path = OnTheMap;
 			sourceTree = "<group>";
 		};
-		EE1731E21DF8777400978508 /* Convenience */ = {
+		EE1731E21DF8777400978508 /* Convenience Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				EE1731C41DF7C2C700978508 /* Convenience - Color.swift */,
 				EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */,
 				EE17322E1DFBC21C00978508 /* Convenience - Array.swift */,
-				EE209F001DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift */,
 				EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */,
+				EEB827951E02B21600880D62 /* Convenience - String.swift */,
 			);
-			name = Convenience;
+			name = "Convenience Extensions";
 			sourceTree = "<group>";
 		};
 		EE1732321DFBE15B00978508 /* Testing */ = {
@@ -331,10 +268,7 @@
 			children = (
 				EE1731DD1DF873F200978508 /* Reusable */,
 				EE204F9D1DF6E05400D855BA /* OnTheMap */,
-				EE204FB21DF6E05500D855BA /* OnTheMapTests */,
-				EE204FBD1DF6E05500D855BA /* OnTheMapUITests */,
 				EEB827711E0294AD00880D62 /* CustomViews */,
-				EEB8277E1E0294AE00880D62 /* CustomViewsTests */,
 				EE204F9C1DF6E05400D855BA /* Products */,
 				B5364068192FE82AEA2DAD97 /* Pods */,
 				C0FC671B2103CF61950F4EC0 /* Frameworks */,
@@ -345,10 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				EE204F9B1DF6E05400D855BA /* OnTheMap.app */,
-				EE204FAF1DF6E05500D855BA /* OnTheMapTests.xctest */,
-				EE204FBA1DF6E05500D855BA /* OnTheMapUITests.xctest */,
 				EEB827701E0294AD00880D62 /* CustomViews.framework */,
-				EEB827781E0294AD00880D62 /* CustomViewsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -363,48 +294,23 @@
 			path = OnTheMap;
 			sourceTree = "<group>";
 		};
-		EE204FB21DF6E05500D855BA /* OnTheMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				EE204FB31DF6E05500D855BA /* OnTheMapTests.swift */,
-				EE204FB51DF6E05500D855BA /* Info.plist */,
-			);
-			path = OnTheMapTests;
-			sourceTree = "<group>";
-		};
-		EE204FBD1DF6E05500D855BA /* OnTheMapUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EE204FBE1DF6E05500D855BA /* OnTheMapUITests.swift */,
-				EE204FC01DF6E05500D855BA /* Info.plist */,
-			);
-			path = OnTheMapUITests;
-			sourceTree = "<group>";
-		};
 		EEB827711E0294AD00880D62 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EEB828121E040B7600880D62 /* TextField.swift */,
 				EEB827721E0294AD00880D62 /* CustomViews.h */,
 				EEB827731E0294AD00880D62 /* Info.plist */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		EEB8277E1E0294AE00880D62 /* CustomViewsTests */ = {
+		EEB8280B1E040A1500880D62 /* Protocols & Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EEB8277F1E0294AE00880D62 /* CustomViewsTests.swift */,
-				EEB827811E0294AE00880D62 /* Info.plist */,
+				EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */,
+				EEB828171E04105700880D62 /* OrderedViewsForKeyboard.swift */,
 			);
-			path = CustomViewsTests;
-			sourceTree = "<group>";
-		};
-		EEB8278D1E0294B500880D62 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				EEB827901E02955C00880D62 /* TextField.swift */,
-			);
-			name = CustomViews;
+			name = "Protocols & Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,48 +349,6 @@
 			productReference = EE204F9B1DF6E05400D855BA /* OnTheMap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EE204FAE1DF6E05500D855BA /* OnTheMapTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EE204FC61DF6E05500D855BA /* Build configuration list for PBXNativeTarget "OnTheMapTests" */;
-			buildPhases = (
-				A22B0237A854A7DF4D9E8A41 /* [CP] Check Pods Manifest.lock */,
-				EE204FAB1DF6E05500D855BA /* Sources */,
-				EE204FAC1DF6E05500D855BA /* Frameworks */,
-				EE204FAD1DF6E05500D855BA /* Resources */,
-				C6047017AD6F385477D2F049 /* [CP] Embed Pods Frameworks */,
-				81F4B9A1F2142569BBF3CC2D /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EE204FB11DF6E05500D855BA /* PBXTargetDependency */,
-			);
-			name = OnTheMapTests;
-			productName = OnTheMapTests;
-			productReference = EE204FAF1DF6E05500D855BA /* OnTheMapTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EE204FB91DF6E05500D855BA /* OnTheMapUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EE204FC91DF6E05500D855BA /* Build configuration list for PBXNativeTarget "OnTheMapUITests" */;
-			buildPhases = (
-				E546A17C74EEFDD01E386FF1 /* [CP] Check Pods Manifest.lock */,
-				EE204FB61DF6E05500D855BA /* Sources */,
-				EE204FB71DF6E05500D855BA /* Frameworks */,
-				EE204FB81DF6E05500D855BA /* Resources */,
-				06687794A1F4B32190B9FE78 /* [CP] Embed Pods Frameworks */,
-				2703787010EF9ECEECDA9241 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EE204FBC1DF6E05500D855BA /* PBXTargetDependency */,
-			);
-			name = OnTheMapUITests;
-			productName = OnTheMapUITests;
-			productReference = EE204FBA1DF6E05500D855BA /* OnTheMapUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		EEB8276F1E0294AD00880D62 /* CustomViews */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEB827871E0294AE00880D62 /* Build configuration list for PBXNativeTarget "CustomViews" */;
@@ -503,25 +367,6 @@
 			productReference = EEB827701E0294AD00880D62 /* CustomViews.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EEB827771E0294AD00880D62 /* CustomViewsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EEB8278A1E0294AE00880D62 /* Build configuration list for PBXNativeTarget "CustomViewsTests" */;
-			buildPhases = (
-				EEB827741E0294AD00880D62 /* Sources */,
-				EEB827751E0294AD00880D62 /* Frameworks */,
-				EEB827761E0294AD00880D62 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EEB8277B1E0294AD00880D62 /* PBXTargetDependency */,
-				EEB8277D1E0294AE00880D62 /* PBXTargetDependency */,
-			);
-			name = CustomViewsTests;
-			productName = CustomViewsTests;
-			productReference = EEB827781E0294AD00880D62 /* CustomViewsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -538,29 +383,11 @@
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
-					EE204FAE1DF6E05500D855BA = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = AR27PDZ76S;
-						ProvisioningStyle = Automatic;
-						TestTargetID = EE204F9A1DF6E05400D855BA;
-					};
-					EE204FB91DF6E05500D855BA = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = AR27PDZ76S;
-						ProvisioningStyle = Automatic;
-						TestTargetID = EE204F9A1DF6E05400D855BA;
-					};
 					EEB8276F1E0294AD00880D62 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = AR27PDZ76S;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
-					};
-					EEB827771E0294AD00880D62 = {
-						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = AR27PDZ76S;
-						ProvisioningStyle = Automatic;
-						TestTargetID = EE204F9A1DF6E05400D855BA;
 					};
 				};
 			};
@@ -578,10 +405,7 @@
 			projectRoot = "";
 			targets = (
 				EE204F9A1DF6E05400D855BA /* OnTheMap */,
-				EE204FAE1DF6E05500D855BA /* OnTheMapTests */,
-				EE204FB91DF6E05500D855BA /* OnTheMapUITests */,
 				EEB8276F1E0294AD00880D62 /* CustomViews */,
-				EEB827771E0294AD00880D62 /* CustomViewsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -597,28 +421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE204FAD1DF6E05500D855BA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EE204FB81DF6E05500D855BA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EEB8276E1E0294AD00880D62 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEB827761E0294AD00880D62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -628,21 +431,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06687794A1F4B32190B9FE78 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0E9A2027E131FF40DE4CD2C3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,81 +447,6 @@
 			showEnvVarsInLog = 0;
 		};
 		13B643F5F8FEA840394B74FA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2703787010EF9ECEECDA9241 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		81F4B9A1F2142569BBF3CC2D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTheMapTests/Pods-OnTheMapTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A22B0237A854A7DF4D9E8A41 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C6047017AD6F385477D2F049 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTheMapTests/Pods-OnTheMapTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E546A17C74EEFDD01E386FF1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -773,6 +486,7 @@
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
 				EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
+				EEB828181E04105700880D62 /* OrderedViewsForKeyboard.swift in Sources */,
 				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
 				EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */,
@@ -780,6 +494,7 @@
 				EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
 				EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */,
+				EEB827961E02B21600880D62 /* Convenience - String.swift in Sources */,
 				EE1732381DFBF93400978508 /* Random - Basic.swift in Sources */,
 				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
 				EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */,
@@ -788,24 +503,8 @@
 				EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */,
 				EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */,
 				EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */,
-				EE209F011DFD7FE100C82F5C /* Convenience - UITableViewDataSource.swift in Sources */,
+				EE209F011DFD7FE100C82F5C /* ArrayTableViewDataSource.swift in Sources */,
 				EE1731D31DF832CD00978508 /* ListViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EE204FAB1DF6E05500D855BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EE204FB41DF6E05500D855BA /* OnTheMapTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EE204FB61DF6E05500D855BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EE204FBF1DF6E05500D855BA /* OnTheMapUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,41 +512,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEB827911E02955C00880D62 /* TextField.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEB827741E0294AD00880D62 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEB827801E0294AE00880D62 /* CustomViewsTests.swift in Sources */,
+				EEB828131E040B7600880D62 /* TextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EE204FB11DF6E05500D855BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EE204F9A1DF6E05400D855BA /* OnTheMap */;
-			targetProxy = EE204FB01DF6E05500D855BA /* PBXContainerItemProxy */;
-		};
-		EE204FBC1DF6E05500D855BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EE204F9A1DF6E05400D855BA /* OnTheMap */;
-			targetProxy = EE204FBB1DF6E05500D855BA /* PBXContainerItemProxy */;
-		};
-		EEB8277B1E0294AD00880D62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EEB8276F1E0294AD00880D62 /* CustomViews */;
-			targetProxy = EEB8277A1E0294AD00880D62 /* PBXContainerItemProxy */;
-		};
-		EEB8277D1E0294AE00880D62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EE204F9A1DF6E05400D855BA /* OnTheMap */;
-			targetProxy = EEB8277C1E0294AE00880D62 /* PBXContainerItemProxy */;
-		};
 		EEB827841E0294AE00880D62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EEB8276F1E0294AD00880D62 /* CustomViews */;
@@ -1005,68 +676,6 @@
 			};
 			name = Release;
 		};
-		EE204FC71DF6E05500D855BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F678FA332AE796610D8A119 /* Pods-OnTheMapTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = AR27PDZ76S;
-				INFOPLIST_FILE = OnTheMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.from101.OnTheMapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
-			};
-			name = Debug;
-		};
-		EE204FC81DF6E05500D855BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846FCB54C5CA4F30414C870B /* Pods-OnTheMapTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = AR27PDZ76S;
-				INFOPLIST_FILE = OnTheMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.from101.OnTheMapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
-			};
-			name = Release;
-		};
-		EE204FCA1DF6E05500D855BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA08DB472FAA92F223D24C30 /* Pods-OnTheMapUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = AR27PDZ76S;
-				INFOPLIST_FILE = OnTheMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.from101.OnTheMapUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = OnTheMap;
-			};
-			name = Debug;
-		};
-		EE204FCB1DF6E05500D855BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA2A24FFF9FFD1A6FA3BA72A /* Pods-OnTheMapUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = AR27PDZ76S;
-				INFOPLIST_FILE = OnTheMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.from101.OnTheMapUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = OnTheMap;
-			};
-			name = Release;
-		};
 		EEB827881E0294AE00880D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1116,36 +725,6 @@
 			};
 			name = Release;
 		};
-		EEB8278B1E0294AE00880D62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = AR27PDZ76S;
-				INFOPLIST_FILE = CustomViewsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.from101.CustomViewsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
-			};
-			name = Debug;
-		};
-		EEB8278C1E0294AE00880D62 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = AR27PDZ76S;
-				INFOPLIST_FILE = CustomViewsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.from101.CustomViewsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1167,37 +746,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE204FC61DF6E05500D855BA /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EE204FC71DF6E05500D855BA /* Debug */,
-				EE204FC81DF6E05500D855BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EE204FC91DF6E05500D855BA /* Build configuration list for PBXNativeTarget "OnTheMapUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EE204FCA1DF6E05500D855BA /* Debug */,
-				EE204FCB1DF6E05500D855BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		EEB827871E0294AE00880D62 /* Build configuration list for PBXNativeTarget "CustomViews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EEB827881E0294AE00880D62 /* Debug */,
 				EEB827891E0294AE00880D62 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		EEB8278A1E0294AE00880D62 /* Build configuration list for PBXNativeTarget "CustomViewsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EEB8278B1E0294AE00880D62 /* Debug */,
-				EEB8278C1E0294AE00880D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
