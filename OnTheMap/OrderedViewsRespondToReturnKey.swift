@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-public protocol OrderedViewsForKeyboard {
+public protocol OrderedViewsRespondToReturnKey {
     var viewTags: CountableClosedRange<Int> { get }
     var containingView: UIView { get }
     func haveValidInputForView(withTag tag: Int) -> Bool
@@ -18,7 +18,7 @@ public protocol OrderedViewsForKeyboard {
 }
 
 
-public extension OrderedViewsForKeyboard {
+public extension OrderedViewsRespondToReturnKey {
     func shouldBeFirstResponder(withTag tag: Int) -> Bool {
         if viewTags ~= tag {
             return !haveValidInputForView(withTag: tag)
@@ -28,7 +28,7 @@ public extension OrderedViewsForKeyboard {
 }
 
 
-public extension OrderedViewsForKeyboard {
+public extension OrderedViewsRespondToReturnKey {
     
     func getView(withTag tag: Int) -> UIView? {
         return containingView.viewWithTag(tag)

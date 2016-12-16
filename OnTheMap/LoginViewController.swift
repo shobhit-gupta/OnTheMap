@@ -63,7 +63,7 @@ extension LoginViewController {
 
 
 
-extension LoginViewController: OrderedViewsForKeyboard {
+extension LoginViewController: OrderedViewsRespondToReturnKey {
     
     var viewTags: CountableClosedRange<Int> {
         return 1...2
