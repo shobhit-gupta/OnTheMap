@@ -1,6 +1,6 @@
 //
 //  TextField.swift
-//  CustomViews
+//  On The Map
 //
 //  Created by Shobhit Gupta on 15/12/16.
 //  Copyright © 2016 Shobhit Gupta. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class TextField: UITextField {
-
+    
     @IBInspectable var topPadding: CGFloat = 0
     @IBInspectable var leftPadding: CGFloat = 0
     @IBInspectable var bottomPadding: CGFloat = 0
@@ -33,5 +33,5 @@ import UIKit
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)
     }
-
+    
 }
