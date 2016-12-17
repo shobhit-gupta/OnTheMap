@@ -74,6 +74,11 @@ extension LoginViewController: OrderedViewsRespondToReturnKey {
     }
     
     
+    func orderedViewsCompletionHandler() {
+        signIn(self)
+    }
+    
+    
     func haveValidInputForView(withTag tag: Int) -> Bool {
         switch tag {
         case 1:
@@ -94,9 +99,7 @@ extension LoginViewController: OrderedViewsRespondToReturnKey {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return viewShouldReturn(textField) { (view) in
-            self.signIn(view)
-        }
+        return viewShouldReturn(textField)
     }
     
 }

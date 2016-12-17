@@ -34,6 +34,7 @@
 		EEB827961E02B21600880D62 /* Convenience - String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB827951E02B21600880D62 /* Convenience - String.swift */; };
 		EEB828181E04105700880D62 /* OrderedViewsRespondToReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */; };
 		EEB8281B1E0412AF00880D62 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8281A1E0412AF00880D62 /* TextField.swift */; };
+		EECE75B51E0561C300176B36 /* UIView - Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +87,7 @@
 		EEB827951E02B21600880D62 /* Convenience - String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - String.swift"; sourceTree = "<group>"; };
 		EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedViewsRespondToReturnKey.swift; sourceTree = "<group>"; };
 		EEB8281A1E0412AF00880D62 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView - Fadeable.swift"; sourceTree = "<group>"; };
 		F91037634ADC71122243C740 /* Pods_OnTheMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTheMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA08DB472FAA92F223D24C30 /* Pods-OnTheMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2A24FFF9FFD1A6FA3BA72A /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			children = (
 				EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */,
 				EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */,
+				EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */,
 			);
 			name = "Protocols & Extensions";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				EEB8281B1E0412AF00880D62 /* TextField.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
 				EEB828181E04105700880D62 /* OrderedViewsRespondToReturnKey.swift in Sources */,
+				EECE75B51E0561C300176B36 /* UIView - Fadeable.swift in Sources */,
 				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
 				EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */,
