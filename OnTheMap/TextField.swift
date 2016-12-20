@@ -8,29 +8,29 @@
 
 import UIKit
 
-@IBDesignable class TextField: UITextField {
+@IBDesignable open class TextField: UITextField {
     
-    @IBInspectable var topPadding: CGFloat = 0
-    @IBInspectable var leftPadding: CGFloat = 0
-    @IBInspectable var bottomPadding: CGFloat = 0
-    @IBInspectable var rightPadding: CGFloat = 0
+    @IBInspectable public var topPadding: CGFloat = 0
+    @IBInspectable public var leftPadding: CGFloat = 0
+    @IBInspectable public var bottomPadding: CGFloat = 0
+    @IBInspectable public var rightPadding: CGFloat = 0
     
     var padding: UIEdgeInsets {
         return UIEdgeInsets(top: topPadding, left: leftPadding, bottom: bottomPadding, right: rightPadding)
     }
     
     
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)
     }
     
     
-    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)
     }
     
     
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)
     }
     
