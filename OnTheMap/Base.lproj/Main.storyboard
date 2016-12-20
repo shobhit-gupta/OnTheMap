@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,26 +20,26 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="jbQ-Yy-oDT" userLabel="Sign In Services Stack View">
-                                <rect key="frame" x="20" y="20" width="335" height="465.5"/>
+                                <rect key="frame" x="20" y="20" width="280" height="465.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-ry-Gqu" userLabel="Udacity Account Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="368"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="368"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UdacityBanner" translatesAutoresizingMaskIntoConstraints="NO" id="oN3-8k-67l">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="180"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="kKL-7T-JFW" userLabel="Account Action Stack View">
-                                                <rect key="frame" x="0.0" y="188" width="335" height="180"/>
+                                                <rect key="frame" x="0.0" y="188" width="280" height="180"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-uG-74Q" userLabel="Text Fields Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="74"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="74"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-oh-FOC" customClass="TextField" customModule="OnTheMap" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="33"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="33"/>
                                                                 <color key="textColor" red="0.1803921568627451" green="0.23921568627450979" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
@@ -62,7 +62,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-q7-S7x" customClass="TextField" customModule="OnTheMap" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="41" width="335" height="33"/>
+                                                                <rect key="frame" x="0.0" y="41" width="280" height="33"/>
                                                                 <color key="textColor" red="0.1803921568627451" green="0.23921568627450979" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
@@ -100,7 +100,7 @@
                                                         </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fTV-S5-807" userLabel="Network Action Stack View">
-                                                        <rect key="frame" x="65" y="106" width="205" height="74"/>
+                                                        <rect key="frame" x="37.5" y="106" width="205" height="74"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-RI-zuy">
                                                                 <rect key="frame" x="0.0" y="0.0" width="205" height="36.5"/>
@@ -148,22 +148,22 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MNf-cY-fHH" userLabel="Other Services Outer Horizontal Stack View">
-                                        <rect key="frame" x="0.0" y="400" width="335" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="400" width="280" height="65.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HtR-G8-1Io" userLabel="Other Services Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="65.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="65.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or sign in with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXf-Or-bJV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
                                                         <color key="textColor" red="0.45882352941176469" green="0.48627450980392156" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="85T-wj-8gX" userLabel="Services List Stack View">
-                                                        <rect key="frame" x="0.0" y="32.5" width="335" height="33"/>
+                                                        <rect key="frame" x="0.0" y="32.5" width="280" height="33"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzt-0Q-VqM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="33"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="136" height="33"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                                 <state key="normal" title="FACEBOOK">
@@ -179,7 +179,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41t-B5-rQt">
-                                                                <rect key="frame" x="171.5" y="0.0" width="163.5" height="33"/>
+                                                                <rect key="frame" x="144" y="0.0" width="136" height="33"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                                 <state key="normal" title="GOOGLE">
@@ -277,11 +277,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Srd-F5-esX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zvp-xY-7eq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qiA-4w-nXf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -306,19 +306,19 @@
             <objects>
                 <tableViewController id="fij-Ye-2nw" customClass="ListViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F9f-uS-8Gr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListViewCell" textLabel="QcX-8g-lgV" imageView="hhW-st-pcl" style="IBUITableViewCellStyleDefault" id="s8p-zd-v2l">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8p-zd-v2l" id="ZRv-oe-0s0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QcX-8g-lgV">
-                                            <rect key="frame" x="54" y="0.0" width="306" height="43"/>
+                                            <rect key="frame" x="54" y="0.0" width="251" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -351,21 +351,22 @@
                         <viewControllerLayoutGuide type="bottom" id="6fj-Wt-IFD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UV2-I2-LAh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UPi-Lv-gv4" userLabel="Add Link Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-0.5" width="320" height="481"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap Here To Add Link" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58k-ce-JPQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="96.5"/>
                                         <color key="backgroundColor" red="0.25490196079999999" green="0.45882352939999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="q59-LG-9Mv">
-                                        <rect key="frame" x="0.0" y="133.5" width="375" height="533.5"/>
+                                        <rect key="frame" x="0.0" y="96.5" width="320" height="384.5"/>
                                     </mapView>
                                 </subviews>
                                 <constraints>
@@ -373,13 +374,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="tRj-AV-aEs" userLabel="Add Location Stack View">
-                                <rect key="frame" x="0.0" y="52" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="52" width="320" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="383-9B-jPK" userLabel="Form Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="334"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uen-88-NTQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Where are you
@@ -409,24 +410,21 @@ today?</string>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xCP-Vq-bxm" userLabel="Address Text View">
-                                                <rect key="frame" x="0.0" y="85" width="375" height="249"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap Here To Add Your Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-bb-1ne" userLabel="Address Text Field">
+                                                <rect key="frame" x="0.0" y="85" width="320" height="249"/>
                                                 <color key="backgroundColor" red="0.25490196078431371" green="0.45882352941176469" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
-                                                <string key="text">Set No. 5,
-CTO Building,
-The Mall,
-Shimla</string>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits"/>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                 </variation>
-                                            </textView>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-NQ-izJ">
-                                        <rect key="frame" x="117" y="366" width="141" height="34"/>
+                                        <rect key="frame" x="89.5" y="366" width="141" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
@@ -454,10 +452,10 @@ Shimla</string>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="8"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="zCx-ZL-S9l" userLabel="Overlay Cancel Stack View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="17"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="17"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSD-n9-0NS">
-                                        <rect key="frame" x="315" y="0.0" width="60" height="17"/>
+                                        <rect key="frame" x="260" y="0.0" width="60" height="17"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                         <state key="normal" title="Cancel">
@@ -470,10 +468,10 @@ Shimla</string>
                                 </subviews>
                             </stackView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kqf-ZU-nS7" userLabel="Overlay Submit Stack View">
-                                <rect key="frame" x="0.0" y="601" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="414" width="320" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP1-So-Wrw">
-                                        <rect key="frame" x="148" y="0.0" width="79" height="34"/>
+                                        <rect key="frame" x="120.5" y="0.0" width="79" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
@@ -524,7 +522,9 @@ Shimla</string>
                     <connections>
                         <outlet property="addLinkStackView" destination="UPi-Lv-gv4" id="OKA-Co-TEX"/>
                         <outlet property="addLocationStackView" destination="tRj-AV-aEs" id="AOO-G3-PTm"/>
+                        <outlet property="addressTextField" destination="Kxx-bb-1ne" id="RsT-Xb-nXi"/>
                         <outlet property="cancelButton" destination="jSD-n9-0NS" id="Sxi-vZ-2eS"/>
+                        <outlet property="mapView" destination="q59-LG-9Mv" id="TN8-GF-chk"/>
                         <outlet property="overlaySubmitStackView" destination="kqf-ZU-nS7" id="oH5-oi-nRl"/>
                     </connections>
                 </viewController>

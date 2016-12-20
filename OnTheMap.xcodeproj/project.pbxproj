@@ -35,6 +35,7 @@
 		EEB828181E04105700880D62 /* OrderedViewsRespondToReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */; };
 		EEB8281B1E0412AF00880D62 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8281A1E0412AF00880D62 /* TextField.swift */; };
 		EECE75B51E0561C300176B36 /* UIView - Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */; };
+		EEEC91E51E07F1A700884D72 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +89,7 @@
 		EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedViewsRespondToReturnKey.swift; sourceTree = "<group>"; };
 		EEB8281A1E0412AF00880D62 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView - Fadeable.swift"; sourceTree = "<group>"; };
+		EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
 		F91037634ADC71122243C740 /* Pods_OnTheMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTheMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA08DB472FAA92F223D24C30 /* Pods-OnTheMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2A24FFF9FFD1A6FA3BA72A /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		EEB828191E04129500880D62 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */,
 				EEB8281A1E0412AF00880D62 /* TextField.swift */,
 			);
 			name = "Custom Views";
@@ -431,6 +434,7 @@
 				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
 				EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */,
 				EE7EEE521E019B4B007522A4 /* Convenience - CALayer.swift in Sources */,
+				EEEC91E51E07F1A700884D72 /* CustomActivityIndicatorView.swift in Sources */,
 				EE17323E1DFC1B0F00978508 /* Random - CG.swift in Sources */,
 				EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */,
 				EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */,

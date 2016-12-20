@@ -22,6 +22,9 @@ class InformationPostingViewController: UIViewController {
     @IBOutlet weak var addLocationStackView: UIStackView!
     @IBOutlet weak var overlaySubmitStackView: UIStackView!
     @IBOutlet weak var cancelButton: UIButton!
+
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var mapView: MKMapView!
     
     
     var currentState: InformationPostingState = .addLocation {
@@ -40,16 +43,17 @@ class InformationPostingViewController: UIViewController {
         
         switch state {
         case .addLocation:
-            addLocationStackView.isHidden = false
-            addLinkStackView.isHidden = true
-            overlaySubmitStackView.isHidden = true
-            cancelButton.setTitleColor(UIColor(netHex: 0x325075), for: .normal)
+            UIView.fade(out: addLinkStackView, andHide: true, thenFadeIn: addLocationStackView)
+            UIView.transition(with: self.cancelButton, duration: 2.0, options: .transitionCrossDissolve, animations: { self.cancelButton.setTitleColor(UIColor(netHex: 0x325075), for: .normal) }, completion: nil)
+            overlaySubmitStackView.fadeOut { _ in
+                self.overlaySubmitStackView.isHidden = true
+            }
             
         case .addLink:
             UIView.fade(out: addLocationStackView, andHide: true, thenFadeIn: addLinkStackView) { _ in
-                self.overlaySubmitStackView.fadeIn()
-                self.cancelButton.setTitleColor(UIColor.white, for: .normal)
             }
+            self.overlaySubmitStackView.fadeIn(duration: 2.0)
+            UIView.transition(with: self.cancelButton, duration: 2.0, options: .transitionCrossDissolve, animations: { self.cancelButton.setTitleColor(UIColor.white, for: .normal) }, completion: nil)
             
         }
         
@@ -57,7 +61,9 @@ class InformationPostingViewController: UIViewController {
     
 
     @IBAction func findOnMap(_ sender: Any) {
-        currentState = .addLink
+        if let address = addressTextField.text {
+            CLGeocoder().geocodeAddressString(address, completionHandler: forwardGeocoded(placemarks:error:))
+        }
     }
     
     
@@ -68,6 +74,35 @@ class InformationPostingViewController: UIViewController {
     
     @IBAction func submit(_ sender: Any) {
         // TODO: Check if input is valid and submit to server
+        currentState = .addLocation
     }
 
 }
+
+
+extension InformationPostingViewController {
+    
+    func forwardGeocoded(placemarks: [CLPlacemark]?, error: Error?) -> Void {
+        
+        guard error == nil else {
+            print(error!.localizedDescription)
+            return
+        }
+        
+        guard let placemarks = placemarks,
+            let coordinates = placemarks[0].location?.coordinate else {
+                print("Couldn't find the address!")
+                return
+        }
+        
+        if let address = addressTextField.text,
+            let annotation = OTMMapViewAnnotation(with: [.title: address, .coordinate:coordinates]) {
+            currentState = .addLink
+            mapView.showAnnotations([annotation], animated: true)
+        }
+        
+    }
+    
+    
+}
+
