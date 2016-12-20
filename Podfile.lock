@@ -1,12 +1,15 @@
 PODS:
   - IQKeyboardManagerSwift (4.0.7)
+  - SDCAlertView (7.1)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - SDCAlertView (~> 7.1)
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 58bbcf46b5cf9fd4ed625d28a60cb2fbae4ab0f4
+  SDCAlertView: b92fd1f00e522e18a062005e15a16c1e8295c5b5
 
-PODFILE CHECKSUM: f9c4e3ed0d9c714aa877e46f78eff0529ac9f3e1
+PODFILE CHECKSUM: d243b7e730bbc9f348ba08e8cb35d65879aef7ed
 
 COCOAPODS: 1.2.0.beta.1

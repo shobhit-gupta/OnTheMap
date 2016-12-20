@@ -8,29 +8,26 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-OnTheMap.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-OnTheMapTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-OnTheMapUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
+		</dict>
+		<key>SDCAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -45,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC6A7DAC27479561D6713189DBE655F2</key>
+		<key>ED33FBE9F4631168C8D95662D07806E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F7996ECDCBC08FFA5DCA71D4838B80EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F93916CC1FC521BA380707E0A0A4C756</key>
 		<dict>
 			<key>primary</key>
 			<true/>
