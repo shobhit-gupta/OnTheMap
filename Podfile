@@ -7,7 +7,6 @@ target 'OnTheMap' do
 
     # Pods for OnTheMap
     pod 'IQKeyboardManagerSwift'
-    pod 'SDCAlertView', '~> 7.1'
 
     target 'OnTheMapTests' do
         inherit! :search_paths

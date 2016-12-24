@@ -20,7 +20,7 @@ import QuartzCore
     var isAnimating = false
     
     
-    @IBInspectable public var hidesWhenStopped: Bool = true
+    @IBInspectable public var hidesWhenStopped: Bool = false
     
     @IBInspectable public var rotateClockwise: Bool = true {
         didSet {
@@ -40,7 +40,7 @@ import QuartzCore
     }
     
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
@@ -52,8 +52,16 @@ import QuartzCore
     }
     
     
+    public convenience init(with image: UIImage, origin: CGPoint = CGPoint(x: 0, y: 0)) {
+        self.init(frame: CGRect(origin: origin, size: image.size))
+        DispatchQueue.main.async {
+            self.image = image
+        }
+    }
+    
+    
     func commonInit() {
-        isHidden = true
+        isHidden = false
         layer.addSublayer(animationLayer)
     }
     
@@ -74,6 +82,9 @@ public extension CustomActivityIndicatorView {
         animationLayer.contents = image.cgImage
         animationLayer.masksToBounds = true
         configureRotation(forLayer: animationLayer)
+        if !isAnimating {
+            stopAnimating()
+        }
     }
     
     

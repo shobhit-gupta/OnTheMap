@@ -14,6 +14,7 @@ class InformationPostingViewController: UIViewController {
     
     enum InformationPostingState {
         case addLocation
+        case busy
         case addLink
     }
     
@@ -25,6 +26,8 @@ class InformationPostingViewController: UIViewController {
 
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var busyOverlayView: BusyOverlayView!
     
     
     var currentState: InformationPostingState = .addLocation {
@@ -43,6 +46,7 @@ class InformationPostingViewController: UIViewController {
         
         switch state {
         case .addLocation:
+            dismissAlert()
             UIView.fade(out: addLinkStackView, andHide: true, thenFadeIn: addLocationStackView)
             UIView.transition(with: self.cancelButton, duration: 2.0, options: .transitionCrossDissolve, animations: { self.cancelButton.setTitleColor(UIColor(netHex: 0x325075), for: .normal) }, completion: nil)
             overlaySubmitStackView.fadeOut { _ in
@@ -50,10 +54,14 @@ class InformationPostingViewController: UIViewController {
             }
             
         case .addLink:
+            dismissAlert()
             UIView.fade(out: addLocationStackView, andHide: true, thenFadeIn: addLinkStackView) { _ in
             }
             self.overlaySubmitStackView.fadeIn(duration: 2.0)
             UIView.transition(with: self.cancelButton, duration: 2.0, options: .transitionCrossDissolve, animations: { self.cancelButton.setTitleColor(UIColor.white, for: .normal) }, completion: nil)
+            
+        case .busy:
+            presentAlert()
             
         }
         
@@ -62,6 +70,7 @@ class InformationPostingViewController: UIViewController {
 
     @IBAction func findOnMap(_ sender: Any) {
         if let address = addressTextField.text {
+            currentState = .busy
             CLGeocoder().geocodeAddressString(address, completionHandler: forwardGeocoded(placemarks:error:))
         }
     }
@@ -83,14 +92,16 @@ class InformationPostingViewController: UIViewController {
 extension InformationPostingViewController {
     
     func forwardGeocoded(placemarks: [CLPlacemark]?, error: Error?) -> Void {
-        
+        // TODO: Present an alert view for user in case of an error
         guard error == nil else {
+            currentState = .addLocation
             print(error!.localizedDescription)
             return
         }
         
         guard let placemarks = placemarks,
             let coordinates = placemarks[0].location?.coordinate else {
+                currentState = .addLocation
                 print("Couldn't find the address!")
                 return
         }
@@ -106,3 +117,24 @@ extension InformationPostingViewController {
     
 }
 
+
+extension InformationPostingViewController {
+    
+    func dismissAlert(){
+        if !busyOverlayView.isHidden {
+            busyOverlayView.loadingIndicator.stopAnimating()
+            busyOverlayView.pinIndicator.stopAnimating()
+            busyOverlayView.isHidden = true
+        }
+    }
+    
+    
+    func presentAlert() {
+        busyOverlayView.title.text = "Please Wait"
+        busyOverlayView.subtitle.text = "Looking up on map..."
+        busyOverlayView.loadingIndicator.startAnimating()
+        busyOverlayView.pinIndicator.startAnimating()
+        busyOverlayView.isHidden = false
+    }
+    
+}
