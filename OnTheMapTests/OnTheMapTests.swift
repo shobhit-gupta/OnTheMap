@@ -2,12 +2,11 @@
 //  OnTheMapTests.swift
 //  OnTheMapTests
 //
-//  Created by Shobhit Gupta on 06/12/16.
+//  Created by Shobhit Gupta on 20/12/16.
 //  Copyright © 2016 Shobhit Gupta. All rights reserved.
 //
 
 import XCTest
-@testable import OnTheMap
 
 class OnTheMapTests: XCTestCase {
     
