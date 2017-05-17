@@ -33,13 +33,15 @@
 		EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */; };
 		EE209F011DFD7FE100C82F5C /* ArrayTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */; };
 		EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */; };
+		EE78012F1ECC59A0008F0724 /* ArtKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78012E1ECC59A0008F0724 /* ArtKit.swift */; };
 		EE7EEE521E019B4B007522A4 /* Convenience - CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */; };
 		EEB827961E02B21600880D62 /* Convenience - String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB827951E02B21600880D62 /* Convenience - String.swift */; };
 		EEB828181E04105700880D62 /* OrderedViewsRespondToReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */; };
 		EEB8281B1E0412AF00880D62 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8281A1E0412AF00880D62 /* TextField.swift */; };
 		EEC2C4B81E0D4F290025ABFF /* BusyOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC2C4B61E0D4F290025ABFF /* BusyOverlayView.swift */; };
 		EEC2C4B91E0D4F290025ABFF /* BusyOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC2C4B71E0D4F290025ABFF /* BusyOverlayView.xib */; };
-		EECE75B51E0561C300176B36 /* UIView - Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */; };
+		EECE75B51E0561C300176B36 /* UIView+Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE75B41E0561C300176B36 /* UIView+Fadeable.swift */; };
+		EEDDFDEC1E5EC04400F55E40 /* Random - Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDFDEB1E5EC04400F55E40 /* Random - Objects.swift */; };
 		EEEC91E51E07F1A700884D72 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */; };
 		F669AC35BF432BFAFDD7E3EC /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FBA4B22496CEAE8597EE0 /* Pods_OnTheMap.framework */; };
 /* End PBXBuildFile section */
@@ -115,13 +117,15 @@
 		EE204FAA1DF6E05400D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewDataSource.swift; sourceTree = "<group>"; };
 		EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
+		EE78012E1ECC59A0008F0724 /* ArtKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtKit.swift; sourceTree = "<group>"; };
 		EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - CALayer.swift"; sourceTree = "<group>"; };
 		EEB827951E02B21600880D62 /* Convenience - String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - String.swift"; sourceTree = "<group>"; };
 		EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedViewsRespondToReturnKey.swift; sourceTree = "<group>"; };
 		EEB8281A1E0412AF00880D62 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		EEC2C4B61E0D4F290025ABFF /* BusyOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyOverlayView.swift; sourceTree = "<group>"; };
 		EEC2C4B71E0D4F290025ABFF /* BusyOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusyOverlayView.xib; sourceTree = "<group>"; };
-		EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView - Fadeable.swift"; sourceTree = "<group>"; };
+		EECE75B41E0561C300176B36 /* UIView+Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fadeable.swift"; sourceTree = "<group>"; };
+		EEDDFDEB1E5EC04400F55E40 /* Random - Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - Objects.swift"; sourceTree = "<group>"; };
 		EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
 		FCEC7E8930B36FE978D0949C /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,19 +199,6 @@
 			path = OnTheMapTests;
 			sourceTree = "<group>";
 		};
-		EE1731C21DF7C28E00978508 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EE1731CE1DF7EEA000978508 /* Models */,
-				EE1731CF1DF7EEAB00978508 /* Views */,
-				EE1731CD1DF7EE8800978508 /* Controllers */,
-				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
-				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
-				EE1731CB1DF7EBF000978508 /* ViewConstants.swift */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		EE1731CA1DF7D61000978508 /* CVStackViewSeparator */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +208,7 @@
 			name = CVStackViewSeparator;
 			sourceTree = "<group>";
 		};
-		EE1731CD1DF7EE8800978508 /* Controllers */ = {
+		EE1731CD1DF7EE8800978508 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				EE204FA01DF6E05400D855BA /* LoginViewController.swift */,
@@ -227,24 +218,25 @@
 				EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */,
 				EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */,
 			);
-			name = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		EE1731CE1DF7EEA000978508 /* Models */ = {
+		EE1731CE1DF7EEA000978508 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		EE1731CF1DF7EEAB00978508 /* Views */ = {
+		EE1731CF1DF7EEAB00978508 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE7801301ECC59A4008F0724 /* ArtKit */,
 				EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */,
 				EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */,
 				EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */,
 			);
-			name = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		EE1731D61DF859ED00978508 /* Assets */ = {
@@ -303,6 +295,7 @@
 			children = (
 				EE1732371DFBF93400978508 /* Random - Basic.swift */,
 				EE17323D1DFC1B0F00978508 /* Random - CG.swift */,
+				EEDDFDEB1E5EC04400F55E40 /* Random - Objects.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -333,11 +326,24 @@
 			isa = PBXGroup;
 			children = (
 				EE1731DD1DF873F200978508 /* Reusable */,
-				EE1731C21DF7C28E00978508 /* Classes */,
+				EE1731CE1DF7EEA000978508 /* Model */,
+				EE1731CF1DF7EEAB00978508 /* View */,
+				EE1731CD1DF7EE8800978508 /* Controller */,
+				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
+				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
+				EE1731CB1DF7EBF000978508 /* ViewConstants.swift */,
 				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
 			);
 			path = OnTheMap;
+			sourceTree = "<group>";
+		};
+		EE7801301ECC59A4008F0724 /* ArtKit */ = {
+			isa = PBXGroup;
+			children = (
+				EE78012E1ECC59A0008F0724 /* ArtKit.swift */,
+			);
+			path = ArtKit;
 			sourceTree = "<group>";
 		};
 		EEB8280B1E040A1500880D62 /* Protocols & Extensions */ = {
@@ -345,7 +351,7 @@
 			children = (
 				EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */,
 				EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */,
-				EECE75B41E0561C300176B36 /* UIView - Fadeable.swift */,
+				EECE75B41E0561C300176B36 /* UIView+Fadeable.swift */,
 			);
 			name = "Protocols & Extensions";
 			sourceTree = "<group>";
@@ -677,7 +683,7 @@
 				EEB8281B1E0412AF00880D62 /* TextField.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
 				EEB828181E04105700880D62 /* OrderedViewsRespondToReturnKey.swift in Sources */,
-				EECE75B51E0561C300176B36 /* UIView - Fadeable.swift in Sources */,
+				EECE75B51E0561C300176B36 /* UIView+Fadeable.swift in Sources */,
 				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
 				EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */,
@@ -686,6 +692,8 @@
 				EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
 				EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */,
+				EE78012F1ECC59A0008F0724 /* ArtKit.swift in Sources */,
+				EEDDFDEC1E5EC04400F55E40 /* Random - Objects.swift in Sources */,
 				EEB827961E02B21600880D62 /* Convenience - String.swift in Sources */,
 				EE1732381DFBF93400978508 /* Random - Basic.swift in Sources */,
 				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
