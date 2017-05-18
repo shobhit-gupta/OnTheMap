@@ -97,8 +97,8 @@ public extension CustomActivityIndicatorView {
         rotation.isRemovedOnCompletion = false
         rotation.repeatCount = Float.greatestFiniteMagnitude
         rotation.fillMode = kCAFillModeForwards
-        rotation.fromValue = rotateClockwise ? NSNumber(value: Float(0.0)) : NSNumber(value: Float(M_PI * 2.0))
-        rotation.toValue = rotateClockwise ? NSNumber(value: Float(M_PI * 2.0)) : NSNumber(value: Float(0.0))
+        rotation.fromValue = rotateClockwise ? NSNumber(value: Float(0.0)) : NSNumber(value: Float(.pi * 2.0))
+        rotation.toValue = rotateClockwise ? NSNumber(value: Float(.pi * 2.0)) : NSNumber(value: Float(0.0))
         
         layer.add(rotation, forKey: "rotate")
         

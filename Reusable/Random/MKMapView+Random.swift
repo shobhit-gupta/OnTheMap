@@ -1,5 +1,5 @@
 //
-//  Random - MKMapView.swift
+//  MKMapView+Random.swift
 //  OnTheMap
 //
 //  Created by Shobhit Gupta on 10/12/16.
