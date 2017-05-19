@@ -50,6 +50,7 @@
 		EEA929931ECE024700C8A9B0 /* Error_+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297B1ECE024700C8A9B0 /* Error_+Random.swift */; };
 		EEA929941ECE024700C8A9B0 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */; };
 		EEA929951ECE024700C8A9B0 /* UIView+Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */; };
+		EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F181ECF1335007399A0 /* Default+App.swift */; };
 		F669AC35BF432BFAFDD7E3EC /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FBA4B22496CEAE8597EE0 /* Pods_OnTheMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +142,7 @@
 		EEA9297B1ECE024700C8A9B0 /* Error_+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error_+Random.swift"; sourceTree = "<group>"; };
 		EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fadeable.swift"; sourceTree = "<group>"; };
+		EEE21F181ECF1335007399A0 /* Default+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+App.swift"; sourceTree = "<group>"; };
 		FCEC7E8930B36FE978D0949C /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,11 +292,12 @@
 		EE204F9D1DF6E05400D855BA /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				EEE21F181ECF1335007399A0 /* Default+App.swift */,
+				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
 				EE1731CE1DF7EEA000978508 /* Model */,
 				EE1731CF1DF7EEAB00978508 /* View */,
 				EE1731CD1DF7EE8800978508 /* Controller */,
 				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
-				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
 				EE1731CB1DF7EBF000978508 /* ViewConstants.swift */,
 				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
@@ -321,11 +324,11 @@
 		EEA9295D1ECE024700C8A9B0 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				EEA929721ECE024700C8A9B0 /* MustImport */,
 				EEA9295E1ECE024700C8A9B0 /* CustomViews */,
 				EEA929651ECE024700C8A9B0 /* DataSource */,
 				EEA9296A1ECE024700C8A9B0 /* EaseExtensions */,
 				EEA929701ECE024700C8A9B0 /* Keyboard */,
-				EEA929721ECE024700C8A9B0 /* MustImport */,
 				EEA929751ECE024700C8A9B0 /* Random */,
 				EEA9297D1ECE024700C8A9B0 /* UIView */,
 			);
@@ -744,6 +747,7 @@
 				EEA929871ECE024700C8A9B0 /* Array+Ease.swift in Sources */,
 				EEA929811ECE024700C8A9B0 /* CustomActivityIndicatorView.swift in Sources */,
 				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
+				EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
 				EEA929831ECE024700C8A9B0 /* TextField.swift in Sources */,
 				EEA929861ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift in Sources */,

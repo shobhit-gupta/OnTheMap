@@ -63,7 +63,7 @@ extension ListViewController: ArrayTableViewDataSourceController {
     }
     
     var reusableCellIdentifier: String {
-        return "ListViewCell"
+        return Default.ListViewCell.ReusableCellId
     }
     
     
