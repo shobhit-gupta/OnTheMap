@@ -27,8 +27,6 @@
 		EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */; };
 		EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */; };
 		EE78012F1ECC59A0008F0724 /* ArtKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78012E1ECC59A0008F0724 /* ArtKit.swift */; };
-		EEA9297F1ECE024700C8A9B0 /* BusyOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929601ECE024700C8A9B0 /* BusyOverlayView.swift */; };
-		EEA929801ECE024700C8A9B0 /* BusyOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA929611ECE024700C8A9B0 /* BusyOverlayView.xib */; };
 		EEA929811ECE024700C8A9B0 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */; };
 		EEA929821ECE024700C8A9B0 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929631ECE024700C8A9B0 /* Overlay.swift */; };
 		EEA929831ECE024700C8A9B0 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929641ECE024700C8A9B0 /* TextField.swift */; };
@@ -51,6 +49,8 @@
 		EEA929941ECE024700C8A9B0 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */; };
 		EEA929951ECE024700C8A9B0 /* UIView+Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */; };
 		EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F181ECF1335007399A0 /* Default+App.swift */; };
+		EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1A1ECF8446007399A0 /* BusyView.swift */; };
+		EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */; };
 		F669AC35BF432BFAFDD7E3EC /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FBA4B22496CEAE8597EE0 /* Pods_OnTheMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,8 +119,6 @@
 		EE204FAA1DF6E05400D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
 		EE78012E1ECC59A0008F0724 /* ArtKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtKit.swift; sourceTree = "<group>"; };
-		EEA929601ECE024700C8A9B0 /* BusyOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyOverlayView.swift; sourceTree = "<group>"; };
-		EEA929611ECE024700C8A9B0 /* BusyOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusyOverlayView.xib; sourceTree = "<group>"; };
 		EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
 		EEA929631ECE024700C8A9B0 /* Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
 		EEA929641ECE024700C8A9B0 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -143,6 +141,8 @@
 		EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fadeable.swift"; sourceTree = "<group>"; };
 		EEE21F181ECF1335007399A0 /* Default+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+App.swift"; sourceTree = "<group>"; };
+		EEE21F1A1ECF8446007399A0 /* BusyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
+		EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
 		FCEC7E8930B36FE978D0949C /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -338,21 +338,12 @@
 		EEA9295E1ECE024700C8A9B0 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				EEA9295F1ECE024700C8A9B0 /* BusyView */,
+				EEE21F1A1ECF8446007399A0 /* BusyView.swift */,
 				EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */,
 				EEA929631ECE024700C8A9B0 /* Overlay.swift */,
 				EEA929641ECE024700C8A9B0 /* TextField.swift */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		EEA9295F1ECE024700C8A9B0 /* BusyView */ = {
-			isa = PBXGroup;
-			children = (
-				EEA929601ECE024700C8A9B0 /* BusyOverlayView.swift */,
-				EEA929611ECE024700C8A9B0 /* BusyOverlayView.xib */,
-			);
-			path = BusyView;
 			sourceTree = "<group>";
 		};
 		EEA929651ECE024700C8A9B0 /* DataSource */ = {
@@ -426,6 +417,7 @@
 		EEA9297D1ECE024700C8A9B0 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */,
 				EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */,
 			);
 			path = UIView;
@@ -566,7 +558,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEA929801ECE024700C8A9B0 /* BusyOverlayView.xib in Resources */,
 				EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */,
 				EE204FA61DF6E05400D855BA /* Assets.xcassets in Resources */,
 				EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */,
@@ -743,7 +734,6 @@
 				EEA9298B1ECE024700C8A9B0 /* UIColor+Ease.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
 				EEA9298F1ECE024700C8A9B0 /* Basic+Random.swift in Sources */,
-				EEA9297F1ECE024700C8A9B0 /* BusyOverlayView.swift in Sources */,
 				EEA929871ECE024700C8A9B0 /* Array+Ease.swift in Sources */,
 				EEA929811ECE024700C8A9B0 /* CustomActivityIndicatorView.swift in Sources */,
 				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
@@ -756,6 +746,7 @@
 				EEA9298C1ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift in Sources */,
 				EEA929841ECE024700C8A9B0 /* ArrayDataSourceController.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
+				EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */,
 				EEA929851ECE024700C8A9B0 /* ArrayTableViewDataSource.swift in Sources */,
 				EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */,
 				EE78012F1ECC59A0008F0724 /* ArtKit.swift in Sources */,
@@ -763,6 +754,7 @@
 				EEA929821ECE024700C8A9B0 /* Overlay.swift in Sources */,
 				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
 				EEA929911ECE024700C8A9B0 /* MKMapView+Random.swift in Sources */,
+				EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */,
 				EEA929901ECE024700C8A9B0 /* CG+Random.swift in Sources */,
 				EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */,
 				EEA9298A1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift in Sources */,

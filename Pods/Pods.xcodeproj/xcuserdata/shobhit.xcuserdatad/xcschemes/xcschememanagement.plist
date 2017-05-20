@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -37,7 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC6A7DAC27479561D6713189DBE655F2</key>
+		<key>CEC48ED3E14E0B356427086BA51ABE46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA3F5934E8E57A0E909BC64540104570</key>
 		<dict>
 			<key>primary</key>
 			<true/>

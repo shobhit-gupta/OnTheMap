@@ -19,7 +19,6 @@ import QuartzCore
     
     var isAnimating = false
     
-    
     @IBInspectable public var hidesWhenStopped: Bool = false
     
     @IBInspectable public var rotateClockwise: Bool = true {
