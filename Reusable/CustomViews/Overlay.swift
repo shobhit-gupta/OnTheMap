@@ -105,7 +105,7 @@ public extension Overlay where Self: UIView {
 }
 
 
-class OverlayView: UIView, Overlay {}
+open class OverlayView: UIView, Overlay {}
 
 
 public extension Default {

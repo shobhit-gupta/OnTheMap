@@ -82,7 +82,7 @@ public extension CustomActivityIndicatorView {
         animationLayer.masksToBounds = true
         configureRotation(forLayer: animationLayer)
         if !isAnimating {
-            stopAnimating()
+            stopAnimation()
         }
     }
     
@@ -130,7 +130,7 @@ public extension CustomActivityIndicatorView {
     }
     
     
-    func startAnimating() {
+    func startAnimation() {
         guard !isAnimating else {
             return
         }
@@ -143,7 +143,7 @@ public extension CustomActivityIndicatorView {
     }
     
     
-    func stopAnimating() {
+    func stopAnimation() {
         if hidesWhenStopped {
             isHidden = true
         }

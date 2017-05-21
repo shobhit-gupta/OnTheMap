@@ -121,16 +121,14 @@ extension InformationPostingViewController {
     
     func dismissAlert(){
         if !busyView.isHidden {
-            busyView.outerIndicator.stopAnimating()
-            busyView.innerIndicator.stopAnimating()
+            busyView.stopAnimation()
             busyView.isHidden = true
         }
     }
     
     
     func presentAlert() {
-        busyView.outerIndicator.startAnimating()
-        busyView.innerIndicator.startAnimating()
+        busyView.startAnimation()
         busyView.isHidden = false
     }
     

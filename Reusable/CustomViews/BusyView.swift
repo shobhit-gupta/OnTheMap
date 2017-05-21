@@ -11,9 +11,9 @@ import PureLayout
 
 
 @IBDesignable
-class BusyView: OverlayView {
+open class BusyView: OverlayView {
     
-    // MARK: Public variables and types
+    // MARK: IBInspectables
     @IBInspectable public var title: String? {
         get { return titleLabel.text }
         set { titleLabel.text = newValue }
@@ -34,16 +34,16 @@ class BusyView: OverlayView {
         set { innerIndicator.image = newValue }
     }
     
-    public let outerIndicator = CustomActivityIndicatorView(frame: CGRect.zero)
-    public let innerIndicator = CustomActivityIndicatorView(frame: CGRect.zero)
-    
     
     // MARK: Private variables and types
     fileprivate let titleLabel = UILabel(frame: CGRect.zero)
     fileprivate let subtitleLabel = UILabel(frame: CGRect.zero)
+    fileprivate let outerIndicator = CustomActivityIndicatorView(frame: CGRect.zero)
+    fileprivate let innerIndicator = CustomActivityIndicatorView(frame: CGRect.zero)
     fileprivate let containerStackView = UIStackView(frame: CGRect.zero)
     
     private var shouldSetupConstraints = true
+    
     
     // MARK: Initializers
     override init(frame: CGRect) {
@@ -52,13 +52,14 @@ class BusyView: OverlayView {
     }
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
     }
 
     
-    override func updateConstraints() {
+    // MARK: UIView Methods
+    override open func updateConstraints() {
         if shouldSetupConstraints {
             containerStackView.autoPinEdge(.left, to: .left, of: self)
             containerStackView.autoPinEdge(.right, to: .right, of: self)
@@ -71,6 +72,9 @@ class BusyView: OverlayView {
 }
 
 
+//******************************************************************************
+//                              MARK: Setup
+//******************************************************************************
 fileprivate extension BusyView {
 
     fileprivate func setupView() {
@@ -153,6 +157,19 @@ fileprivate extension BusyView {
     
 }
 
+
+public extension BusyView {
+    
+    public func startAnimation() {
+        [outerIndicator, innerIndicator].forEach { $0.startAnimation() }
+    }
+    
+    
+    public func stopAnimation() {
+        [outerIndicator, innerIndicator].forEach { $0.stopAnimation() }
+    }
+    
+}
 
 
 
