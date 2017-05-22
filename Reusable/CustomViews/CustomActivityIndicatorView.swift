@@ -19,7 +19,6 @@ import QuartzCore
     
     var isAnimating = false
     
-    
     @IBInspectable public var hidesWhenStopped: Bool = false
     
     @IBInspectable public var rotateClockwise: Bool = true {
@@ -83,7 +82,7 @@ public extension CustomActivityIndicatorView {
         animationLayer.masksToBounds = true
         configureRotation(forLayer: animationLayer)
         if !isAnimating {
-            stopAnimating()
+            stopAnimation()
         }
     }
     
@@ -97,8 +96,8 @@ public extension CustomActivityIndicatorView {
         rotation.isRemovedOnCompletion = false
         rotation.repeatCount = Float.greatestFiniteMagnitude
         rotation.fillMode = kCAFillModeForwards
-        rotation.fromValue = rotateClockwise ? NSNumber(value: Float(0.0)) : NSNumber(value: Float(M_PI * 2.0))
-        rotation.toValue = rotateClockwise ? NSNumber(value: Float(M_PI * 2.0)) : NSNumber(value: Float(0.0))
+        rotation.fromValue = rotateClockwise ? NSNumber(value: Float(0.0)) : NSNumber(value: Float(.pi * 2.0))
+        rotation.toValue = rotateClockwise ? NSNumber(value: Float(.pi * 2.0)) : NSNumber(value: Float(0.0))
         
         layer.add(rotation, forKey: "rotate")
         
@@ -131,7 +130,7 @@ public extension CustomActivityIndicatorView {
     }
     
     
-    func startAnimating() {
+    func startAnimation() {
         guard !isAnimating else {
             return
         }
@@ -144,7 +143,7 @@ public extension CustomActivityIndicatorView {
     }
     
     
-    func stopAnimating() {
+    func stopAnimation() {
         if hidesWhenStopped {
             isHidden = true
         }

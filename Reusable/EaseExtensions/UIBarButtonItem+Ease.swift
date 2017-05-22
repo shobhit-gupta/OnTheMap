@@ -1,5 +1,5 @@
 //
-//  BarButtonItem.swift
+//  UIBarButtonItem+Ease.swift
 //  OnTheMap
 //
 //  Created by Shobhit Gupta on 07/12/16.
@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 enum BarButtonItemKeys {
@@ -41,19 +42,19 @@ extension UIBarButtonItem {
     
     convenience init(barButtonItemData: BarButtonItemData) {
         if let image = barButtonItemData.image {
-        
+            
             self.init(image: image,
                       style: barButtonItemData.style,
                       target: barButtonItemData.target,
                       action: barButtonItemData.action)
-        
+            
         } else {
             
             self.init(title: barButtonItemData.title,
                       style: barButtonItemData.style,
                       target: barButtonItemData.target,
                       action: barButtonItemData.action)
-        
+            
         }
     }
     

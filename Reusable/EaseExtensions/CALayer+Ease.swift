@@ -1,5 +1,5 @@
 //
-//  Convenience - CALayer.swift
+//  CALayer+Ease.swift
 //  OnTheMap
 //
 //  Created by Shobhit Gupta on 14/12/16.

@@ -11,38 +11,46 @@
 		DA2C4040899DBA5D8083DC1D /* Pods_OnTheMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2554569CC9522DA2FB85156 /* Pods_OnTheMapTests.framework */; };
 		EE0CFB821E08F0B000E0120F /* OnTheMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CFB811E08F0B000E0120F /* OnTheMapUITests.swift */; };
 		EE0CFB901E08F0B700E0120F /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CFB8F1E08F0B700E0120F /* OnTheMapTests.swift */; };
-		EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C41DF7C2C700978508 /* Convenience - Color.swift */; };
 		EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C81DF7D28000978508 /* UIStackView+Separator.m */; };
 		EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731CB1DF7EBF000978508 /* ViewConstants.swift */; };
 		EE1731D11DF832B500978508 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731D01DF832B500978508 /* MapViewController.swift */; };
 		EE1731D31DF832CD00978508 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731D21DF832CD00978508 /* ListViewController.swift */; };
 		EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */; };
-		EE1731E11DF874EB00978508 /* Convenience - BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */; };
 		EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */; };
 		EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */; };
 		EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */; };
 		EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */; };
-		EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17322E1DFBC21C00978508 /* Convenience - Array.swift */; };
-		EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */; };
-		EE1732381DFBF93400978508 /* Random - Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1732371DFBF93400978508 /* Random - Basic.swift */; };
-		EE17323E1DFC1B0F00978508 /* Random - CG.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17323D1DFC1B0F00978508 /* Random - CG.swift */; };
 		EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204F9E1DF6E05400D855BA /* AppDelegate.swift */; };
 		EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE204FA01DF6E05400D855BA /* LoginViewController.swift */; };
 		EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA21DF6E05400D855BA /* Main.storyboard */; };
 		EE204FA61DF6E05400D855BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA51DF6E05400D855BA /* Assets.xcassets */; };
 		EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */; };
-		EE209F011DFD7FE100C82F5C /* ArrayTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */; };
 		EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */; };
 		EE78012F1ECC59A0008F0724 /* ArtKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78012E1ECC59A0008F0724 /* ArtKit.swift */; };
-		EE7EEE521E019B4B007522A4 /* Convenience - CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */; };
-		EEB827961E02B21600880D62 /* Convenience - String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB827951E02B21600880D62 /* Convenience - String.swift */; };
-		EEB828181E04105700880D62 /* OrderedViewsRespondToReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */; };
-		EEB8281B1E0412AF00880D62 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8281A1E0412AF00880D62 /* TextField.swift */; };
-		EEC2C4B81E0D4F290025ABFF /* BusyOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC2C4B61E0D4F290025ABFF /* BusyOverlayView.swift */; };
-		EEC2C4B91E0D4F290025ABFF /* BusyOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC2C4B71E0D4F290025ABFF /* BusyOverlayView.xib */; };
-		EECE75B51E0561C300176B36 /* UIView+Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE75B41E0561C300176B36 /* UIView+Fadeable.swift */; };
-		EEDDFDEC1E5EC04400F55E40 /* Random - Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDFDEB1E5EC04400F55E40 /* Random - Objects.swift */; };
-		EEEC91E51E07F1A700884D72 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */; };
+		EEA929811ECE024700C8A9B0 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */; };
+		EEA929821ECE024700C8A9B0 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929631ECE024700C8A9B0 /* Overlay.swift */; };
+		EEA929831ECE024700C8A9B0 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929641ECE024700C8A9B0 /* TextField.swift */; };
+		EEA929841ECE024700C8A9B0 /* ArrayDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929661ECE024700C8A9B0 /* ArrayDataSourceController.swift */; };
+		EEA929851ECE024700C8A9B0 /* ArrayTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929681ECE024700C8A9B0 /* ArrayTableViewDataSource.swift */; };
+		EEA929861ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929691ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift */; };
+		EEA929871ECE024700C8A9B0 /* Array+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9296B1ECE024700C8A9B0 /* Array+Ease.swift */; };
+		EEA929881ECE024700C8A9B0 /* CALayer+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9296C1ECE024700C8A9B0 /* CALayer+Ease.swift */; };
+		EEA929891ECE024700C8A9B0 /* String+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9296D1ECE024700C8A9B0 /* String+Ease.swift */; };
+		EEA9298A1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9296E1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift */; };
+		EEA9298B1ECE024700C8A9B0 /* UIColor+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9296F1ECE024700C8A9B0 /* UIColor+Ease.swift */; };
+		EEA9298C1ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929711ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift */; };
+		EEA9298D1ECE024700C8A9B0 /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929731ECE024700C8A9B0 /* Default.swift */; };
+		EEA9298E1ECE024700C8A9B0 /* Error_.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929741ECE024700C8A9B0 /* Error_.swift */; };
+		EEA9298F1ECE024700C8A9B0 /* Basic+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929761ECE024700C8A9B0 /* Basic+Random.swift */; };
+		EEA929901ECE024700C8A9B0 /* CG+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929771ECE024700C8A9B0 /* CG+Random.swift */; };
+		EEA929911ECE024700C8A9B0 /* MKMapView+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929781ECE024700C8A9B0 /* MKMapView+Random.swift */; };
+		EEA929921ECE024700C8A9B0 /* Default+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297A1ECE024700C8A9B0 /* Default+Random.swift */; };
+		EEA929931ECE024700C8A9B0 /* Error_+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297B1ECE024700C8A9B0 /* Error_+Random.swift */; };
+		EEA929941ECE024700C8A9B0 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */; };
+		EEA929951ECE024700C8A9B0 /* UIView+Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */; };
+		EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F181ECF1335007399A0 /* Default+App.swift */; };
+		EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1A1ECF8446007399A0 /* BusyView.swift */; };
+		EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */; };
 		F669AC35BF432BFAFDD7E3EC /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FBA4B22496CEAE8597EE0 /* Pods_OnTheMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +99,6 @@
 		EE0CFB8D1E08F0B700E0120F /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0CFB8F1E08F0B700E0120F /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
 		EE0CFB911E08F0B700E0120F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE1731C41DF7C2C700978508 /* Convenience - Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - Color.swift"; sourceTree = "<group>"; };
 		EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE1731C71DF7D28000978508 /* UIStackView+Separator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStackView+Separator.h"; sourceTree = "<group>"; };
 		EE1731C81DF7D28000978508 /* UIStackView+Separator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStackView+Separator.m"; sourceTree = "<group>"; };
@@ -99,15 +106,10 @@
 		EE1731D01DF832B500978508 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EE1731D21DF832CD00978508 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItem.swift; sourceTree = "<group>"; };
-		EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - BarButtonItem.swift"; sourceTree = "<group>"; };
 		EE1731E31DF92A4100978508 /* OTMNavigationItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemDelegate.swift; sourceTree = "<group>"; };
 		EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemController.swift; sourceTree = "<group>"; };
 		EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItemControllerProtocol.swift; sourceTree = "<group>"; };
 		EE17322C1DFADA4700978508 /* OTMMapViewAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMMapViewAnnotation.swift; sourceTree = "<group>"; };
-		EE17322E1DFBC21C00978508 /* Convenience - Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - Array.swift"; sourceTree = "<group>"; };
-		EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - MKMapView.swift"; sourceTree = "<group>"; };
-		EE1732371DFBF93400978508 /* Random - Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - Basic.swift"; sourceTree = "<group>"; };
-		EE17323D1DFC1B0F00978508 /* Random - CG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - CG.swift"; sourceTree = "<group>"; };
 		EE204F9B1DF6E05400D855BA /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE204F9E1DF6E05400D855BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE204FA01DF6E05400D855BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -115,18 +117,32 @@
 		EE204FA51DF6E05400D855BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE204FA81DF6E05400D855BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE204FAA1DF6E05400D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewDataSource.swift; sourceTree = "<group>"; };
 		EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
 		EE78012E1ECC59A0008F0724 /* ArtKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtKit.swift; sourceTree = "<group>"; };
-		EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - CALayer.swift"; sourceTree = "<group>"; };
-		EEB827951E02B21600880D62 /* Convenience - String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Convenience - String.swift"; sourceTree = "<group>"; };
-		EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedViewsRespondToReturnKey.swift; sourceTree = "<group>"; };
-		EEB8281A1E0412AF00880D62 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		EEC2C4B61E0D4F290025ABFF /* BusyOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyOverlayView.swift; sourceTree = "<group>"; };
-		EEC2C4B71E0D4F290025ABFF /* BusyOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusyOverlayView.xib; sourceTree = "<group>"; };
-		EECE75B41E0561C300176B36 /* UIView+Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fadeable.swift"; sourceTree = "<group>"; };
-		EEDDFDEB1E5EC04400F55E40 /* Random - Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random - Objects.swift"; sourceTree = "<group>"; };
-		EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
+		EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
+		EEA929631ECE024700C8A9B0 /* Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
+		EEA929641ECE024700C8A9B0 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		EEA929661ECE024700C8A9B0 /* ArrayDataSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSourceController.swift; sourceTree = "<group>"; };
+		EEA929681ECE024700C8A9B0 /* ArrayTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewDataSource.swift; sourceTree = "<group>"; };
+		EEA929691ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableArrayTableViewDataSource.swift; sourceTree = "<group>"; };
+		EEA9296B1ECE024700C8A9B0 /* Array+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ease.swift"; sourceTree = "<group>"; };
+		EEA9296C1ECE024700C8A9B0 /* CALayer+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Ease.swift"; sourceTree = "<group>"; };
+		EEA9296D1ECE024700C8A9B0 /* String+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ease.swift"; sourceTree = "<group>"; };
+		EEA9296E1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Ease.swift"; sourceTree = "<group>"; };
+		EEA9296F1ECE024700C8A9B0 /* UIColor+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ease.swift"; sourceTree = "<group>"; };
+		EEA929711ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedViewsRespondToReturnKey.swift; sourceTree = "<group>"; };
+		EEA929731ECE024700C8A9B0 /* Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
+		EEA929741ECE024700C8A9B0 /* Error_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error_.swift; sourceTree = "<group>"; };
+		EEA929761ECE024700C8A9B0 /* Basic+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Basic+Random.swift"; sourceTree = "<group>"; };
+		EEA929771ECE024700C8A9B0 /* CG+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CG+Random.swift"; sourceTree = "<group>"; };
+		EEA929781ECE024700C8A9B0 /* MKMapView+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Random.swift"; sourceTree = "<group>"; };
+		EEA9297A1ECE024700C8A9B0 /* Default+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+Random.swift"; sourceTree = "<group>"; };
+		EEA9297B1ECE024700C8A9B0 /* Error_+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error_+Random.swift"; sourceTree = "<group>"; };
+		EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fadeable.swift"; sourceTree = "<group>"; };
+		EEE21F181ECF1335007399A0 /* Default+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+App.swift"; sourceTree = "<group>"; };
+		EEE21F1A1ECF8446007399A0 /* BusyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
+		EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
 		FCEC7E8930B36FE978D0949C /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,7 +221,7 @@
 				EE1731C71DF7D28000978508 /* UIStackView+Separator.h */,
 				EE1731C81DF7D28000978508 /* UIStackView+Separator.m */,
 			);
-			name = CVStackViewSeparator;
+			path = CVStackViewSeparator;
 			sourceTree = "<group>";
 		};
 		EE1731CD1DF7EE8800978508 /* Controller */ = {
@@ -249,60 +265,11 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		EE1731DD1DF873F200978508 /* Reusable */ = {
-			isa = PBXGroup;
-			children = (
-				EEB828191E04129500880D62 /* Custom Views */,
-				EEB8280B1E040A1500880D62 /* Protocols & Extensions */,
-				EE1732361DFBE75900978508 /* Utilities */,
-				EE1732321DFBE15B00978508 /* Testing */,
-				EE1731E21DF8777400978508 /* Convenience Extensions */,
-				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
-			);
-			name = Reusable;
-			sourceTree = "<group>";
-		};
-		EE1731E21DF8777400978508 /* Convenience Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EE1731C41DF7C2C700978508 /* Convenience - Color.swift */,
-				EE1731E01DF874EB00978508 /* Convenience - BarButtonItem.swift */,
-				EE17322E1DFBC21C00978508 /* Convenience - Array.swift */,
-				EE7EEE511E019B4B007522A4 /* Convenience - CALayer.swift */,
-				EEB827951E02B21600880D62 /* Convenience - String.swift */,
-			);
-			name = "Convenience Extensions";
-			sourceTree = "<group>";
-		};
-		EE1732321DFBE15B00978508 /* Testing */ = {
-			isa = PBXGroup;
-			children = (
-				EE1732331DFBE4CC00978508 /* Random */,
-			);
-			name = Testing;
-			sourceTree = "<group>";
-		};
-		EE1732331DFBE4CC00978508 /* Random */ = {
-			isa = PBXGroup;
-			children = (
-				EE1732341DFBE4FC00978508 /* Random - MKMapView.swift */,
-			);
-			name = Random;
-			sourceTree = "<group>";
-		};
-		EE1732361DFBE75900978508 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				EE1732371DFBF93400978508 /* Random - Basic.swift */,
-				EE17323D1DFC1B0F00978508 /* Random - CG.swift */,
-				EEDDFDEB1E5EC04400F55E40 /* Random - Objects.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
 		EE204F921DF6E05400D855BA = {
 			isa = PBXGroup;
 			children = (
+				EE7801311ECC5AEC008F0724 /* ThirdParty */,
+				EEA9295D1ECE024700C8A9B0 /* Reusable */,
 				EE204F9D1DF6E05400D855BA /* OnTheMap */,
 				EE0CFB801E08F0B000E0120F /* OnTheMapUITests */,
 				EE0CFB8E1E08F0B700E0120F /* OnTheMapTests */,
@@ -325,12 +292,12 @@
 		EE204F9D1DF6E05400D855BA /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				EE1731DD1DF873F200978508 /* Reusable */,
+				EEE21F181ECF1335007399A0 /* Default+App.swift */,
+				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
 				EE1731CE1DF7EEA000978508 /* Model */,
 				EE1731CF1DF7EEAB00978508 /* View */,
 				EE1731CD1DF7EE8800978508 /* Controller */,
 				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
-				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
 				EE1731CB1DF7EBF000978508 /* ViewConstants.swift */,
 				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
@@ -346,33 +313,114 @@
 			path = ArtKit;
 			sourceTree = "<group>";
 		};
-		EEB8280B1E040A1500880D62 /* Protocols & Extensions */ = {
+		EE7801311ECC5AEC008F0724 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				EE209F001DFD7FE100C82F5C /* ArrayTableViewDataSource.swift */,
-				EEB828171E04105700880D62 /* OrderedViewsRespondToReturnKey.swift */,
-				EECE75B41E0561C300176B36 /* UIView+Fadeable.swift */,
+				EE1731CA1DF7D61000978508 /* CVStackViewSeparator */,
 			);
-			name = "Protocols & Extensions";
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
-		EEB828191E04129500880D62 /* Custom Views */ = {
+		EEA9295D1ECE024700C8A9B0 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				EEC2C4BA1E0D4F4C0025ABFF /* Busy Overlay View */,
-				EEEC91E41E07F1A700884D72 /* CustomActivityIndicatorView.swift */,
-				EEB8281A1E0412AF00880D62 /* TextField.swift */,
+				EEA929721ECE024700C8A9B0 /* MustImport */,
+				EEA9295E1ECE024700C8A9B0 /* CustomViews */,
+				EEA929651ECE024700C8A9B0 /* DataSource */,
+				EEA9296A1ECE024700C8A9B0 /* EaseExtensions */,
+				EEA929701ECE024700C8A9B0 /* Keyboard */,
+				EEA929751ECE024700C8A9B0 /* Random */,
+				EEA9297D1ECE024700C8A9B0 /* UIView */,
 			);
-			name = "Custom Views";
+			path = Reusable;
 			sourceTree = "<group>";
 		};
-		EEC2C4BA1E0D4F4C0025ABFF /* Busy Overlay View */ = {
+		EEA9295E1ECE024700C8A9B0 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				EEC2C4B61E0D4F290025ABFF /* BusyOverlayView.swift */,
-				EEC2C4B71E0D4F290025ABFF /* BusyOverlayView.xib */,
+				EEE21F1A1ECF8446007399A0 /* BusyView.swift */,
+				EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */,
+				EEA929631ECE024700C8A9B0 /* Overlay.swift */,
+				EEA929641ECE024700C8A9B0 /* TextField.swift */,
 			);
-			name = "Busy Overlay View";
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EEA929651ECE024700C8A9B0 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EEA929661ECE024700C8A9B0 /* ArrayDataSourceController.swift */,
+				EEA929671ECE024700C8A9B0 /* UITableView */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EEA929671ECE024700C8A9B0 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				EEA929681ECE024700C8A9B0 /* ArrayTableViewDataSource.swift */,
+				EEA929691ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		EEA9296A1ECE024700C8A9B0 /* EaseExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				EEA9296B1ECE024700C8A9B0 /* Array+Ease.swift */,
+				EEA9296C1ECE024700C8A9B0 /* CALayer+Ease.swift */,
+				EEA9296D1ECE024700C8A9B0 /* String+Ease.swift */,
+				EEA9296E1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift */,
+				EEA9296F1ECE024700C8A9B0 /* UIColor+Ease.swift */,
+			);
+			path = EaseExtensions;
+			sourceTree = "<group>";
+		};
+		EEA929701ECE024700C8A9B0 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EEA929711ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		EEA929721ECE024700C8A9B0 /* MustImport */ = {
+			isa = PBXGroup;
+			children = (
+				EEA929731ECE024700C8A9B0 /* Default.swift */,
+				EEA929741ECE024700C8A9B0 /* Error_.swift */,
+			);
+			path = MustImport;
+			sourceTree = "<group>";
+		};
+		EEA929751ECE024700C8A9B0 /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				EEA929761ECE024700C8A9B0 /* Basic+Random.swift */,
+				EEA929771ECE024700C8A9B0 /* CG+Random.swift */,
+				EEA929781ECE024700C8A9B0 /* MKMapView+Random.swift */,
+				EEA929791ECE024700C8A9B0 /* MustImport */,
+				EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */,
+			);
+			path = Random;
+			sourceTree = "<group>";
+		};
+		EEA929791ECE024700C8A9B0 /* MustImport */ = {
+			isa = PBXGroup;
+			children = (
+				EEA9297A1ECE024700C8A9B0 /* Default+Random.swift */,
+				EEA9297B1ECE024700C8A9B0 /* Error_+Random.swift */,
+			);
+			path = MustImport;
+			sourceTree = "<group>";
+		};
+		EEA9297D1ECE024700C8A9B0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */,
+				EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,7 +558,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC2C4B91E0D4F290025ABFF /* BusyOverlayView.xib in Resources */,
 				EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */,
 				EE204FA61DF6E05400D855BA /* Assets.xcassets in Resources */,
 				EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */,
@@ -678,33 +725,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA9298D1ECE024700C8A9B0 /* Default.swift in Sources */,
+				EEA9298E1ECE024700C8A9B0 /* Error_.swift in Sources */,
+				EEA929921ECE024700C8A9B0 /* Default+Random.swift in Sources */,
+				EEA929931ECE024700C8A9B0 /* Error_+Random.swift in Sources */,
+				EEA929891ECE024700C8A9B0 /* String+Ease.swift in Sources */,
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
-				EE1732351DFBE4FC00978508 /* Random - MKMapView.swift in Sources */,
-				EEB8281B1E0412AF00880D62 /* TextField.swift in Sources */,
+				EEA9298B1ECE024700C8A9B0 /* UIColor+Ease.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
-				EEB828181E04105700880D62 /* OrderedViewsRespondToReturnKey.swift in Sources */,
-				EECE75B51E0561C300176B36 /* UIView+Fadeable.swift in Sources */,
+				EEA9298F1ECE024700C8A9B0 /* Basic+Random.swift in Sources */,
+				EEA929871ECE024700C8A9B0 /* Array+Ease.swift in Sources */,
+				EEA929811ECE024700C8A9B0 /* CustomActivityIndicatorView.swift in Sources */,
 				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
+				EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
-				EE17322F1DFBC21C00978508 /* Convenience - Array.swift in Sources */,
-				EE1731E11DF874EB00978508 /* Convenience - BarButtonItem.swift in Sources */,
-				EEC2C4B81E0D4F290025ABFF /* BusyOverlayView.swift in Sources */,
+				EEA929831ECE024700C8A9B0 /* TextField.swift in Sources */,
+				EEA929861ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift in Sources */,
+				EEA929881ECE024700C8A9B0 /* CALayer+Ease.swift in Sources */,
 				EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */,
+				EEA9298C1ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift in Sources */,
+				EEA929841ECE024700C8A9B0 /* ArrayDataSourceController.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
+				EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */,
+				EEA929851ECE024700C8A9B0 /* ArrayTableViewDataSource.swift in Sources */,
 				EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */,
 				EE78012F1ECC59A0008F0724 /* ArtKit.swift in Sources */,
-				EEDDFDEC1E5EC04400F55E40 /* Random - Objects.swift in Sources */,
-				EEB827961E02B21600880D62 /* Convenience - String.swift in Sources */,
-				EE1732381DFBF93400978508 /* Random - Basic.swift in Sources */,
+				EEA929941ECE024700C8A9B0 /* UIColor+Random.swift in Sources */,
+				EEA929821ECE024700C8A9B0 /* Overlay.swift in Sources */,
 				EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */,
+				EEA929911ECE024700C8A9B0 /* MKMapView+Random.swift in Sources */,
+				EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */,
+				EEA929901ECE024700C8A9B0 /* CG+Random.swift in Sources */,
 				EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */,
-				EE7EEE521E019B4B007522A4 /* Convenience - CALayer.swift in Sources */,
-				EEEC91E51E07F1A700884D72 /* CustomActivityIndicatorView.swift in Sources */,
-				EE17323E1DFC1B0F00978508 /* Random - CG.swift in Sources */,
-				EE1731C51DF7C2C700978508 /* Convenience - Color.swift in Sources */,
+				EEA9298A1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift in Sources */,
 				EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */,
+				EEA929951ECE024700C8A9B0 /* UIView+Fadeable.swift in Sources */,
 				EE204F9F1DF6E05400D855BA /* AppDelegate.swift in Sources */,
-				EE209F011DFD7FE100C82F5C /* ArrayTableViewDataSource.swift in Sources */,
 				EE1731D31DF832CD00978508 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

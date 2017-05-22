@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -227,7 +227,7 @@
                         <outlet property="emailTextField" destination="Xgp-oh-FOC" id="1Ey-Tk-dPT"/>
                         <outlet property="passwordTextField" destination="Aho-q7-S7x" id="aQq-sy-lB7"/>
                         <outlet property="rootStackView" destination="jbQ-Yy-oDT" id="kb1-eL-6fP"/>
-                        <segue destination="CY7-ab-Dbm" kind="show" identifier="ShowMapTableTabbedView" animates="NO" id="lBb-RO-EGk"/>
+                        <segue destination="CY7-ab-Dbm" kind="show" identifier="fromLoginToTabbedView" animates="NO" id="lBb-RO-EGk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -314,11 +314,11 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8p-zd-v2l" id="ZRv-oe-0s0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QcX-8g-lgV">
-                                            <rect key="frame" x="54" y="0.0" width="251" height="43"/>
+                                            <rect key="frame" x="54" y="0.0" width="251" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -490,29 +490,35 @@ today?</string>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDW-Vr-6kr" customClass="BusyOverlayView" customModule="OnTheMap" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkK-CH-OTR" customClass="BusyView" customModule="OnTheMap" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="outerIndicatorImage" value="LoadingIcon"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="innerIndicatorImage" value="PinIcon"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Please Wait"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="Looking up on map..."/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="BDW-Vr-6kr" firstAttribute="width" secondItem="UV2-I2-LAh" secondAttribute="width" id="0jP-3R-yhS"/>
                             <constraint firstItem="UPi-Lv-gv4" firstAttribute="centerY" secondItem="UV2-I2-LAh" secondAttribute="centerY" id="2cv-pk-IJQ"/>
-                            <constraint firstItem="BDW-Vr-6kr" firstAttribute="centerX" secondItem="UV2-I2-LAh" secondAttribute="centerX" id="4Hz-NK-NaH"/>
                             <constraint firstItem="kqf-ZU-nS7" firstAttribute="width" secondItem="UV2-I2-LAh" secondAttribute="width" id="74W-ax-Us7"/>
-                            <constraint firstItem="BDW-Vr-6kr" firstAttribute="centerY" secondItem="UV2-I2-LAh" secondAttribute="centerY" id="7r8-iG-jjw"/>
                             <constraint firstItem="6fj-Wt-IFD" firstAttribute="top" secondItem="kqf-ZU-nS7" secondAttribute="bottom" constant="32" id="FxF-A7-Izx"/>
                             <constraint firstItem="UPi-Lv-gv4" firstAttribute="width" secondItem="UV2-I2-LAh" secondAttribute="width" id="Gbq-t8-2TF"/>
                             <constraint firstAttribute="trailing" secondItem="tRj-AV-aEs" secondAttribute="trailing" id="LW4-VB-lNC"/>
                             <constraint firstItem="tRj-AV-aEs" firstAttribute="top" secondItem="DUa-83-0gB" secondAttribute="bottom" constant="32" id="TfC-Cb-Rx5"/>
-                            <constraint firstItem="BDW-Vr-6kr" firstAttribute="height" secondItem="UV2-I2-LAh" secondAttribute="height" id="ds9-SZ-lFU"/>
+                            <constraint firstItem="lkK-CH-OTR" firstAttribute="height" secondItem="UV2-I2-LAh" secondAttribute="height" id="a3z-rx-b4f"/>
+                            <constraint firstItem="lkK-CH-OTR" firstAttribute="centerX" secondItem="UV2-I2-LAh" secondAttribute="centerX" id="aaI-9n-f83"/>
                             <constraint firstItem="zCx-ZL-S9l" firstAttribute="top" secondItem="DUa-83-0gB" secondAttribute="bottom" id="eGb-YU-mXY"/>
                             <constraint firstItem="kqf-ZU-nS7" firstAttribute="leading" secondItem="UV2-I2-LAh" secondAttribute="leadingMargin" constant="-16" id="gAo-wL-nGa"/>
                             <constraint firstItem="58k-ce-JPQ" firstAttribute="height" secondItem="UV2-I2-LAh" secondAttribute="height" multiplier="0.2" id="gOU-00-vnl"/>
+                            <constraint firstItem="lkK-CH-OTR" firstAttribute="width" secondItem="UV2-I2-LAh" secondAttribute="width" id="kEI-pa-OJ6"/>
                             <constraint firstItem="zCx-ZL-S9l" firstAttribute="leading" secondItem="UV2-I2-LAh" secondAttribute="leadingMargin" constant="-16" id="kJE-Ly-ExI"/>
                             <constraint firstItem="zCx-ZL-S9l" firstAttribute="width" secondItem="UV2-I2-LAh" secondAttribute="width" id="ndQ-bd-f5E"/>
                             <constraint firstItem="UPi-Lv-gv4" firstAttribute="centerX" secondItem="UV2-I2-LAh" secondAttribute="centerX" id="qod-at-EoU"/>
+                            <constraint firstItem="lkK-CH-OTR" firstAttribute="centerY" secondItem="UV2-I2-LAh" secondAttribute="centerY" id="rT5-ae-gn4"/>
                             <constraint firstItem="6fj-Wt-IFD" firstAttribute="top" secondItem="tRj-AV-aEs" secondAttribute="bottom" constant="32" id="sQc-5N-OWl"/>
                             <constraint firstItem="tRj-AV-aEs" firstAttribute="leading" secondItem="UV2-I2-LAh" secondAttribute="leading" id="vPF-uJ-p4l"/>
                         </constraints>
@@ -531,7 +537,7 @@ today?</string>
                         <outlet property="addLinkStackView" destination="UPi-Lv-gv4" id="OKA-Co-TEX"/>
                         <outlet property="addLocationStackView" destination="tRj-AV-aEs" id="AOO-G3-PTm"/>
                         <outlet property="addressTextField" destination="Kxx-bb-1ne" id="RsT-Xb-nXi"/>
-                        <outlet property="busyOverlayView" destination="BDW-Vr-6kr" id="6Ig-fo-axh"/>
+                        <outlet property="busyView" destination="lkK-CH-OTR" id="8DU-ez-rWk"/>
                         <outlet property="cancelButton" destination="jSD-n9-0NS" id="Sxi-vZ-2eS"/>
                         <outlet property="mapView" destination="q59-LG-9Mv" id="TN8-GF-chk"/>
                         <outlet property="overlaySubmitStackView" destination="kqf-ZU-nS7" id="oH5-oi-nRl"/>
@@ -563,6 +569,7 @@ today?</string>
     <resources>
         <image name="ListViewDeselectedIcon" width="75" height="50"/>
         <image name="ListViewSelectedIcon" width="75" height="50"/>
+        <image name="LoadingIcon" width="46" height="46"/>
         <image name="MapViewDeslectedIcon" width="75" height="50"/>
         <image name="MapViewSelectedIcon" width="75" height="50"/>
         <image name="PinIcon" width="24" height="24"/>

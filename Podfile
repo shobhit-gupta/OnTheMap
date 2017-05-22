@@ -7,6 +7,7 @@ target 'OnTheMap' do
 
     # Pods for OnTheMap
     pod 'IQKeyboardManagerSwift'
+    pod 'PureLayout'
 
     target 'OnTheMapTests' do
         inherit! :search_paths

@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         // 3. If not, present alert view specifying whether it was
         //      3.1. a failed network connection
         //      3.2. an incoorect email or password
-        performSegue(withIdentifier: "ShowMapTableTabbedView", sender: nil)
+        performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
     }
     
     
@@ -50,13 +50,13 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     func beautifyView() {
-        rootStackView.separatorColor = ViewConstants.StackView.Separator.color
-        rootStackView.separatorThickness = ViewConstants.StackView.Separator.thickness
+        rootStackView.separatorColor = Default.StackView.Separator.Color
+        rootStackView.separatorThickness = Default.StackView.Separator.Thickness
     }
     
     
     override func viewDidLayoutSubviews() {
-        rootStackView.separatorLength = (rootStackView.axis == .vertical ? rootStackView.frame.width : rootStackView.frame.height) - 40
+        rootStackView.separatorLength = (rootStackView.axis == .vertical ? rootStackView.frame.width : rootStackView.frame.height) - (2 * Default.StackView.Separator.Padding)
     }
     
 }

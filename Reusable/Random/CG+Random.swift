@@ -1,5 +1,5 @@
 //
-//  Random - CG.swift
+//  CG+Random.swift
 //  OnTheMap
 //
 //  Created by Shobhit Gupta on 10/12/16.
@@ -51,7 +51,7 @@ public extension CGPoint {
     
     public static func random(withinRadius radius: CGFloat, ofPoint midPoint:CGPoint) -> CGPoint {
         let r = CGFloat.random(lower: 0.0, upper: radius)
-        let a = CGFloat.random(lower: 0.0, upper: CGFloat(M_PI * 2))
+        let a = CGFloat.random(lower: 0.0, upper: CGFloat(Double.pi * 2))
         let x = midPoint.x + r * cos(a)
         let y = midPoint.y + r * sin(a)
         return CGPoint(x: x,y: y)

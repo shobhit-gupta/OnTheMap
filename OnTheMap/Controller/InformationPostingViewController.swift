@@ -27,7 +27,7 @@ class InformationPostingViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var busyOverlayView: BusyOverlayView!
+    @IBOutlet weak var busyView: BusyView!
     
     
     var currentState: InformationPostingState = .addLocation {
@@ -114,27 +114,22 @@ extension InformationPostingViewController {
         
     }
     
-    
 }
 
 
 extension InformationPostingViewController {
     
     func dismissAlert(){
-        if !busyOverlayView.isHidden {
-            busyOverlayView.loadingIndicator.stopAnimating()
-            busyOverlayView.pinIndicator.stopAnimating()
-            busyOverlayView.isHidden = true
+        if !busyView.isHidden {
+            busyView.stopAnimation()
+            busyView.isHidden = true
         }
     }
     
     
     func presentAlert() {
-        busyOverlayView.title.text = "Please Wait"
-        busyOverlayView.subtitle.text = "Looking up on map..."
-        busyOverlayView.loadingIndicator.startAnimating()
-        busyOverlayView.pinIndicator.startAnimating()
-        busyOverlayView.isHidden = false
+        busyView.startAnimation()
+        busyView.isHidden = false
     }
     
 }

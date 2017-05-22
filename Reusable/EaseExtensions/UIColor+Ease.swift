@@ -1,5 +1,5 @@
 //
-//  Color.swift
+//  UIColor+Ease.swift
 //  OnTheMap
 //
 //  Created by Shobhit Gupta on 07/12/16.

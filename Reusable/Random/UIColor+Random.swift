@@ -1,5 +1,5 @@
 //
-//  Random - Objects.swift
+//  UIColor+Random.swift
 //  OnTheMap
 //
 //  Created by Shobhit Gupta on 23/02/17.
