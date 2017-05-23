@@ -10,18 +10,16 @@ import Foundation
 import UIKit
 
 
-public class Network: NSObject {}
+public class Network: NSObject {
 
-
-//******************************************************************************
-//                              MARK: Get
-//******************************************************************************
-public extension Network {
-    
-    public class func asyncGetData(from url: URL,
-                             completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+    public class func asyncDataTask(with urlRequest: URLRequest,
+                                   completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        guard let url = urlRequest.url else {
+            completion(nil, Error_.Network.Request.NoURLFound(in: urlRequest))
+            return
+        }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             
             // Was there an error?
             guard error == nil else {
@@ -32,13 +30,13 @@ public extension Network {
             // Did we get a successful 2XX response?
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
                 case 200...299 = statusCode else {
-                    completion(nil, Error_.Network.Get.UnsuccessfulStatusCode(url: url))
+                    completion(nil, Error_.Network.Response.UnsuccessfulStatusCode(url: url))
                     return
             }
             
             // Was there any data returned?
             guard let _ = data else {
-                completion(nil, Error_.Network.Get.NoData(url: url))
+                completion(nil, Error_.Network.Response.NoData(url: url))
                 return
             }
             
@@ -46,12 +44,20 @@ public extension Network {
         
     }
     
+}
+
+
+//******************************************************************************
+//                              MARK: Get
+//******************************************************************************
+public extension Network {
     
-//    public class func asyncGetData(from url: URL,
-//                                   completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-//        let request = URLRequest(url: url)
-//        URLSession.shared.dataTask(with: request, completionHandler: completion).resume()
-//    }
+    public class func asyncGetData(from url: URL,
+                             completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        
+        return asyncDataTask(with: URLRequest(url: url), completion: completion)
+        
+    }
     
     
     public class func asyncGetImage(from url: URL,
@@ -66,7 +72,7 @@ public extension Network {
                 if let image = UIImage(data: data) {
                     completion(image, nil)
                 } else {
-                    completion(nil, Error_.Network.Get.NotAnImage(url: url))
+                    completion(nil, Error_.Network.Response.NotAnImage(url: url))
                 }
             }
         }
@@ -87,7 +93,7 @@ public extension Network {
                    parsedResult is [String : Any] || parsedResult is [Any] {
                     completion(parsedResult, nil)
                 } else {
-                    completion(nil, Error_.Network.Get.InvalidJSON(url: url, data: data))
+                    completion(nil, Error_.Network.Response.InvalidJSON(url: url, data: data))
                     return
                 }
             }
@@ -106,7 +112,7 @@ public extension Default.Network {
 
 
 public extension Error_.Network {
-    enum Get: Error {
+    enum Response: Error {
         case NoData(url: URL)
         case UnsuccessfulStatusCode(url: URL)
         case NotAnImage(url: URL)
@@ -136,4 +142,27 @@ public extension Error_.Network {
         }
         
     }
+    
+    
+    enum Request: Error {
+        case NoURLFound(in: URLRequest)
+        case ToJSONConversionFailed(from: Any)
+        
+        var localizedDescription: String {
+            var description = String(describing: self)
+            switch self {
+                
+            case .NoURLFound(let urlRequest):
+                description += "No url found in URLRequest: \(urlRequest)"
+                
+            case .ToJSONConversionFailed(let json):
+                description += "Failed to convert to JSON: \(json)"
+            
+            }
+            
+            return description
+        }
+        
+    }
+        
 }
