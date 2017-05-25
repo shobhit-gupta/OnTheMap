@@ -11,9 +11,9 @@ import UIKit
 
 
 public class Network: NSObject {
-
-    public class func asyncDataTask(with urlRequest: URLRequest,
-                                   completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+    
+    public class func dataTask(with urlRequest: URLRequest,
+                                    completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         guard let url = urlRequest.url else {
             completion(nil, Error_.Network.Request.NoURLFound(in: urlRequest))
             return
@@ -35,12 +35,14 @@ public class Network: NSObject {
             }
             
             // Was there any data returned?
-            guard let _ = data else {
+            guard let data = data else {
                 completion(nil, Error_.Network.Response.NoData(url: url))
                 return
             }
             
-        }.resume()
+            completion(data, nil)
+            
+            }.resume()
         
     }
     
@@ -52,56 +54,114 @@ public class Network: NSObject {
 //******************************************************************************
 public extension Network {
     
-    public class func asyncGetData(from url: URL,
-                             completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+    public class func getData(from url: URL,
+                                   completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         
-        return asyncDataTask(with: URLRequest(url: url), completion: completion)
+        return dataTask(with: URLRequest(url: url), completion: completion)
         
     }
     
     
-    public class func asyncGetImage(from url: URL,
-                              completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
-        asyncGetData(from: url) { (data, error) in
+    public class func getImage(from url: URL,
+                                    completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
+        getData(from: url) { (data, error) in
             guard let data = data, error == nil else {
                 completion(nil, error)
                 return
             }
             
-            DispatchQueue.main.async {
-                if let image = UIImage(data: data) {
-                    completion(image, nil)
-                } else {
-                    completion(nil, Error_.Network.Response.NotAnImage(url: url))
-                }
+            if let image = UIImage(data: data) {
+                completion(image, nil)
+            } else {
+                completion(nil, Error_.Network.Response.NotAnImage(url: url))
             }
         }
     }
     
     
-    public class func asyncGetJSON(from url: URL,
+    public class func getJSON(from url: URL,
                                    options opt: JSONSerialization.ReadingOptions = [],
                                    completion: @escaping (_ json: Any?, _ error: Error?) -> Void) {
-        asyncGetData(from: url) { (data, error) in
+        getData(from: url) { (data, error) in
             guard let data = data, error == nil else {
                 completion(nil, error)
                 return
             }
             
-            DispatchQueue.main.async {
-                if let parsedResult = try? JSONSerialization.jsonObject(with: data, options: opt),
-                   parsedResult is [String : Any] || parsedResult is [Any] {
-                    completion(parsedResult, nil)
-                } else {
-                    completion(nil, Error_.Network.Response.InvalidJSON(url: url, data: data))
-                    return
-                }
+            if let parsedResult = try? JSONSerialization.jsonObject(with: data, options: opt),
+                parsedResult is [String : Any] || parsedResult is [Any] {
+                completion(parsedResult, nil)
+            } else {
+                completion(nil, Error_.Network.Response.InvalidJSON(url: url, data: data))
+                return
             }
+            
         }
     }
     
     
 }
+
+
+//******************************************************************************
+//                              MARK: Post
+//******************************************************************************
+public extension Network {
+    
+    private class func postJSON(_ json: Data,
+                                     to url: URL,
+                                     acceptResponseType acceptHeader: String = "application/json",
+                                     completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        var urlRequest = URLRequest(url: url)
+        
+        // Configure header
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue(acceptHeader, forHTTPHeaderField: "Accept")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // Body
+        urlRequest.httpBody = json
+        
+        // Perform POST
+        dataTask(with: urlRequest, completion: completion)
+        
+    }
+    
+    
+    public class func postJSONString(_ json: String,
+                                          to url: URL,
+                                          completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        guard let postData = json.data(using: .utf8) else {
+            completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
+            return
+        }
+        return postJSON(postData, to: url, completion: completion)
+    }
+    
+    
+    public class func postJSONArray(_ json: [Any],
+                                         to url: URL,
+                                         completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        guard let postData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) else {
+            completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
+            return
+        }
+        return postJSON(postData, to: url, completion: completion)
+    }
+    
+    
+    public class func postJSONDict(_ json: [String : Any],
+                                        to url: URL,
+                                        completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        guard let postData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) else {
+            completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
+            return
+        }
+        return postJSON(postData, to: url, completion: completion)
+    }
+    
+}
+
 
 
 public extension Default.Network {
@@ -157,12 +217,12 @@ public extension Error_.Network {
                 
             case .ToJSONConversionFailed(let json):
                 description += "Failed to convert to JSON: \(json)"
-            
+                
             }
             
             return description
         }
         
     }
-        
+    
 }
