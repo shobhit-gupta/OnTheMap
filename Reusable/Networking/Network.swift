@@ -13,7 +13,7 @@ import UIKit
 public class Network: NSObject {
     
     public class func dataTask(with urlRequest: URLRequest,
-                                    completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+                               completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         guard let url = urlRequest.url else {
             completion(nil, Error_.Network.Request.NoURLFound(in: urlRequest))
             return
@@ -55,16 +55,16 @@ public class Network: NSObject {
 public extension Network {
     
     public class func getData(from url: URL,
-                                   completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
-        
-        return dataTask(with: URLRequest(url: url), completion: completion)
-        
+                              headerParams: [String : Any] = Default.Network.HeaderParams,
+                              completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        return dataTask(with: URLRequest(url: url, headerParams: headerParams), completion: completion)
     }
     
     
     public class func getImage(from url: URL,
-                                    completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
-        getData(from: url) { (data, error) in
+                               headerParams: [String : Any] = [:],
+                               completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
+        getData(from: url, headerParams: headerParams) { (data, error) in
             guard let data = data, error == nil else {
                 completion(nil, error)
                 return
@@ -80,9 +80,10 @@ public extension Network {
     
     
     public class func getJSON(from url: URL,
-                                   options opt: JSONSerialization.ReadingOptions = [],
-                                   completion: @escaping (_ json: Any?, _ error: Error?) -> Void) {
-        getData(from: url) { (data, error) in
+                              headerParams: [String : Any] = Default.Network.HeaderParams,
+                              options opt: JSONSerialization.ReadingOptions = [],
+                              completion: @escaping (_ json: Any?, _ error: Error?) -> Void) {
+        getData(from: url, headerParams: headerParams) { (data, error) in
             guard let data = data, error == nil else {
                 completion(nil, error)
                 return
@@ -109,15 +110,16 @@ public extension Network {
 public extension Network {
     
     private class func postJSON(_ json: Data,
-                                     to url: URL,
-                                     acceptResponseType acceptHeader: String = "application/json",
-                                     completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
-        var urlRequest = URLRequest(url: url)
+                                to url: URL,
+                                headerParams: [String : Any] = Default.Network.HeaderParams,
+                                completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        var urlRequest = URLRequest(url: url, headerParams: headerParams)
         
         // Configure header
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue(acceptHeader, forHTTPHeaderField: "Accept")
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
         
         // Body
         urlRequest.httpBody = json
@@ -129,35 +131,38 @@ public extension Network {
     
     
     public class func postJSONString(_ json: String,
-                                          to url: URL,
-                                          completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+                                     to url: URL,
+                                     headerParams: [String : Any] = Default.Network.HeaderParams,
+                                     completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         guard let postData = json.data(using: .utf8) else {
             completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
             return
         }
-        return postJSON(postData, to: url, completion: completion)
+        return postJSON(postData, to: url, headerParams: headerParams, completion: completion)
     }
     
     
     public class func postJSONArray(_ json: [Any],
-                                         to url: URL,
-                                         completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+                                    to url: URL,
+                                    headerParams: [String : Any] = Default.Network.HeaderParams,
+                                    completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         guard let postData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) else {
             completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
             return
         }
-        return postJSON(postData, to: url, completion: completion)
+        return postJSON(postData, to: url, headerParams: headerParams, completion: completion)
     }
     
     
     public class func postJSONDict(_ json: [String : Any],
-                                        to url: URL,
-                                        completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+                                   to url: URL,
+                                   headerParams: [String : Any] = Default.Network.HeaderParams,
+                                   completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         guard let postData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) else {
             completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
             return
         }
-        return postJSON(postData, to: url, completion: completion)
+        return postJSON(postData, to: url, headerParams: headerParams, completion: completion)
     }
     
 }
@@ -165,7 +170,7 @@ public extension Network {
 
 
 public extension Default.Network {
-    
+    static let HeaderParams: [String : Any] = [:]
 }
 
 
@@ -173,29 +178,30 @@ public extension Default.Network {
 
 public extension Error_.Network {
     enum Response: Error {
-        case NoData(url: URL)
-        case UnsuccessfulStatusCode(url: URL)
-        case NotAnImage(url: URL)
         case InvalidJSON(url: URL, data: Data?)
+        case NoData(url: URL)
+        case NotAnImage(url: URL)
+        case UnsuccessfulStatusCode(url: URL)
         
         var localizedDescription: String {
             var description = String(describing: self)
             switch self {
-                
-            case .NoData(let url):
-                description += "No data was returned by: \(url)"
-                
-            case .UnsuccessfulStatusCode(let url):
-                description += "Other than 2xx status code returned by: \(url)"
-                
-            case .NotAnImage(let url):
-                description += "Can't construct an image from the data returned by: \(url)"
                 
             case let .InvalidJSON(url, data):
                 description += "Can't construct JSON from the data returned by: \(url)"
                 if let data = data {
                     description += "\nData Returned: \(data)"
                 }
+
+            case .NoData(let url):
+                description += "No data was returned by: \(url)"
+                
+            case .NotAnImage(let url):
+                description += "Can't construct an image from the data returned by: \(url)"
+                
+            case .UnsuccessfulStatusCode(let url):
+                description += "Other than 2xx status code returned by: \(url)"
+                
             }
             
             return description
