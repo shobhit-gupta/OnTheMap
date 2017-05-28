@@ -52,7 +52,7 @@
 		EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F181ECF1335007399A0 /* Default+App.swift */; };
 		EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1A1ECF8446007399A0 /* BusyView.swift */; };
 		EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */; };
-		EEEF86FE1ED4B87F004BB0D9 /* UdacityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FD1ED4B87F004BB0D9 /* UdacityAPI.swift */; };
+		EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */; };
 		EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */; };
 		EEF4DA441ED2AB0700DE0988 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4DA431ED2AB0700DE0988 /* Network.swift */; };
 		F669AC35BF432BFAFDD7E3EC /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FBA4B22496CEAE8597EE0 /* Pods_OnTheMap.framework */; };
@@ -148,7 +148,7 @@
 		EEE21F181ECF1335007399A0 /* Default+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+App.swift"; sourceTree = "<group>"; };
 		EEE21F1A1ECF8446007399A0 /* BusyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
 		EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
-		EEEF86FD1ED4B87F004BB0D9 /* UdacityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityAPI.swift; sourceTree = "<group>"; };
+		EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Udacity.swift; sourceTree = "<group>"; };
 		EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ease.swift"; sourceTree = "<group>"; };
 		EEF4DA431ED2AB0700DE0988 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		FCEC7E8930B36FE978D0949C /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -332,8 +332,8 @@
 		EEA9295D1ECE024700C8A9B0 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				EEEF86F81ED4B7AF004BB0D9 /* API */,
 				EEA929721ECE024700C8A9B0 /* MustImport */,
+				EEEF86F81ED4B7AF004BB0D9 /* API */,
 				EEA9295E1ECE024700C8A9B0 /* CustomViews */,
 				EEA929651ECE024700C8A9B0 /* DataSource */,
 				EEA9296A1ECE024700C8A9B0 /* EaseExtensions */,
@@ -446,7 +446,7 @@
 		EEEF86FA1ED4B800004BB0D9 /* Udacity */ = {
 			isa = PBXGroup;
 			children = (
-				EEEF86FD1ED4B87F004BB0D9 /* UdacityAPI.swift */,
+				EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */,
 			);
 			path = Udacity;
 			sourceTree = "<group>";
@@ -767,7 +767,7 @@
 				EEA929931ECE024700C8A9B0 /* Error_+Random.swift in Sources */,
 				EEA929891ECE024700C8A9B0 /* String+Ease.swift in Sources */,
 				EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */,
-				EEEF86FE1ED4B87F004BB0D9 /* UdacityAPI.swift in Sources */,
+				EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */,
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
 				EEF4DA441ED2AB0700DE0988 /* Network.swift in Sources */,
 				EEA9298B1ECE024700C8A9B0 /* UIColor+Ease.swift in Sources */,
