@@ -13,6 +13,7 @@ import UIKit
 public class Network: NSObject {
     
     public class func dataTask(with urlRequest: URLRequest,
+                               acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                                completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         guard let url = urlRequest.url else {
             completion(nil, Error_.Network.Request.NoURLFound(in: urlRequest))
@@ -27,10 +28,11 @@ public class Network: NSObject {
                 return
             }
             
-            // Did we get a successful 2XX response?
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
-                case 200...299 = statusCode else {
-                    completion(nil, Error_.Network.Response.UnsuccessfulStatusCode(url: url))
+            // Did we get an acceptable response?
+            let statusCodeOptional = (response as? HTTPURLResponse)?.statusCode
+            guard let statusCode = statusCodeOptional,
+                acceptedStatusCodes.contains(where: { $0.overlaps(statusCode...statusCode) }) else {
+                    completion(nil, Error_.Network.Response.UnacceptableStatusCode(statusCodeOptional, acceptedStatusCodes: acceptedStatusCodes, url: url))
                     return
             }
             
@@ -54,17 +56,27 @@ public class Network: NSObject {
 //******************************************************************************
 public extension Network {
     
+    
     public class func getData(from url: URL,
-                              headerParams: [String : Any] = Default.Network.HeaderParams,
+                              headerParams: [String : Any] = Default.URL_.HeaderParams,
+                              acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                               completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
-        return dataTask(with: URLRequest(url: url, headerParams: headerParams), completion: completion)
+        
+        return dataTask(with: URLRequest(url: url, headerParams: headerParams),
+                        acceptedStatusCodes: acceptedStatusCodes,
+                        completion: completion)
     }
+    
     
     
     public class func getImage(from url: URL,
                                headerParams: [String : Any] = [:],
+                               acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                                completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
-        getData(from: url, headerParams: headerParams) { (data, error) in
+        getData(from: url,
+                headerParams: headerParams,
+                acceptedStatusCodes: acceptedStatusCodes) { (data, error) in
+            
             guard let data = data, error == nil else {
                 completion(nil, error)
                 return
@@ -79,11 +91,19 @@ public extension Network {
     }
     
     
+    
     public class func getJSON(from url: URL,
-                              headerParams: [String : Any] = Default.Network.HeaderParams,
+                              headerParams: [String : Any] = Default.URL_.HeaderParams,
+                              acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                               options opt: JSONSerialization.ReadingOptions = [],
                               completion: @escaping (_ json: Any?, _ error: Error?) -> Void) {
-        getData(from: url, headerParams: headerParams) { (data, error) in
+        var headerParams = headerParams
+        headerParams[Default.URL_.Header.Key.ResponseType] = Default.URL_.Header.Value.ResponseType.JSON
+        
+        getData(from: url,
+                headerParams: headerParams,
+                acceptedStatusCodes: acceptedStatusCodes) { (data, error) in
+            
             guard let data = data, error == nil else {
                 completion(nil, error)
                 return
@@ -109,68 +129,139 @@ public extension Network {
 //******************************************************************************
 public extension Network {
     
+    
     private class func postJSON(_ json: Data,
                                 to url: URL,
-                                headerParams: [String : Any] = Default.Network.HeaderParams,
+                                headerParams: [String : Any] = Default.URL_.HeaderParams,
+                                acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                                 completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        
         var urlRequest = URLRequest(url: url, headerParams: headerParams)
         
         // Configure header
         urlRequest.httpMethod = "POST"
-        if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        if urlRequest.value(forHTTPHeaderField: Default.URL_.Header.Key.ContentType) == nil {
+            urlRequest.addValue(Default.URL_.Header.Value.ContentType.JSON, forHTTPHeaderField: Default.URL_.Header.Key.ContentType)
         }
         
         // Body
         urlRequest.httpBody = json
         
         // Perform POST
-        dataTask(with: urlRequest, completion: completion)
+        dataTask(with: urlRequest,
+                 acceptedStatusCodes: acceptedStatusCodes,
+                 completion: completion)
         
     }
     
     
+    
     public class func postJSONString(_ json: String,
                                      to url: URL,
-                                     headerParams: [String : Any] = Default.Network.HeaderParams,
+                                     headerParams: [String : Any] = Default.URL_.HeaderParams,
+                                     acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                                      completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        
         guard let postData = json.data(using: .utf8) else {
             completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
             return
         }
-        return postJSON(postData, to: url, headerParams: headerParams, completion: completion)
+        
+        return postJSON(postData,
+                        to: url,
+                        headerParams: headerParams,
+                        acceptedStatusCodes: acceptedStatusCodes,
+                        completion: completion)
     }
+    
     
     
     public class func postJSONArray(_ json: [Any],
                                     to url: URL,
-                                    headerParams: [String : Any] = Default.Network.HeaderParams,
+                                    headerParams: [String : Any] = Default.URL_.HeaderParams,
+                                    acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                                     completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        
         guard let postData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) else {
             completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
             return
         }
-        return postJSON(postData, to: url, headerParams: headerParams, completion: completion)
+        
+        return postJSON(postData,
+                        to: url,
+                        headerParams: headerParams,
+                        acceptedStatusCodes: acceptedStatusCodes,
+                        completion: completion)
     }
+    
     
     
     public class func postJSONDict(_ json: [String : Any],
                                    to url: URL,
-                                   headerParams: [String : Any] = Default.Network.HeaderParams,
+                                   headerParams: [String : Any] = Default.URL_.HeaderParams,
+                                   acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                                    completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        
         guard let postData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) else {
             completion(nil, Error_.Network.Request.ToJSONConversionFailed(from: json))
             return
         }
-        return postJSON(postData, to: url, headerParams: headerParams, completion: completion)
+        
+        return postJSON(postData,
+                        to: url,
+                        headerParams: headerParams,
+                        acceptedStatusCodes: acceptedStatusCodes,
+                        completion: completion)
     }
+    
     
 }
 
 
+//******************************************************************************
+//                              MARK: Delete
+//******************************************************************************
+public extension Network {
+    
+    public class func deleteRequest(to url: URL,
+                              headerParams: [String : Any] = Default.URL_.HeaderParams,
+                              acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
+                              completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        
+        var urlRequest = URLRequest(url: url, headerParams: headerParams)
+        urlRequest.httpMethod = "DELETE"
+        
+        return dataTask(with: urlRequest,
+                        acceptedStatusCodes: acceptedStatusCodes,
+                        completion: completion)
+    }
+    
+    
+}
 
-public extension Default.Network {
+
+public extension Default.URL_ {
+    
     static let HeaderParams: [String : Any] = [:]
+    static let AcceptedStatusCodes = [200...299]
+    
+    enum Header {
+        enum Key {
+            static let ResponseType = "Accept"
+            static let ContentType = "Content-Type"
+        }
+        
+        enum Value {
+            
+            enum ResponseType {
+                static let JSON = "application/json"
+            }
+            
+            enum ContentType {
+                static let JSON = "application/json"
+            }
+        }
+    }
 }
 
 
@@ -181,7 +272,7 @@ public extension Error_.Network {
         case InvalidJSON(url: URL, data: Data?)
         case NoData(url: URL)
         case NotAnImage(url: URL)
-        case UnsuccessfulStatusCode(url: URL)
+        case UnacceptableStatusCode(Int?, acceptedStatusCodes: [CountableClosedRange<Int>], url: URL)
         
         var localizedDescription: String {
             var description = String(describing: self)
@@ -199,8 +290,8 @@ public extension Error_.Network {
             case .NotAnImage(let url):
                 description += "Can't construct an image from the data returned by: \(url)"
                 
-            case .UnsuccessfulStatusCode(let url):
-                description += "Other than 2xx status code returned by: \(url)"
+            case let .UnacceptableStatusCode(statusCode, acceptedStatusCodes, url):
+                description += "StatusCode \(String(describing: statusCode)) other than the accepted status codes: \(acceptedStatusCodes) returned by: \(url)"
                 
             }
             

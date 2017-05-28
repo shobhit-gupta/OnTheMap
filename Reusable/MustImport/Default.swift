@@ -18,9 +18,9 @@ public enum Default {
 
 
 public extension Default {
-    enum Audio {}
-    enum FileManager_ {}
-    enum Network {}
-    enum UIImage_ {}
+    // enum Audio {}
+    // enum FileManager_ {}
+    // enum UIImage_ {}
     enum UIView_ {}
+    enum URL_ {}
 }
