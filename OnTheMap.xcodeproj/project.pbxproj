@@ -54,6 +54,9 @@
 		EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */; };
 		EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */; };
 		EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */; };
+		EEEF87041EDBE929004BB0D9 /* Dictionary+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */; };
+		EEEF87061EDD3311004BB0D9 /* Default+Udacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF87051EDD3311004BB0D9 /* Default+Udacity.swift */; };
+		EEEF87081EDD3327004BB0D9 /* Error_+Udacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF87071EDD3327004BB0D9 /* Error_+Udacity.swift */; };
 		EEF4DA441ED2AB0700DE0988 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4DA431ED2AB0700DE0988 /* Network.swift */; };
 		F669AC35BF432BFAFDD7E3EC /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FBA4B22496CEAE8597EE0 /* Pods_OnTheMap.framework */; };
 /* End PBXBuildFile section */
@@ -150,6 +153,9 @@
 		EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
 		EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Udacity.swift; sourceTree = "<group>"; };
 		EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ease.swift"; sourceTree = "<group>"; };
+		EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ease.swift"; sourceTree = "<group>"; };
+		EEEF87051EDD3311004BB0D9 /* Default+Udacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+Udacity.swift"; sourceTree = "<group>"; };
+		EEEF87071EDD3327004BB0D9 /* Error_+Udacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error_+Udacity.swift"; sourceTree = "<group>"; };
 		EEF4DA431ED2AB0700DE0988 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		FCEC7E8930B36FE978D0949C /* Pods-OnTheMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMapUITests/Pods-OnTheMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -379,6 +385,7 @@
 			children = (
 				EEA9296B1ECE024700C8A9B0 /* Array+Ease.swift */,
 				EEA9296C1ECE024700C8A9B0 /* CALayer+Ease.swift */,
+				EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */,
 				EEA9296D1ECE024700C8A9B0 /* String+Ease.swift */,
 				EEA9296E1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift */,
 				EEA9296F1ECE024700C8A9B0 /* UIColor+Ease.swift */,
@@ -446,6 +453,8 @@
 		EEEF86FA1ED4B800004BB0D9 /* Udacity */ = {
 			isa = PBXGroup;
 			children = (
+				EEEF87051EDD3311004BB0D9 /* Default+Udacity.swift */,
+				EEEF87071EDD3327004BB0D9 /* Error_+Udacity.swift */,
 				EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */,
 			);
 			path = Udacity;
@@ -765,18 +774,21 @@
 				EEA9298E1ECE024700C8A9B0 /* Error_.swift in Sources */,
 				EEA929921ECE024700C8A9B0 /* Default+Random.swift in Sources */,
 				EEA929931ECE024700C8A9B0 /* Error_+Random.swift in Sources */,
+				EEEF87061EDD3311004BB0D9 /* Default+Udacity.swift in Sources */,
+				EEEF87081EDD3327004BB0D9 /* Error_+Udacity.swift in Sources */,
 				EEA929891ECE024700C8A9B0 /* String+Ease.swift in Sources */,
+				EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */,
 				EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */,
 				EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */,
 				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
 				EEF4DA441ED2AB0700DE0988 /* Network.swift in Sources */,
 				EEA9298B1ECE024700C8A9B0 /* UIColor+Ease.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
+				EEEF87041EDBE929004BB0D9 /* Dictionary+Ease.swift in Sources */,
 				EEA9298F1ECE024700C8A9B0 /* Basic+Random.swift in Sources */,
 				EEA929871ECE024700C8A9B0 /* Array+Ease.swift in Sources */,
 				EEA929811ECE024700C8A9B0 /* CustomActivityIndicatorView.swift in Sources */,
 				EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */,
-				EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */,
 				EE1731D11DF832B500978508 /* MapViewController.swift in Sources */,
 				EEA929831ECE024700C8A9B0 /* TextField.swift in Sources */,
 				EEA929861ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift in Sources */,

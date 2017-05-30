@@ -46,7 +46,7 @@ public extension Error {
 public extension Error_ {
     
     enum General: Error {
-        case DowncastMismatch(for: AnyObject?, as: AnyClass.Type)
+        case DowncastMismatch(for: Any?, as: Any.Type)
         case UnexpectedSegue(identifier: String?)
         case UnexpectedSegueDestination(identifier: String?, destination: UIViewController.Type, expected: UIViewController.Type)
         case UnexpectedSegueSender(identifier: String?, sender: Any.Type, expected: Any.Type)
