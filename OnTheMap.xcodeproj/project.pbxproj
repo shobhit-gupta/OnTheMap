@@ -12,7 +12,6 @@
 		EE0CFB821E08F0B000E0120F /* OnTheMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CFB811E08F0B000E0120F /* OnTheMapUITests.swift */; };
 		EE0CFB901E08F0B700E0120F /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CFB8F1E08F0B700E0120F /* OnTheMapTests.swift */; };
 		EE1731C91DF7D28000978508 /* UIStackView+Separator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1731C81DF7D28000978508 /* UIStackView+Separator.m */; };
-		EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731CB1DF7EBF000978508 /* ViewConstants.swift */; };
 		EE1731D11DF832B500978508 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731D01DF832B500978508 /* MapViewController.swift */; };
 		EE1731D31DF832CD00978508 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731D21DF832CD00978508 /* ListViewController.swift */; };
 		EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */; };
@@ -109,7 +108,6 @@
 		EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE1731C71DF7D28000978508 /* UIStackView+Separator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStackView+Separator.h"; sourceTree = "<group>"; };
 		EE1731C81DF7D28000978508 /* UIStackView+Separator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStackView+Separator.m"; sourceTree = "<group>"; };
-		EE1731CB1DF7EBF000978508 /* ViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		EE1731D01DF832B500978508 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EE1731D21DF832CD00978508 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EE1731DB1DF868AA00978508 /* OTMNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMNavigationItem.swift; sourceTree = "<group>"; };
@@ -312,7 +310,6 @@
 				EE1731CF1DF7EEAB00978508 /* View */,
 				EE1731CD1DF7EE8800978508 /* Controller */,
 				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
-				EE1731CB1DF7EBF000978508 /* ViewConstants.swift */,
 				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
 			);
@@ -780,7 +777,6 @@
 				EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */,
 				EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */,
 				EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */,
-				EE1731CC1DF7EBF000978508 /* ViewConstants.swift in Sources */,
 				EEF4DA441ED2AB0700DE0988 /* Network.swift in Sources */,
 				EEA9298B1ECE024700C8A9B0 /* UIColor+Ease.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
