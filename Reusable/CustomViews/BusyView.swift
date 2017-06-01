@@ -169,6 +169,20 @@ public extension BusyView {
         [outerIndicator, innerIndicator].forEach { $0.stopAnimation() }
     }
     
+    
+    public func present() {
+        startAnimation()
+        isHidden = false
+    }
+    
+    
+    public func dismiss() {
+        if !isHidden {
+            stopAnimation()
+            isHidden = true
+        }
+    }
+    
 }
 
 

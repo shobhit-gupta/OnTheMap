@@ -53,6 +53,7 @@
 		EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */; };
 		EEEE9DAC1EDDA84C000D49C9 /* OTMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAB1EDDA84C000D49C9 /* OTMModel.swift */; };
 		EEEE9DAE1EDDBED2000D49C9 /* Error_+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAD1EDDBED2000D49C9 /* Error_+App.swift */; };
+		EEEE9DB01EDE7DDE000D49C9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAF1EDE7DDE000D49C9 /* TabBarController.swift */; };
 		EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */; };
 		EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */; };
 		EEEF87041EDBE929004BB0D9 /* Dictionary+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */; };
@@ -153,6 +154,7 @@
 		EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
 		EEEE9DAB1EDDA84C000D49C9 /* OTMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMModel.swift; sourceTree = "<group>"; };
 		EEEE9DAD1EDDBED2000D49C9 /* Error_+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error_+App.swift"; sourceTree = "<group>"; };
+		EEEE9DAF1EDE7DDE000D49C9 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Udacity.swift; sourceTree = "<group>"; };
 		EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ease.swift"; sourceTree = "<group>"; };
 		EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ease.swift"; sourceTree = "<group>"; };
@@ -246,9 +248,10 @@
 				EE204FA01DF6E05400D855BA /* LoginViewController.swift */,
 				EE1731D01DF832B500978508 /* MapViewController.swift */,
 				EE1731D21DF832CD00978508 /* ListViewController.swift */,
+				EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */,
 				EE1731E51DF92E4400978508 /* OTMNavigationItemController.swift */,
 				EE1732251DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift */,
-				EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */,
+				EEEE9DAF1EDE7DDE000D49C9 /* TabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				EEA929861ECE024700C8A9B0 /* MutableArrayTableViewDataSource.swift in Sources */,
 				EEA929881ECE024700C8A9B0 /* CALayer+Ease.swift in Sources */,
 				EE1731E41DF92A4100978508 /* OTMNavigationItemDelegate.swift in Sources */,
+				EEEE9DB01EDE7DDE000D49C9 /* TabBarController.swift in Sources */,
 				EEA9298C1ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift in Sources */,
 				EEA929841ECE024700C8A9B0 /* ArrayDataSourceController.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,

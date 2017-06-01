@@ -20,6 +20,20 @@ public extension Default {
     }
     
     
+    enum MapView {
+        static let Title = "Students On the Map"
+        
+        enum Annotation {
+            static let ReusableCellId = "StudentLocationAnnotation"
+        }
+    }
+    
+    
+    enum ListView {
+        static let Title = "Students List"
+    }
+    
+    
     enum ListViewCell {
         static let ReusableCellId = "ListViewCell"
     }
@@ -31,6 +45,12 @@ public extension Default {
             case ToTabbedView = "fromLoginToTabbedView"
         }
         
+    }
+    
+    
+    enum Notification: String {
+        case StudentsLocationModified = "StudentsLocationModified"
+        case StudentsLocationRefreshRequested = "StudentsLocationRefreshRequested"
     }
     
 }

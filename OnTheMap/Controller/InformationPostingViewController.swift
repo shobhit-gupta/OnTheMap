@@ -15,7 +15,7 @@ class InformationPostingViewController: UIViewController {
     enum InformationPostingState {
         case addLocation
         case busy
-        case addLink
+        case addLink(forMapString: String, latitude: Double, longitude: Double)
     }
     
 
@@ -25,6 +25,7 @@ class InformationPostingViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
 
     @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var linkTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var busyView: BusyView!
@@ -46,7 +47,7 @@ class InformationPostingViewController: UIViewController {
         
         switch state {
         case .addLocation:
-            dismissAlert()
+            busyView.dismiss()
             UIView.fade(out: addLinkStackView, andHide: true, thenFadeIn: addLocationStackView)
             UIView.transition(with: self.cancelButton, duration: 2.0, options: .transitionCrossDissolve, animations: { self.cancelButton.setTitleColor(UIColor(netHex: 0x325075), for: .normal) }, completion: nil)
             overlaySubmitStackView.fadeOut { _ in
@@ -54,14 +55,14 @@ class InformationPostingViewController: UIViewController {
             }
             
         case .addLink:
-            dismissAlert()
+            busyView.dismiss()
             UIView.fade(out: addLocationStackView, andHide: true, thenFadeIn: addLinkStackView) { _ in
             }
             self.overlaySubmitStackView.fadeIn(duration: 2.0)
             UIView.transition(with: self.cancelButton, duration: 2.0, options: .transitionCrossDissolve, animations: { self.cancelButton.setTitleColor(UIColor.white, for: .normal) }, completion: nil)
             
         case .busy:
-            presentAlert()
+            busyView.present()
             
         }
         
@@ -82,8 +83,35 @@ class InformationPostingViewController: UIViewController {
     
     
     @IBAction func submit(_ sender: Any) {
-        // TODO: Check if input is valid and submit to server
-        currentState = .addLocation
+        guard case InformationPostingState.addLink(let mapString, let latitude, let longitude) = currentState else {
+            return
+        }
+        
+        guard linkTextField.hasText else {
+            return
+        }
+        
+        guard let url = URL(string: linkTextField.text!) else {
+            return
+        }
+        
+        OTMModel.shared.student?.mapString = mapString
+        OTMModel.shared.student?.latitude = latitude
+        OTMModel.shared.student?.longitude = longitude
+        OTMModel.shared.student?.mediaURL = url
+        
+        currentState = .busy
+        
+        OTMModel.shared.postStudentLocation { (success, error) in
+            guard success else {
+                if let error = error {
+                    self.present(error.alertController(), animated: true, completion: nil)
+                }
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+            
+        }
     }
 
 }
@@ -95,20 +123,24 @@ extension InformationPostingViewController {
         // TODO: Present an alert view for user in case of an error
         guard error == nil else {
             currentState = .addLocation
-            print(error!.localizedDescription)
+            if let error = error {
+                present(error.alertController(), animated: true, completion: nil)
+            }
+            //print(error!.localizedDescription)
             return
         }
         
-        guard let placemarks = placemarks,
-            let coordinates = placemarks[0].location?.coordinate else {
+        guard let placemark = placemarks?[0],
+            let coordinates = placemark.location?.coordinate else {
                 currentState = .addLocation
-                print("Couldn't find the address!")
+                present(Error_.App.AddressNotFound.alertController(), animated: true, completion: nil)
+                //print("Couldn't find the address!")
                 return
         }
         
         if let address = addressTextField.text,
             let annotation = OTMMapViewAnnotation(with: [.title: address, .coordinate:coordinates]) {
-            currentState = .addLink
+            currentState = .addLink(forMapString: placemark.name ?? address, latitude: coordinates.latitude, longitude: coordinates.longitude)
             mapView.showAnnotations([annotation], animated: true)
         }
         
@@ -117,19 +149,3 @@ extension InformationPostingViewController {
 }
 
 
-extension InformationPostingViewController {
-    
-    func dismissAlert(){
-        if !busyView.isHidden {
-            busyView.stopAnimation()
-            busyView.isHidden = true
-        }
-    }
-    
-    
-    func presentAlert() {
-        busyView.startAnimation()
-        busyView.isHidden = false
-    }
-    
-}
