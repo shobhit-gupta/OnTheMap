@@ -51,6 +51,8 @@
 		EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F181ECF1335007399A0 /* Default+App.swift */; };
 		EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1A1ECF8446007399A0 /* BusyView.swift */; };
 		EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */; };
+		EEEE9DAC1EDDA84C000D49C9 /* OTMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAB1EDDA84C000D49C9 /* OTMModel.swift */; };
+		EEEE9DAE1EDDBED2000D49C9 /* Error_+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAD1EDDBED2000D49C9 /* Error_+App.swift */; };
 		EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */; };
 		EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */; };
 		EEEF87041EDBE929004BB0D9 /* Dictionary+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */; };
@@ -149,6 +151,8 @@
 		EEE21F181ECF1335007399A0 /* Default+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+App.swift"; sourceTree = "<group>"; };
 		EEE21F1A1ECF8446007399A0 /* BusyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
 		EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
+		EEEE9DAB1EDDA84C000D49C9 /* OTMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMModel.swift; sourceTree = "<group>"; };
+		EEEE9DAD1EDDBED2000D49C9 /* Error_+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error_+App.swift"; sourceTree = "<group>"; };
 		EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Udacity.swift; sourceTree = "<group>"; };
 		EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ease.swift"; sourceTree = "<group>"; };
 		EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ease.swift"; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 		EE1731CE1DF7EEA000978508 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE9DAB1EDDA84C000D49C9 /* OTMModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE21F181ECF1335007399A0 /* Default+App.swift */,
+				EEEE9DAD1EDDBED2000D49C9 /* Error_+App.swift */,
 				EE1731C61DF7D27F00978508 /* OnTheMap-Bridging-Header.h */,
 				EE1731CE1DF7EEA000978508 /* Model */,
 				EE1731CF1DF7EEAB00978508 /* View */,
@@ -775,6 +781,7 @@
 				EEEF87081EDD3327004BB0D9 /* Error_+Udacity.swift in Sources */,
 				EEA929891ECE024700C8A9B0 /* String+Ease.swift in Sources */,
 				EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */,
+				EEEE9DAE1EDDBED2000D49C9 /* Error_+App.swift in Sources */,
 				EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */,
 				EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */,
 				EEF4DA441ED2AB0700DE0988 /* Network.swift in Sources */,
@@ -804,6 +811,7 @@
 				EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */,
 				EEA929901ECE024700C8A9B0 /* CG+Random.swift in Sources */,
 				EE1731E61DF92E4400978508 /* OTMNavigationItemController.swift in Sources */,
+				EEEE9DAC1EDDA84C000D49C9 /* OTMModel.swift in Sources */,
 				EEA9298A1ECE024700C8A9B0 /* UIBarButtonItem+Ease.swift in Sources */,
 				EE1732261DFA78DF00978508 /* OTMNavigationItemControllerProtocol.swift in Sources */,
 				EEA929951ECE024700C8A9B0 /* UIView+Fadeable.swift in Sources */,
