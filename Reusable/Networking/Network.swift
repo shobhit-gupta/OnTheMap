@@ -96,6 +96,8 @@ public extension Network {
                               headerParams: [String : Any] = Default.URL_.HeaderParams,
                               acceptedStatusCodes: [CountableClosedRange<Int>] = Default.URL_.AcceptedStatusCodes,
                               options opt: JSONSerialization.ReadingOptions = [],
+                              ignorePrefix prefix: Int = 0,
+                              ignorePostfix postfix: Int = 0,
                               completion: @escaping (_ json: Any?, _ error: Error?) -> Void) {
         var headerParams = headerParams
         headerParams[Default.URL_.Header.Key.ResponseType] = Default.URL_.Header.Value.ResponseType.JSON
@@ -104,11 +106,13 @@ public extension Network {
                 headerParams: headerParams,
                 acceptedStatusCodes: acceptedStatusCodes) { (data, error) in
             
-            guard let data = data, error == nil else {
+            guard var data = data, error == nil else {
                 completion(nil, error)
                 return
             }
             
+            data = data.subdata(in: Range(prefix..<data.count - postfix))
+                    
             if let parsedResult = try? JSONSerialization.jsonObject(with: data, options: opt),
                 parsedResult is [String : Any] || parsedResult is [Any] {
                 completion(parsedResult, nil)

@@ -159,10 +159,13 @@ public extension Udacity {
                                  acceptedStatusCodes: Default.Udacity.GeneralAPI.AcceptedStatusCodes,
                                  completion: { (data, error) in
                 
-                guard let data = data, error == nil else {
+                guard var data = data, error == nil else {
                     completion(false, nil, error)
                     return
                 }
+                
+                // What is wrong with you Udacity?
+                data = data.subdata(in: Range(5..<data.count))
                 
                 guard let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) else {
                     completion(false, nil, Error_.Network.Response.InvalidJSON(url: url, data: data))
@@ -181,7 +184,6 @@ public extension Udacity {
                 //     "expiration": "2017-07-26T15:56:06.949970Z"
                 //   }
                 // }
-                
                 guard let jsonResponse = json as? [String : Any] else {
                     completion(false, nil, Error_.General.DowncastMismatch(for: json, as: [String : Any].self))
                     return
@@ -263,11 +265,12 @@ public extension Udacity {
     public static func studentInfo(for studentKey: String, completion: @escaping (_ success: Bool, _ student: Student?, _ error: Error?) -> Void) {
         
         // Get url for GeneralAPI's users method
-        if let url = GeneralAPI.url(from: [:], withPathExtension: Default.Udacity.GeneralAPI.Method.GetUser) {
+        if let url = GeneralAPI.url(from: [:], withPathExtension: Default.Udacity.GeneralAPI.Method.GetUser(withExtension: studentKey)) {
             
             // Make GET Http request to get the JSON data
             Network.getJSON(from: url,
                             acceptedStatusCodes: Default.Udacity.GeneralAPI.AcceptedStatusCodes,
+                            ignorePrefix: 5,
                             completion: { (json, error) in
                 
                 guard let json = json, error == nil else {
@@ -324,6 +327,26 @@ public extension Udacity {
     }
     
 }
+
+
+//******************************************************************************
+//                       MARK: Public Methods (AuthAPI)
+//******************************************************************************
+public extension Udacity {
+    
+    public static func getSignUpURL() -> URL? {
+        
+        let queryParams: [String : Any] = [
+            Default.Udacity.AuthAPI.Query.Key.NextPage : Default.Udacity.AuthAPI.Query.Value.NextPage
+        ]
+        
+        return AuthAPI.url(from: queryParams, withPathExtension: Default.Udacity.AuthAPI.Method.SignUp)
+        
+    }
+    
+}
+
+
 
 
 //******************************************************************************
@@ -430,7 +453,7 @@ public extension Udacity {
             Default.Udacity.ParseAPI.Student.Key.FirstName : student.firstName,
             Default.Udacity.ParseAPI.Student.Key.LastName : student.lastName,
             Default.Udacity.ParseAPI.Student.Key.MapString : student.mapString,
-            Default.Udacity.ParseAPI.Student.Key.MediaURL : student.mediaURL ?? "",
+            Default.Udacity.ParseAPI.Student.Key.MediaURL : student.mediaURL?.absoluteString ?? "",
             Default.Udacity.ParseAPI.Student.Key.Latitude : student.latitude,
             Default.Udacity.ParseAPI.Student.Key.Longitude : student.longitude
         ]

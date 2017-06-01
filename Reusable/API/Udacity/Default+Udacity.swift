@@ -22,6 +22,10 @@ public extension Default {
             enum Method {
                 static let Session = "session"
                 static let GetUser = "users"
+                
+                static func GetUser(withExtension: String) -> String {
+                    return GetUser + "/" + withExtension
+                }
             }
             
             
