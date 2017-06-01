@@ -17,17 +17,22 @@ public extension Error_ {
         case MethodFailedWithUnexpectedJSONResponse(forMethod: String)
         
         var localizedDescription: String {
-            var description = String(describing: self)
+            let description = String(describing: self) + " " + userDescription
+            return description
+        }
+        
+        var userDescription: String {
+            let description : String
             switch self {
                 
             case .InvalidURL(let sender):
-                description += "Couldn't construct url for Udacity API: \(sender)"
+                description = "Couldn't construct url for Udacity API: \(sender)"
                 
             case let .MethodFailed(method, message):
-                description += "\(method) method failed: \(message)"
+                description = "\(method) method failed: \(message)"
                 
             case .MethodFailedWithUnexpectedJSONResponse(let method):
-                description += "\(method) method failed: Unexpected JSON Response"
+                description = "\(method) method failed: Unexpected JSON Response"
                 
             }
             

@@ -278,29 +278,36 @@ public extension Error_.Network {
         case NotAnImage(url: URL)
         case UnacceptableStatusCode(Int?, acceptedStatusCodes: [CountableClosedRange<Int>], url: URL)
         
+        
+        var localizedDescriptionVerbose: String {
+            let description = String(describing: self) + " " + localizedDescription
+            return description
+        }
+        
         var localizedDescription: String {
-            var description = String(describing: self)
+            var description : String
             switch self {
                 
             case let .InvalidJSON(url, data):
-                description += "Can't construct JSON from the data returned by: \(url)"
+                description = "Can't construct JSON from the data returned by: \(url)"
                 if let data = data {
                     description += "\nData Returned: \(data)"
                 }
 
             case .NoData(let url):
-                description += "No data was returned by: \(url)"
+                description = "No data was returned by: \(url)"
                 
             case .NotAnImage(let url):
-                description += "Can't construct an image from the data returned by: \(url)"
+                description = "Can't construct an image from the data returned by: \(url)"
                 
             case let .UnacceptableStatusCode(statusCode, acceptedStatusCodes, url):
-                description += "StatusCode \(String(describing: statusCode)) other than the accepted status codes: \(acceptedStatusCodes) returned by: \(url)"
+                description = "StatusCode \(String(describing: statusCode)) other than the accepted status codes: \(acceptedStatusCodes) returned by: \(url)"
                 
             }
             
             return description
         }
+        
         
     }
     
@@ -309,15 +316,20 @@ public extension Error_.Network {
         case NoURLFound(in: URLRequest)
         case ToJSONConversionFailed(from: Any)
         
+        var localizedDescriptionVerbose: String {
+            let description = String(describing: self) + " " + localizedDescription
+            return description
+        }
+        
         var localizedDescription: String {
-            var description = String(describing: self)
+            var description : String
             switch self {
                 
             case .NoURLFound(let urlRequest):
-                description += "No url found in URLRequest: \(urlRequest)"
+                description = "No url found in URLRequest: \(urlRequest)"
                 
             case .ToJSONConversionFailed(let json):
-                description += "Failed to convert to JSON: \(json)"
+                description = "Failed to convert to JSON: \(json)"
                 
             }
             
