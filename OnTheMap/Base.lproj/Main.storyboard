@@ -109,6 +109,12 @@
                                                                 <state key="normal" title="SIGN IN">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j40-8a-T4p"/>
                                                                 </connections>
@@ -204,12 +210,26 @@
                                 </subviews>
                                 <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-2S-FFP" customClass="BusyView" customModule="OnTheMap" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="outerIndicatorImage" value="LoadingIcon"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="innerIndicatorImage" value="PinIcon"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Please Wait"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="Logging In..."/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jbQ-Yy-oDT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="6U9-z6-3Qi"/>
+                            <constraint firstItem="PuU-2S-FFP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Git-1U-YZR"/>
+                            <constraint firstItem="PuU-2S-FFP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UBu-xm-DoJ"/>
+                            <constraint firstItem="PuU-2S-FFP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uoe-SA-6jj"/>
                             <constraint firstAttribute="bottom" secondItem="jbQ-Yy-oDT" secondAttribute="bottom" constant="20" symbolic="YES" id="dXq-lm-EpW"/>
                             <constraint firstItem="jbQ-Yy-oDT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="ddv-jb-HSf"/>
+                            <constraint firstItem="PuU-2S-FFP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8v-wp-PhV"/>
                             <constraint firstAttribute="trailing" secondItem="jbQ-Yy-oDT" secondAttribute="trailing" constant="20" symbolic="YES" id="mNZ-EQ-VAk"/>
                         </constraints>
                         <variation key="default">
@@ -224,6 +244,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="busyView" destination="PuU-2S-FFP" id="36z-l4-w1d"/>
                         <outlet property="emailTextField" destination="Xgp-oh-FOC" id="1Ey-Tk-dPT"/>
                         <outlet property="passwordTextField" destination="Aho-q7-S7x" id="aQq-sy-lB7"/>
                         <outlet property="rootStackView" destination="jbQ-Yy-oDT" id="kb1-eL-6fP"/>
@@ -364,13 +385,16 @@
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UPi-Lv-gv4" userLabel="Add Link Stack View">
                                 <rect key="frame" x="0.0" y="-0.5" width="320" height="481"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="https://" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58k-ce-JPQ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://" placeholder="Tap to add link" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58k-ce-JPQ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="96.5"/>
                                         <color key="backgroundColor" red="0.25490196079999999" green="0.45882352939999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="send"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="uuh-9Q-xt6" id="wur-ha-22Y"/>
+                                        </connections>
                                     </textField>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="q59-LG-9Mv">
                                         <rect key="frame" x="0.0" y="96.5" width="320" height="384.5"/>
@@ -423,10 +447,13 @@ today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="search"/>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="uuh-9Q-xt6" id="glt-jP-jah"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -490,6 +517,12 @@ today?</string>
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderUIColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="submit:" destination="uuh-9Q-xt6" eventType="touchUpInside" id="eAr-m5-LRY"/>
@@ -503,8 +536,6 @@ today?</string>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="outerIndicatorImage" value="LoadingIcon"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="innerIndicatorImage" value="PinIcon"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Please Wait"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="Looking up on map..."/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
