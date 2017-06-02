@@ -29,7 +29,7 @@ class OTMNavigationItem: UINavigationItem {
             if delegate.shouldDisplayLogoutButton() {
                 
                 leftBarButtonItem = UIBarButtonItem(barButtonItemData:
-                    BarButtonItemData(with: [.title : "Logout",
+                    BarButtonItemData(with: [.title : Default.BarButtonItemLabel.Logout,
                                              .target : delegate,
                                              .action : #selector(delegate.logoutButtonPressed)]))
                 
@@ -47,7 +47,7 @@ class OTMNavigationItem: UINavigationItem {
             
         }
         
-        title = "On The Map"
+        // title = "On The Map"
         
     }
     

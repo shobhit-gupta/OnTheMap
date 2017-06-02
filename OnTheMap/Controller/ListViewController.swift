@@ -83,7 +83,7 @@ extension ListViewController: ArrayTableViewDataSourceController {
     
     func configureCell(_ cell: UITableViewCell, with dataItem: Udacity.Student) {
         cell.textLabel?.text = "\(dataItem.firstName) \(dataItem.lastName)"
-        cell.detailTextLabel?.text = dataItem.mediaURL?.absoluteString ?? "Hasn't shared any link"
+        cell.detailTextLabel?.text = dataItem.mediaURL?.absoluteString ?? Default.Message.NoLinkShared
     }
     
     
@@ -119,7 +119,7 @@ extension ListViewController {
     func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(studentsLocationModified(_:)),
-                                               name: Notification.Name(rawValue: Default.Notification.StudentsLocationModified.rawValue),
+                                               name: Notification.Name(rawValue: Default.Notification_.StudentsLocationModified.rawValue),
                                                object: nil)
     }
     

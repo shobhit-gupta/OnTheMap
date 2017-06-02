@@ -12,8 +12,9 @@ import Foundation
 public extension Error_ {
     
     enum App: Error {
-        case UserDetailsMissing
         case AddressNotFound
+        case BadURL(urlString: String?)
+        case UserDetailsMissing
         
         var localizedDescriptionVerbose: String {
             let description = String(describing: self) + " " + localizedDescription
@@ -24,11 +25,14 @@ public extension Error_ {
             var description : String
             switch self {
                 
-            case .UserDetailsMissing:
-                description = "Specify all the details before sharing."
-                
             case .AddressNotFound:
                 description = "Couldn't find the address!"
+                
+            case .BadURL(let urlString):
+                description = "Bad url: \(String(describing: urlString))"
+
+            case .UserDetailsMissing:
+                description = "Specify all the details before sharing."
                 
             }
             
@@ -72,10 +76,11 @@ public extension Error {
     
     
     public func alertController(with actions: [UIAlertAction]? = nil) -> UIAlertController {
-        let alertController = UIAlertController(title: "Error",
+        let alertController = UIAlertController(title: Default.Alert.Title,
                                                 message: message,
                                                 preferredStyle: .alert)
-        let alertActions = actions ?? [UIAlertAction(title: "Ok", style: .default, handler: nil)]
+        let alertActions = actions ?? [UIAlertAction(title: Default.Alert.Action.Ok.Title,
+                                                     style: .default, handler: nil)]
         alertActions.forEach { alertController.addAction($0) }
         return alertController
     }

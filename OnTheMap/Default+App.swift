@@ -20,11 +20,17 @@ public extension Default {
     }
     
     
+    enum Message {
+        static let NoLinkShared = "Hasn't shared any link"
+    }
+    
+    
     enum MapView {
         static let Title = "Students On the Map"
         
         enum Annotation {
             static let ReusableCellId = "StudentLocationAnnotation"
+            static let CallOutButtonType = UIButtonType.detailDisclosure
         }
     }
     
@@ -39,6 +45,54 @@ public extension Default {
     }
     
     
+    enum InfoPostingView {
+        static let Id = "InformationPostingView"
+    }
+    
+    
+    enum BusyView {
+        
+        static let OuterIndicatorImage = #imageLiteral(resourceName: "LoadingIcon")
+        static let InnerIndicatorImage = #imageLiteral(resourceName: "PinIcon")
+        
+        enum LoggingIn {
+            static let Title = "Please Wait"
+            static let Subtitle = "Logging in..."
+        }
+        
+        enum LoggingOut {
+            static let Title = "Please Wait"
+            static let Subtitle = "Logging out..."
+        }
+        
+        enum LookingUpAddress {
+            static let Title = "Please Wait"
+            static let Subtitle = "Looking up on map..."
+        }
+        
+        enum PostStudentLocation {
+            static let Title = "Please Wait"
+            static let Subtitle = "Sending your greetings to other Udacians!"
+        }
+        
+    }
+    
+    
+    enum Alert {
+        static let Title = "Error"
+        enum Action {
+            enum Ok {
+                static let Title = "Ok"
+            }
+        }
+    }
+    
+    
+    enum BarButtonItemLabel {
+        static let Logout = "Logout"
+    }
+    
+    
     enum Segues {
     
         enum FromLogin: String {
@@ -48,9 +102,14 @@ public extension Default {
     }
     
     
-    enum Notification: String {
+    enum Notification_: String {
         case StudentsLocationModified = "StudentsLocationModified"
         case StudentsLocationRefreshRequested = "StudentsLocationRefreshRequested"
+        
+        func post(to notificationCenter: NotificationCenter = NotificationCenter.default) {
+            let notification = Notification(name: Notification.Name(rawValue: self.rawValue))
+            notificationCenter.post(notification)
+        }
     }
     
 }
