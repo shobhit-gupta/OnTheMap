@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var rootStackView: UIStackView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var busyView: BusyView!
     
     
     // MARK: Private variables and types
@@ -49,16 +50,23 @@ class LoginViewController: UIViewController {
             // Get rid of keyboard if it still showing
             hideKeyboard()
             
+            currentState = .busy(title: Default.BusyView.LoggingIn.Title, subtitle: Default.BusyView.LoggingIn.Subtitle)
+            
             OTMModel.shared.login(userName: email, password: password, completion: { (success, error) in
                 
                 guard success else {
                     if let error = error {
-                        self.currentState = .alert(error: error)
+                        DispatchQueue.main.async {
+                            self.currentState = .alert(error: error)
+                        }
                     }
                     return
                 }
                 
-                self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
+                DispatchQueue.main.async {
+                    self.currentState = .normal
+                    self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
+                }
                 
             })
         }
@@ -83,6 +91,7 @@ extension LoginViewController {
     
     fileprivate func setupUI() {
         setupStackView()
+        setupBusyView()
     }
     
     
@@ -92,16 +101,29 @@ extension LoginViewController {
     }
     
     
+    private func setupBusyView() {
+        busyView.outerIndicatorImage = Default.BusyView.OuterIndicatorImage
+        busyView.innerIndicatorImage = Default.BusyView.InnerIndicatorImage
+    }
+    
+    
     fileprivate func updateUI() {
         switch currentState {
         case .alert(let error):
-            present(error.alertController(), animated: true, completion: nil)
+            busyView.dismiss()
+            let okAction = UIAlertAction(title: Default.Alert.Action.Ok.Title,
+                                         style: .default, handler: { _ in
+                self.currentState = .normal
+            })
+            present(error.alertController(with: [okAction]), animated: true, completion: nil)
             
         case let .busy(title, subtitle):
-            break
+            busyView.title = title
+            busyView.subtitle = subtitle
+            busyView.present()
             
         case .normal:
-            break
+            busyView.dismiss()
             
         }
         
