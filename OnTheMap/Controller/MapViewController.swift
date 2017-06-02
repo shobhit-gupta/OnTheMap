@@ -23,7 +23,7 @@ class MapViewController: UIViewController {
             
             let otmMapViewAnnotationDict: [OTMMapViewAnnotationKeys : Any] = [
                 .title: "\($0.firstName) \($0.lastName)",
-                .subtitle: $0.mediaURL?.absoluteString ?? "Hasn't shared any link",
+                .subtitle: $0.mediaURL?.absoluteString ?? Default.Message.NoLinkShared,
                 .coordinate: CLLocationCoordinate2D(latitude: $0.latitude as CLLocationDegrees,
                                                     longitude: $0.longitude as CLLocationDegrees)]
             
@@ -46,6 +46,7 @@ class MapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupOTMAnnotations()
         subscribeToNotifications()
     }
     
@@ -66,7 +67,7 @@ extension MapViewController {
     fileprivate func setupUI() {
         setupMapView()
         setupNavigationItem()
-        setupOTMAnnotations()
+        //setupOTMAnnotations()
     }
     
     
@@ -82,6 +83,7 @@ extension MapViewController {
 
     
     fileprivate func setupOTMAnnotations() {
+        mapView.removeAnnotations(mapView.annotations)
         mapView.showAnnotations(annotations, animated: true)
     }
     
@@ -103,7 +105,7 @@ extension MapViewController {
     func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(studentsLocationModified(_:)),
-                                               name: Notification.Name(rawValue: Default.Notification.StudentsLocationModified.rawValue),
+                                               name: Notification.Name(rawValue: Default.Notification_.StudentsLocationModified.rawValue),
                                                object: nil)
     }
     
@@ -114,7 +116,9 @@ extension MapViewController {
     
     
     func studentsLocationModified(_ notification: Notification) {
-        setupOTMAnnotations()
+        DispatchQueue.main.async {
+            self.setupOTMAnnotations()
+        }
     }
     
     
@@ -137,7 +141,7 @@ extension MapViewController: MKMapViewDelegate {
             if annotationView == nil {
                 annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView?.canShowCallout = true
-                annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+                annotationView?.rightCalloutAccessoryView = UIButton(type: Default.MapView.Annotation.CallOutButtonType)
                 
             } else {
                 annotationView?.annotation = annotation
