@@ -46,29 +46,35 @@ public extension Error {
 public extension Error_ {
     
     enum General: Error {
-        case DowncastMismatch(for: AnyObject?, as: AnyClass.Type)
+        case DowncastMismatch(for: Any?, as: Any.Type)
         case UnexpectedSegue(identifier: String?)
         case UnexpectedSegueDestination(identifier: String?, destination: UIViewController.Type, expected: UIViewController.Type)
         case UnexpectedSegueSender(identifier: String?, sender: Any.Type, expected: Any.Type)
         case UnexpectedCurrentState(state: String)
         
+        var localizedDescriptionVerbose: String {
+            let description = String(describing: self) + " " + localizedDescription
+            return description
+        }
+        
+        // TODO: Use localized String xml file (Maybe later if there's a need for it.)
         var localizedDescription: String {
-            var description = String(describing: self)
+            let description : String
             switch self {
             case let .DowncastMismatch(object, type):
-                description += "\(String(describing: object)) couldn't be downcasted as \(type)"
+                description = "\(String(describing: object)) couldn't be downcasted as \(type)"
                 
             case .UnexpectedSegue(let identifier):
-                description += "Unexpected Segue Identifier Encounterd: \(String(describing: identifier))"
+                description = "Unexpected Segue Identifier Encounterd: \(String(describing: identifier))"
                 
             case let .UnexpectedSegueDestination(identifier, destination, expected):
-                description += "Segue Identifier: \(String(describing: identifier)) expected \(expected) destination. Received: \(destination)"
+                description = "Segue Identifier: \(String(describing: identifier)) expected \(expected) destination. Received: \(destination)"
                 
             case let .UnexpectedSegueSender(identifier, sender, expected):
-                description += "Segue Identifier: \(String(describing: identifier)) expected \(expected) sender. Received: \(sender)"
+                description = "Segue Identifier: \(String(describing: identifier)) expected \(expected) sender. Received: \(sender)"
                 
             case .UnexpectedCurrentState(let state):
-                description += "Unexpected current state: " + state
+                description = "Unexpected current state: " + state
                 
             }
             
