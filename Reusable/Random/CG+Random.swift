@@ -32,7 +32,7 @@ public extension CGPoint {
         let x = CGFloat.random(lower: rectangle.minX, upper: rectangle.maxX)
         let y = CGFloat.random(lower: rectangle.minY, upper: rectangle.maxY)
         
-        return CGPoint(x: x,y: y)
+        return CGPoint(x: x, y: y)
     }
     
     
@@ -40,7 +40,7 @@ public extension CGPoint {
         let x = CGFloat.random(lower: 0.0, upper: size.width)
         let y = CGFloat.random(lower: 0.0, upper: size.height)
         
-        return CGPoint(x: x,y: y)
+        return CGPoint(x: x, y: y)
     }
     
     
@@ -54,7 +54,7 @@ public extension CGPoint {
         let a = CGFloat.random(lower: 0.0, upper: CGFloat(Double.pi * 2))
         let x = midPoint.x + r * cos(a)
         let y = midPoint.y + r * sin(a)
-        return CGPoint(x: x,y: y)
+        return CGPoint(x: x, y: y)
     }
     
 }

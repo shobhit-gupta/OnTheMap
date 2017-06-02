@@ -27,7 +27,8 @@ extension MKMapView {
         switch randomLocationType {
             
         case .acrossWorld:
-            randomPoint = CGPoint(x: CGFloat.random(lower: -90, upper: 90), y: CGFloat.random(lower: -180, upper: 180))
+            randomPoint = CGPoint(x: CGFloat.random(lower: Default.Map.Latitude.Min, upper: Default.Map.Latitude.Max),
+                                  y: CGFloat.random(lower: Default.Map.Longitude.Min, upper: Default.Map.Longitude.Max))
             locationForRandomPoint = CLLocationCoordinate2D(latitude: CLLocationDegrees(randomPoint.x), longitude: CLLocationDegrees(randomPoint.y))
             
         case .acrossView:
@@ -70,4 +71,19 @@ extension MKMapView {
     }
     
     
+}
+
+
+public extension Default.Map {
+    
+    enum Latitude {
+        static let Min: CGFloat = -90.0
+        static let Max: CGFloat = 90.0
+    }
+    
+    enum Longitude {
+        static let Min: CGFloat = -180.0
+        static let Max: CGFloat = 180.0
+    }
+
 }

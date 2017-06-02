@@ -88,24 +88,26 @@ fileprivate extension BusyView {
     private func setupIndicators() {
         setupIndicator(outerIndicator)
         setupIndicator(innerIndicator)
-        outerIndicator.rotateClockwise = true
-        innerIndicator.rotateClockwise = false
+        outerIndicator.rotateClockwise = Default.BusyView.Indicator.Outer.RotateClockWise
+        innerIndicator.rotateClockwise = Default.BusyView.Indicator.Inner.RotateClockWise
     }
     
     
     private func setupIndicator(_ indicator: CustomActivityIndicatorView) {
-        indicator.backgroundColor = UIColor.clear
-        indicator.isOpaque = true
+        indicator.backgroundColor = Default.BusyView.Indicator.BackgroundColor
+        indicator.isOpaque = Default.BusyView.Indicator.IsOpaque
     }
     
     
     private func setupContainerStackView() {
         configureContainerStackView()
         let textStackView = setupTextStackView()
-        let outerIndicatorStackView = outerIndicator.encompassInStackView(axis: .vertical, alignment: .center)
+        let outerIndicatorStackView = outerIndicator.encompassInStackView(axis: Default.BusyView.StackView.Indicator.Outer.Axis,
+                                                                          alignment: Default.BusyView.StackView.Indicator.Outer.Alignment)
         [outerIndicatorStackView, textStackView].forEach { containerStackView.addArrangedSubview($0) }
         
-        let innerIndicatorStackView = innerIndicator.encompassInStackView(axis: .vertical, alignment: .center)
+        let innerIndicatorStackView = innerIndicator.encompassInStackView(axis: Default.BusyView.StackView.Indicator.Inner.Axis,
+                                                                          alignment: Default.BusyView.StackView.Indicator.Inner.Alignment)
         [containerStackView, innerIndicatorStackView].forEach { addSubview($0) }
         
         innerIndicatorStackView.autoAlignAxis(.horizontal, toSameAxisOf: outerIndicatorStackView)
@@ -114,19 +116,19 @@ fileprivate extension BusyView {
     
     
     private func configureContainerStackView() {
-        containerStackView.axis = .vertical
-        containerStackView.alignment = .fill
-        containerStackView.distribution = .fill
-        containerStackView.spacing = 16.0
+        containerStackView.axis = Default.BusyView.StackView.Container.Axis
+        containerStackView.alignment = Default.BusyView.StackView.Container.Alignment
+        containerStackView.distribution = Default.BusyView.StackView.Container.Distribution
+        containerStackView.spacing = Default.BusyView.StackView.Container.Spacing
     }
     
     
     private func setupTextStackView() -> UIStackView {
         let textStackView = UIStackView(frame: CGRect.zero)
-        textStackView.axis = .vertical
-        textStackView.alignment = .fill
-        textStackView.distribution = .fill
-        textStackView.spacing = 8.0
+        textStackView.axis = Default.BusyView.StackView.Text.Axis
+        textStackView.alignment = Default.BusyView.StackView.Text.Alignment
+        textStackView.distribution = Default.BusyView.StackView.Text.Distribution
+        textStackView.spacing = Default.BusyView.StackView.Text.Spacing
         [titleLabel, subtitleLabel].forEach { textStackView.addArrangedSubview($0) }
         return textStackView
     }
@@ -135,22 +137,23 @@ fileprivate extension BusyView {
     private func setupLabels() {
         setupLabel(titleLabel)
         setupLabel(subtitleLabel)
-        titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        titleLabel.font = Default.BusyView.Label.Title.Font
+        subtitleLabel.font = Default.BusyView.Label.Subtitle.Font
     }
     
     
     private func setupLabel(_ label: UILabel) {
-        label.textColor = UIColor.white
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.shadowOffset = CGSize(width: 0.0, height: -1.0)
+        label.textColor = Default.BusyView.Label.Text.Color
+        label.textAlignment = Default.BusyView.Label.Text.Alignment
+        label.numberOfLines = Default.BusyView.Label.NumberOfLines
+        label.shadowOffset = Default.BusyView.Label.ShadowOffset
     }
     
     
     private func setupOverlay() {
-        let properties = OverlayType.Properties(color: ArtKit.primaryColor.withAlphaComponent(0.2),
-                                                blur: OverlayType.Properties.Blur(style: .dark, isVibrant: false))
+        let properties = OverlayType.Properties(color: Default.BusyView.Overlay.BackgroundColor,
+                                                blur: OverlayType.Properties.Blur(style: Default.BusyView.Overlay.BlurEffectStyle,
+                                                                                  isVibrant: false))
         _ = setupOverlay(withDesired: properties)
         
     }
@@ -212,6 +215,89 @@ public extension BusyView {
 }
 
 
+public extension Default {
+    
+    enum BusyView {
+        
+        enum Indicator {
+            
+            static let BackgroundColor = UIColor.clear
+            static let IsOpaque = true
+            
+            enum Outer {
+                static let RotateClockWise = true
+            }
+            
+            enum Inner {
+                static let RotateClockWise = false
+            }
+        }
+        
+        
+        enum Label {
+            
+            static let NumberOfLines = 0
+            static let ShadowOffset = CGSize(width: 0.0, height: -1.0)
+            
+            enum Text {
+                static let Color: UIColor = ArtKit.secondaryColor // UIColor.white
+                static let Alignment: NSTextAlignment = .center
+            }
+            
+            enum Title {
+                static let Font = UIFont.preferredFont(forTextStyle: .headline)
+            }
+            
+            enum Subtitle {
+                static let Font = UIFont.preferredFont(forTextStyle: .subheadline)
+            }
+        }
+    
+        
+        enum StackView {
+            
+            enum Container {
+                static let Axis: UILayoutConstraintAxis = .vertical
+                static let Alignment: UIStackViewAlignment = .fill
+                static let Distribution: UIStackViewDistribution = .fill
+                static let Spacing: CGFloat = 16.0
+            }
+            
+            
+            enum Text {
+                static let Axis: UILayoutConstraintAxis = .vertical
+                static let Alignment: UIStackViewAlignment = .fill
+                static let Distribution: UIStackViewDistribution = .fill
+                static let Spacing: CGFloat = 8.0
+            }
+            
+            
+            enum Indicator {
+                
+                enum Outer {
+                    static let Axis: UILayoutConstraintAxis = .vertical
+                    static let Alignment: UIStackViewAlignment = .center
+                }
+                
+                enum Inner {
+                    static let Axis: UILayoutConstraintAxis = .vertical
+                    static let Alignment: UIStackViewAlignment = .center
+                }
+                
+            }
+            
+        }
+        
+        
+        enum Overlay {
+            static let BlurEffectStyle: UIBlurEffectStyle = Default.Overlay.BlurEffectStyle
+            static let BackgroundColor = ArtKit.primaryColor.withAlphaComponent(0.2) // Default.Overlay.BackgroundColor
+        }
+        
+    }
+    
+    
+}
 
 
 

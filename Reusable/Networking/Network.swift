@@ -143,7 +143,7 @@ public extension Network {
         var urlRequest = URLRequest(url: url, headerParams: headerParams)
         
         // Configure header
-        urlRequest.httpMethod = "POST"
+        urlRequest.httpMethod = Default.URL_.HTTPMethod.Post
         if urlRequest.value(forHTTPHeaderField: Default.URL_.Header.Key.ContentType) == nil {
             urlRequest.addValue(Default.URL_.Header.Value.ContentType.JSON, forHTTPHeaderField: Default.URL_.Header.Key.ContentType)
         }
@@ -233,7 +233,7 @@ public extension Network {
                               completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         
         var urlRequest = URLRequest(url: url, headerParams: headerParams)
-        urlRequest.httpMethod = "DELETE"
+        urlRequest.httpMethod = Default.URL_.HTTPMethod.Delete
         
         return dataTask(with: urlRequest,
                         acceptedStatusCodes: acceptedStatusCodes,
@@ -248,6 +248,13 @@ public extension Default.URL_ {
     
     static let HeaderParams: [String : Any] = [:]
     static let AcceptedStatusCodes = [200...299]
+    
+    enum HTTPMethod {
+        static let Delete = "Delete"
+        static let Get = "GET"
+        static let Post = "POST"
+    }
+    
     
     enum Header {
         enum Key {
@@ -266,12 +273,14 @@ public extension Default.URL_ {
             }
         }
     }
+    
 }
 
 
 
 
 public extension Error_.Network {
+    
     enum Response: Error {
         case InvalidJSON(url: URL, data: Data?)
         case NoData(url: URL)

@@ -19,9 +19,9 @@ import QuartzCore
     
     var isAnimating = false
     
-    @IBInspectable public var hidesWhenStopped: Bool = false
+    @IBInspectable public var hidesWhenStopped: Bool = Default.CustomActivityIndicatorView.HidesWhenStopped
     
-    @IBInspectable public var rotateClockwise: Bool = true {
+    @IBInspectable public var rotateClockwise: Bool = Default.CustomActivityIndicatorView.RotateClockwise {
         didSet {
             configureRotation(forLayer: animationLayer)
         }
@@ -51,7 +51,7 @@ import QuartzCore
     }
     
     
-    public convenience init(with image: UIImage, origin: CGPoint = CGPoint(x: 0, y: 0)) {
+    public convenience init(with image: UIImage, origin: CGPoint = Default.CustomActivityIndicatorView.Origin) {
         self.init(frame: CGRect(origin: origin, size: image.size))
         DispatchQueue.main.async {
             self.image = image
@@ -66,7 +66,7 @@ import QuartzCore
     
     
     override open var intrinsicContentSize: CGSize {
-        return image?.size ?? CGSize(width: 0.0, height: 0.0)
+        return image?.size ?? Default.CustomActivityIndicatorView.IntrinsicContentSize
     }
     
     
@@ -76,8 +76,7 @@ import QuartzCore
 public extension CustomActivityIndicatorView {
     
     func configureAnimationLayer(with image: UIImage) {
-        animationLayer.frame = CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: intrinsicContentSize)
-        //        animationLayer.frame = CGRect(x: 0.0, y: 0.0, width: frame.size.width, height: frame.size.height)
+        animationLayer.frame = CGRect(origin: CGPoint.zero, size: intrinsicContentSize)
         animationLayer.contents = image.cgImage
         animationLayer.masksToBounds = true
         configureRotation(forLayer: animationLayer)
@@ -89,17 +88,17 @@ public extension CustomActivityIndicatorView {
     
     func configureRotation(forLayer layer: CALayer) {
         
-        layer.removeAnimation(forKey: "rotate")
+        layer.removeAnimation(forKey: Default.CustomActivityIndicatorView.Animation.Rotate.Key)
         
-        let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotation.duration = 1.0
-        rotation.isRemovedOnCompletion = false
-        rotation.repeatCount = Float.greatestFiniteMagnitude
+        let rotation = CABasicAnimation(keyPath: Default.CustomActivityIndicatorView.Animation.Rotate.KeyPath)
+        rotation.duration = Default.CustomActivityIndicatorView.Animation.Rotate.Duration
+        rotation.isRemovedOnCompletion = Default.CustomActivityIndicatorView.Animation.Rotate.IsRemovedOnCompletion
+        rotation.repeatCount = Default.CustomActivityIndicatorView.Animation.Rotate.RepeatCount
         rotation.fillMode = kCAFillModeForwards
-        rotation.fromValue = rotateClockwise ? NSNumber(value: Float(0.0)) : NSNumber(value: Float(.pi * 2.0))
-        rotation.toValue = rotateClockwise ? NSNumber(value: Float(.pi * 2.0)) : NSNumber(value: Float(0.0))
+        rotation.fromValue = rotateClockwise ? Default.Angle.Zero : Default.Angle.TwoPi
+        rotation.toValue = rotateClockwise ? Default.Angle.TwoPi : Default.Angle.Zero
         
-        layer.add(rotation, forKey: "rotate")
+        layer.add(rotation, forKey: Default.CustomActivityIndicatorView.Animation.Rotate.Key)
         
     }
     
@@ -111,7 +110,7 @@ public extension CustomActivityIndicatorView {
     
     func pause(layer: CALayer) {
         let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
-        layer.speed = 0.0
+        layer.speed = Default.CustomActivityIndicatorView.Animation.Pause.Speed
         layer.timeOffset = pausedTime
         
         isAnimating = false
@@ -120,8 +119,8 @@ public extension CustomActivityIndicatorView {
     
     func resume(layer: CALayer) {
         let pausedTime = layer.timeOffset
-        layer.speed = 1.0
-        layer.timeOffset = 0.0
+        layer.speed = Default.CustomActivityIndicatorView.Animation.Resume.Speed
+        layer.timeOffset = Default.CustomActivityIndicatorView.Animation.Resume.TimeOffset
         
         let timeSincePause = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
         layer.beginTime = timeSincePause
@@ -152,5 +151,53 @@ public extension CustomActivityIndicatorView {
     
     
 }
+
+
+public extension Default {
+
+    enum Angle {
+        static let Zero = NSNumber(value: Float(0.0))
+        static let Pi = NSNumber(value: Float.pi)
+        static let TwoPi = NSNumber(value: Float(.pi * 2.0))
+    }
+    
+    
+    enum CustomActivityIndicatorView {
+        
+        static let HidesWhenStopped = false
+        static let RotateClockwise = true
+        static let Origin =  CGPoint.zero
+        static let IntrinsicContentSize = CGSize.zero
+        
+        enum Animation {
+            
+            enum Pause {
+                static let Speed: Float = 0.0
+            }
+            
+            enum Resume {
+                static let Speed: Float = 1.0
+                static let TimeOffset: CFTimeInterval = 0.0
+            }
+            
+            enum Rotate {
+                static let Key = "rotate"
+                static let KeyPath = "transform.rotation.z"
+                static let Duration: CFTimeInterval = 1.0
+                static let IsRemovedOnCompletion = false
+                static let RepeatCount = Float.greatestFiniteMagnitude
+            }
+            
+        }
+        
+    }
+    
+    
+}
+
+
+
+
+
 
 

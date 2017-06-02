@@ -50,34 +50,6 @@ public extension Default {
     }
     
     
-    enum BusyView {
-        
-        static let OuterIndicatorImage = #imageLiteral(resourceName: "LoadingIcon")
-        static let InnerIndicatorImage = #imageLiteral(resourceName: "PinIcon")
-        
-        enum LoggingIn {
-            static let Title = "Please Wait"
-            static let Subtitle = "Logging in..."
-        }
-        
-        enum LoggingOut {
-            static let Title = "Please Wait"
-            static let Subtitle = "Logging out..."
-        }
-        
-        enum LookingUpAddress {
-            static let Title = "Please Wait"
-            static let Subtitle = "Looking up on map..."
-        }
-        
-        enum PostStudentLocation {
-            static let Title = "Please Wait"
-            static let Subtitle = "Sending your greetings to other Udacians!"
-        }
-        
-    }
-    
-    
     enum Alert {
         static let Title = "Error"
         enum Action {
@@ -111,5 +83,34 @@ public extension Default {
             notificationCenter.post(notification)
         }
     }
+    
+}
+
+
+public extension Default.BusyView {
+    
+    static let OuterIndicatorImage = #imageLiteral(resourceName: "LoadingIcon")
+    static let InnerIndicatorImage = #imageLiteral(resourceName: "PinIcon")
+    
+    enum LoggingIn {
+        static let Title = "Please Wait"
+        static let Subtitle = "Logging in..."
+    }
+    
+    enum LoggingOut {
+        static let Title = "Please Wait"
+        static let Subtitle = "Logging out..."
+    }
+    
+    enum LookingUpAddress {
+        static let Title = "Please Wait"
+        static let Subtitle = "Looking up on map..."
+    }
+    
+    enum PostStudentLocation {
+        static let Title = "Please Wait"
+        static let Subtitle = "Sending your greetings to other Udacians!"
+    }
+    
     
 }
