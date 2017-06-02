@@ -54,6 +54,8 @@
 		EEEE9DAC1EDDA84C000D49C9 /* OTMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAB1EDDA84C000D49C9 /* OTMModel.swift */; };
 		EEEE9DAE1EDDBED2000D49C9 /* Error_+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAD1EDDBED2000D49C9 /* Error_+App.swift */; };
 		EEEE9DB01EDE7DDE000D49C9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DAF1EDE7DDE000D49C9 /* TabBarController.swift */; };
+		EEEE9DB51EE07C86000D49C9 /* ArtKit+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DB31EE07C86000D49C9 /* ArtKit+Appearance.swift */; };
+		EEEE9DB61EE07C86000D49C9 /* Default+Artkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE9DB41EE07C86000D49C9 /* Default+Artkit.swift */; };
 		EEEF86FE1ED4B87F004BB0D9 /* Udacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */; };
 		EEEF87001ED92E74004BB0D9 /* URLRequest+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */; };
 		EEEF87041EDBE929004BB0D9 /* Dictionary+Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */; };
@@ -155,6 +157,8 @@
 		EEEE9DAB1EDDA84C000D49C9 /* OTMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMModel.swift; sourceTree = "<group>"; };
 		EEEE9DAD1EDDBED2000D49C9 /* Error_+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error_+App.swift"; sourceTree = "<group>"; };
 		EEEE9DAF1EDE7DDE000D49C9 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EEEE9DB31EE07C86000D49C9 /* ArtKit+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ArtKit+Appearance.swift"; sourceTree = "<group>"; };
+		EEEE9DB41EE07C86000D49C9 /* Default+Artkit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+Artkit.swift"; sourceTree = "<group>"; };
 		EEEF86FD1ED4B87F004BB0D9 /* Udacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Udacity.swift; sourceTree = "<group>"; };
 		EEEF86FF1ED92E74004BB0D9 /* URLRequest+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ease.swift"; sourceTree = "<group>"; };
 		EEEF87031EDBE929004BB0D9 /* Dictionary+Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ease.swift"; sourceTree = "<group>"; };
@@ -328,7 +332,9 @@
 		EE7801301ECC59A4008F0724 /* ArtKit */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE9DB41EE07C86000D49C9 /* Default+Artkit.swift */,
 				EE78012E1ECC59A0008F0724 /* ArtKit.swift */,
+				EEEE9DB31EE07C86000D49C9 /* ArtKit+Appearance.swift */,
 			);
 			path = ArtKit;
 			sourceTree = "<group>";
@@ -420,10 +426,10 @@
 		EEA929751ECE024700C8A9B0 /* Random */ = {
 			isa = PBXGroup;
 			children = (
+				EEA929791ECE024700C8A9B0 /* MustImport */,
 				EEA929761ECE024700C8A9B0 /* Basic+Random.swift */,
 				EEA929771ECE024700C8A9B0 /* CG+Random.swift */,
 				EEA929781ECE024700C8A9B0 /* MKMapView+Random.swift */,
-				EEA929791ECE024700C8A9B0 /* MustImport */,
 				EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */,
 			);
 			path = Random;
@@ -441,8 +447,8 @@
 		EEA9297D1ECE024700C8A9B0 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */,
 				EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */,
+				EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -778,6 +784,7 @@
 			files = (
 				EEA9298D1ECE024700C8A9B0 /* Default.swift in Sources */,
 				EEA9298E1ECE024700C8A9B0 /* Error_.swift in Sources */,
+				EEEE9DB61EE07C86000D49C9 /* Default+Artkit.swift in Sources */,
 				EEA929921ECE024700C8A9B0 /* Default+Random.swift in Sources */,
 				EEA929931ECE024700C8A9B0 /* Error_+Random.swift in Sources */,
 				EEEF87061EDD3311004BB0D9 /* Default+Udacity.swift in Sources */,
@@ -804,6 +811,7 @@
 				EEA9298C1ECE024700C8A9B0 /* OrderedViewsRespondToReturnKey.swift in Sources */,
 				EEA929841ECE024700C8A9B0 /* ArrayDataSourceController.swift in Sources */,
 				EE204FA11DF6E05400D855BA /* LoginViewController.swift in Sources */,
+				EEEE9DB51EE07C86000D49C9 /* ArtKit+Appearance.swift in Sources */,
 				EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */,
 				EEA929851ECE024700C8A9B0 /* ArrayTableViewDataSource.swift in Sources */,
 				EE1731DC1DF868AA00978508 /* OTMNavigationItem.swift in Sources */,
