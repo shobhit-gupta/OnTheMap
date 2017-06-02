@@ -18,7 +18,6 @@ class OTMNavigationItemController: OTMNavigationItemDelegate {
     
     
     init(withParent parent: UIViewController) {
-        print("OTMNavigationItemController initialised")
         self.parent = parent
         if let otmNavigationItem = otmNavigationItem {
             otmNavigationItem.delegate = self
@@ -27,28 +26,47 @@ class OTMNavigationItemController: OTMNavigationItemDelegate {
     
     
     func refreshButtonPressed() {
-        // TODO: Update models
+        Default.Notification_.StudentsLocationRefreshRequested.post()
     }
     
     
     func pinButtonPressed() {
-        // TODO: Modally present Information Posting View
-        print("pinButtonPressed")
-        if let controller = parent.storyboard?.instantiateViewController(withIdentifier: "InformationPostingView") {
+        if let controller = parent.storyboard?.instantiateViewController(withIdentifier: Default.InfoPostingView.Id) {
             parent.present(controller, animated: true, completion: nil)
         }
     }
     
     
     func shouldDisplayLogoutButton() -> Bool {
-        // TODO: Depending upon the login mechanism return an appropriate value
-        return Bool.random()
+        return OTMModel.shared.loginMethod == .udacity
     }
     
     
     func logoutButtonPressed() {
-        // TODO: Logout
-        parent.dismiss(animated: false, completion: nil)
+        
+        let view: UIView = UIApplication.shared.keyWindow ?? parent.view
+
+        let busyView = BusyView.overlay(on: view, withTitle: Default.BusyView.LoggingOut.Title,
+                                        subtitle: Default.BusyView.LoggingOut.Subtitle,
+                                        outerIndicatorImage: Default.BusyView.OuterIndicatorImage,
+                                        innerIndicatorImage: Default.BusyView.InnerIndicatorImage)
+        busyView.present()
+        
+        OTMModel.shared.logout { (success, error) in
+            busyView.dismiss()
+            busyView.removeFromSuperview()
+            
+            guard success else {
+                if let error = error {
+                    self.parent.present(error.alertController(), animated: true, completion: nil)
+                }
+                return
+            }
+            
+            self.parent.dismiss(animated: false, completion: nil)
+            
+        }
+        
     }
     
     

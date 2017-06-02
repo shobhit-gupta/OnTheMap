@@ -21,9 +21,22 @@ class TabBarController: UITabBarController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshStudentsLocation()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        subscribeToNotifications()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeFromNotification()
     }
 
     
@@ -36,12 +49,15 @@ extension TabBarController {
         OTMModel.shared.getStudentsLocation { (success, error) in
             guard success else {
                 if let error = error {
-                    self.currentState = .alert(error: error)
+                    DispatchQueue.main.async {
+                        self.currentState = .alert(error: error)
+                    }
                 }
                 return
             }
         }
     }
+    
     
     fileprivate func updateUI() {
         switch currentState {
@@ -59,12 +75,12 @@ extension TabBarController {
 //******************************************************************************
 //                              MARK: Notifications
 //******************************************************************************
-extension ListViewController {
+extension TabBarController {
     
     func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(studentsLocationRefreshRequested(_:)),
-                                               name: Notification.Name(rawValue: Default.Notification.StudentsLocationRefreshRequested.rawValue),
+                                               name: Notification.Name(rawValue: Default.Notification_.StudentsLocationRefreshRequested.rawValue),
                                                object: nil)
     }
     
@@ -75,7 +91,7 @@ extension ListViewController {
     
     
     func studentsLocationRefreshRequested(_ notification: Notification) {
-        tableView.reloadData()
+        refreshStudentsLocation()
     }
     
     

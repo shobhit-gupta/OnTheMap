@@ -186,6 +186,30 @@ public extension BusyView {
 }
 
 
+public extension BusyView {
+    
+    public static func overlay(on view: UIView,
+                               withTitle title: String?,
+                               subtitle: String?,
+                               outerIndicatorImage: UIImage?,
+                               innerIndicatorImage: UIImage?) -> BusyView {
+        
+        let busyView = BusyView(frame: CGRect.zero)
+        
+        busyView.title = title
+        busyView.subtitle = subtitle
+        busyView.outerIndicatorImage = outerIndicatorImage
+        busyView.innerIndicatorImage = innerIndicatorImage
+        
+        view.addSubview(busyView)
+        busyView.autoPinEdgesToSuperviewEdges()
+        
+        busyView.isHidden = true
+        
+        return busyView
+    }
+    
+}
 
 
 

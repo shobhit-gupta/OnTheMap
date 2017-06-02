@@ -13,11 +13,16 @@ class OTMModel {
     
     public static let shared = OTMModel()
     
+    public enum LoginMethod {
+        case udacity
+    }
+    
+    public var loginMethod: LoginMethod?
+    
     var student: Udacity.Student?
     var students: [Udacity.Student]  = [] {
         didSet {
-            let notification = Notification(name: Notification.Name(rawValue: Default.Notification.StudentsLocationModified.rawValue))
-            NotificationCenter.default.post(notification)
+            Default.Notification_.StudentsLocationModified.post()
         }
     }
     
@@ -50,7 +55,7 @@ extension OTMModel {
                 }
                 
                 self.student = student
-                print("\(student.uniqueKey): \(student.firstName) \(student.lastName)")
+                self.loginMethod = .udacity
                 completion(true, nil)
                 
             }
