@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var busyView: BusyView!
     
+    @IBOutlet weak var googleSignIn: UIButton!
+    
     
     // MARK: Private variables and types
     fileprivate enum State {
@@ -35,6 +37,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupDelegates()
     }
     
     
@@ -46,29 +49,36 @@ class LoginViewController: UIViewController {
     // MARK: IBActions
     @IBAction func signIn(_ sender: Any) {
         
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            // Get rid of keyboard if it still showing
-            hideKeyboard()
+        let completionHandler = { (success: Bool, error: Error?) in
             
-            currentState = .busy(title: Default.BusyView.LoggingIn.Title, subtitle: Default.BusyView.LoggingIn.Subtitle)
-            
-            OTMModel.shared.login(userName: email, password: password, completion: { (success, error) in
-                
-                guard success else {
-                    if let error = error {
-                        DispatchQueue.main.async {
-                            self.currentState = .alert(error: error)
-                        }
+            guard success else {
+                if let error = error {
+                    DispatchQueue.main.async {
+                        self.currentState = .alert(error: error)
                     }
-                    return
                 }
-                
-                DispatchQueue.main.async {
-                    self.currentState = .normal
-                    self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
-                }
-                
-            })
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.currentState = .normal
+                self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
+            }
+            
+        }
+        
+        
+        // Get rid of keyboard if it still showing
+        hideKeyboard()
+        currentState = .busy(title: Default.BusyView.LoggingIn.Title, subtitle: Default.BusyView.LoggingIn.Subtitle)
+        
+        
+        if googleSignIn === sender as? UIButton {
+            OTMModel.shared.loginWithGoogle(completion: completionHandler)
+            
+        } else if let email = emailTextField.text, let password = passwordTextField.text {
+            OTMModel.shared.login(userName: email, password: password, completion: completionHandler)
+        
         }
         
     }
@@ -92,6 +102,7 @@ extension LoginViewController {
     fileprivate func setupUI() {
         setupStackView()
         setupBusyView()
+        setupGoogle()
     }
     
     
@@ -104,6 +115,11 @@ extension LoginViewController {
     private func setupBusyView() {
         busyView.outerIndicatorImage = Default.BusyView.OuterIndicatorImage
         busyView.innerIndicatorImage = Default.BusyView.InnerIndicatorImage
+    }
+    
+    
+    private func setupGoogle() {
+        googleSignIn.isEnabled = OTMModel.shared.isGoogleSignInAvailable
     }
     
     
@@ -131,6 +147,19 @@ extension LoginViewController {
     
     
 }
+
+
+//******************************************************************************
+//               MARK: OrderedViewsRespondToReturnKey Protocol
+//******************************************************************************
+extension LoginViewController {
+    
+    fileprivate func setupDelegates() {
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+    
+}
+
 
 
 //******************************************************************************
@@ -192,3 +221,18 @@ extension LoginViewController {
         passwordTextField.resignFirstResponder()
     }
 }
+
+
+//******************************************************************************
+//                           MARK: Google Sign In
+//******************************************************************************
+extension LoginViewController: GIDSignInUIDelegate {}
+
+
+
+
+
+
+
+
+

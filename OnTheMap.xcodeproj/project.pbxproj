@@ -48,6 +48,9 @@
 		EEA929931ECE024700C8A9B0 /* Error_+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297B1ECE024700C8A9B0 /* Error_+Random.swift */; };
 		EEA929941ECE024700C8A9B0 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */; };
 		EEA929951ECE024700C8A9B0 /* UIView+Fadeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */; };
+		EEB0C7971EE246470072773F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEB0C7961EE246470072773F /* GoogleService-Info.plist */; };
+		EEB0C79A1EE291660072773F /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEB0C7991EE291660072773F /* Roboto-Medium.ttf */; };
+		EEB0C79D1EE30CFC0072773F /* GIDSignInDelegate+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0C79C1EE30CFC0072773F /* GIDSignInDelegate+Configure.swift */; };
 		EEE21F191ECF1335007399A0 /* Default+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F181ECF1335007399A0 /* Default+App.swift */; };
 		EEE21F1B1ECF8446007399A0 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1A1ECF8446007399A0 /* BusyView.swift */; };
 		EEE21F1D1ED00A73007399A0 /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */; };
@@ -151,6 +154,9 @@
 		EEA9297B1ECE024700C8A9B0 /* Error_+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error_+Random.swift"; sourceTree = "<group>"; };
 		EEA9297C1ECE024700C8A9B0 /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		EEA9297E1ECE024700C8A9B0 /* UIView+Fadeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fadeable.swift"; sourceTree = "<group>"; };
+		EEB0C7961EE246470072773F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEB0C7991EE291660072773F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		EEB0C79C1EE30CFC0072773F /* GIDSignInDelegate+Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GIDSignInDelegate+Configure.swift"; sourceTree = "<group>"; };
 		EEE21F181ECF1335007399A0 /* Default+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Default+App.swift"; sourceTree = "<group>"; };
 		EEE21F1A1ECF8446007399A0 /* BusyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
 		EEE21F1C1ED00A73007399A0 /* UIView+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 		EE1731D61DF859ED00978508 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				EEB0C7981EE291660072773F /* Fonts */,
 				EE204FA21DF6E05400D855BA /* Main.storyboard */,
 				EE204FA51DF6E05400D855BA /* Assets.xcassets */,
 				EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */,
@@ -325,6 +332,7 @@
 				EE204F9E1DF6E05400D855BA /* AppDelegate.swift */,
 				EE1731D61DF859ED00978508 /* Assets */,
 				EE204FAA1DF6E05400D855BA /* Info.plist */,
+				EEB0C7961EE246470072773F /* GoogleService-Info.plist */,
 			);
 			path = OnTheMap;
 			sourceTree = "<group>";
@@ -453,10 +461,27 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		EEB0C7981EE291660072773F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EEB0C7991EE291660072773F /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EEB0C79B1EE30C660072773F /* GoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				EEB0C79C1EE30CFC0072773F /* GIDSignInDelegate+Configure.swift */,
+			);
+			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
 		EEEF86F81ED4B7AF004BB0D9 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				EE8AED641ED3E84800125126 /* SimpleAPI.swift */,
+				EEB0C79B1EE30C660072773F /* GoogleSignIn */,
 				EEEF86FA1ED4B800004BB0D9 /* Udacity */,
 			);
 			path = API;
@@ -615,7 +640,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB0C79A1EE291660072773F /* Roboto-Medium.ttf in Resources */,
 				EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */,
+				EEB0C7971EE246470072773F /* GoogleService-Info.plist in Resources */,
 				EE204FA61DF6E05400D855BA /* Assets.xcassets in Resources */,
 				EE204FA41DF6E05400D855BA /* Main.storyboard in Resources */,
 			);
@@ -782,6 +809,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB0C79D1EE30CFC0072773F /* GIDSignInDelegate+Configure.swift in Sources */,
 				EEA9298D1ECE024700C8A9B0 /* Default.swift in Sources */,
 				EEA9298E1ECE024700C8A9B0 /* Error_.swift in Sources */,
 				EEEE9DB61EE07C86000D49C9 /* Default+Artkit.swift in Sources */,

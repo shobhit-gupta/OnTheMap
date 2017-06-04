@@ -16,11 +16,6 @@ public extension Error_ {
         case BadURL(urlString: String?)
         case UserDetailsMissing
         
-        var localizedDescriptionVerbose: String {
-            let description = String(describing: self) + " " + localizedDescription
-            return description
-        }
-        
         var localizedDescription: String {
             var description : String
             switch self {

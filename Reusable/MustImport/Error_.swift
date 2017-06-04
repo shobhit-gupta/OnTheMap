@@ -52,10 +52,6 @@ public extension Error_ {
         case UnexpectedSegueSender(identifier: String?, sender: Any.Type, expected: Any.Type)
         case UnexpectedCurrentState(state: String)
         
-        var localizedDescriptionVerbose: String {
-            let description = String(describing: self) + " " + localizedDescription
-            return description
-        }
         
         // TODO: Use localized String xml file (Maybe later if there's a need for it.)
         var localizedDescription: String {
