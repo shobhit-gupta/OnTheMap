@@ -9,6 +9,8 @@ target 'OnTheMap' do
     pod 'IQKeyboardManagerSwift'
     pod 'PureLayout'
     pod 'Google/SignIn'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
 
     target 'OnTheMapTests' do
         inherit! :search_paths

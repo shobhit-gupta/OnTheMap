@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FacebookLogin
+import FBSDKCoreKit
 
 
 class OTMModel: NSObject {
@@ -16,9 +18,10 @@ class OTMModel: NSObject {
     public enum LoginMethod {
         case udacity
         case google
+        case facebook
     }
     
-    public var loginMethod: LoginMethod? {
+    public fileprivate(set) var loginMethod: LoginMethod? {
         get { return _loginMethod }
         set {
             guard _loginMethod == nil || newValue == nil else {
@@ -55,12 +58,23 @@ extension OTMModel {
 
     public func logout(completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
         
-        if loginMethod == .udacity {
+        guard let loginMethod = loginMethod else {
+            completion(false, Error_.App.NotLoggedIn)
+            return
+        }
+        
+        switch loginMethod {
+        case .udacity:
             logoutFromUdacity(completion: completion)
             
-        } else if loginMethod == .google {
+        case .google:
             logoutFromGoogle(completion: completion)
+            
+        case .facebook:
+            logoutFromFacebook(completion: completion)
+            
         }
+        
     }
     
 }
@@ -192,8 +206,54 @@ extension OTMModel: GIDSignInDelegate {
     }
     
     
+}
+
+
+//******************************************************************************
+//                            MARK: Facebook Login
+//******************************************************************************
+extension OTMModel{
+    
+    public func loginWithFacebook(viewController: UIViewController, completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+        let loginManager = LoginManager()
+        loginManager.logIn([.publicProfile], viewController: viewController) { loginResult in
+            
+            switch loginResult {
+            case .failed(let error):
+                completion(false, error)
+                
+            case .cancelled:
+                completion(false, Error_.Facebook.LoginCanceled)
+                
+            case .success:
+                FBSDKProfile.loadCurrentProfile(completion: { (profile, error) in
+                    guard let profile = profile, error == nil else {
+                        completion(false, error)
+                        return
+                    }
+                    
+                    self.student = Udacity.Student(uniqueKey: profile.userID, firstName: profile.firstName, lastName: profile.lastName)
+                    self.loginMethod = .facebook
+                    completion(true, nil)
+                })
+                
+            }
+        }
+    }
+    
+    
+    fileprivate func logoutFromFacebook(completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+        Facebook.logoutFromFacebook { (success, error) in
+            if success {
+                self.loginMethod = nil
+            }
+            completion(success, error)
+        }
+    }
+    
     
 }
+
 
 
 

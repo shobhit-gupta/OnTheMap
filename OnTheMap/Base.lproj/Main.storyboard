@@ -173,9 +173,9 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="85T-wj-8gX" userLabel="Services List Stack View">
                                                         <rect key="frame" x="0.0" y="32.5" width="280" height="64"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzt-0Q-VqM">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzt-0Q-VqM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="136" height="64"/>
-                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                                 <state key="normal" title="FACEBOOK">
                                                                     <color key="titleColor" red="0.45882352941176469" green="0.48627450980392156" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -188,6 +188,9 @@
                                                                         <color key="value" red="0.85882352941176465" green="0.88627450980392153" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ou2-Ul-nfv"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41t-B5-rQt">
                                                                 <rect key="frame" x="144" y="0.0" width="136" height="64"/>
@@ -259,6 +262,7 @@
                     <connections>
                         <outlet property="busyView" destination="PuU-2S-FFP" id="36z-l4-w1d"/>
                         <outlet property="emailTextField" destination="Xgp-oh-FOC" id="1Ey-Tk-dPT"/>
+                        <outlet property="facebookSignIn" destination="vzt-0Q-VqM" id="0eO-GY-Bjt"/>
                         <outlet property="googleSignIn" destination="41t-B5-rQt" id="9nQ-wm-r7M"/>
                         <outlet property="passwordTextField" destination="Aho-q7-S7x" id="aQq-sy-lB7"/>
                         <outlet property="rootStackView" destination="jbQ-Yy-oDT" id="kb1-eL-6fP"/>

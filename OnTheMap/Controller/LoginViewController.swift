@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var busyView: BusyView!
     
     @IBOutlet weak var googleSignIn: UIButton!
+    @IBOutlet weak var facebookSignIn: UIButton!
     
     
     // MARK: Private variables and types
@@ -49,35 +50,18 @@ class LoginViewController: UIViewController {
     // MARK: IBActions
     @IBAction func signIn(_ sender: Any) {
         
-        let completionHandler = { (success: Bool, error: Error?) in
-            
-            guard success else {
-                if let error = error {
-                    DispatchQueue.main.async {
-                        self.currentState = .alert(error: error)
-                    }
-                }
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.currentState = .normal
-                self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
-            }
-            
-        }
-        
-        
         // Get rid of keyboard if it still showing
         hideKeyboard()
         currentState = .busy(title: Default.BusyView.LoggingIn.Title, subtitle: Default.BusyView.LoggingIn.Subtitle)
         
-        
-        if googleSignIn === sender as? UIButton {
-            OTMModel.shared.loginWithGoogle(completion: completionHandler)
+        if facebookSignIn === sender as? UIButton {
+            OTMModel.shared.loginWithFacebook(viewController: self, completion: loginCompletionHandler(success:error:))
+            
+        } else if googleSignIn === sender as? UIButton {
+            OTMModel.shared.loginWithGoogle(completion: loginCompletionHandler(success:error:))
             
         } else if let email = emailTextField.text, let password = passwordTextField.text {
-            OTMModel.shared.login(userName: email, password: password, completion: completionHandler)
+            OTMModel.shared.login(userName: email, password: password, completion: loginCompletionHandler(success:error:))
         
         }
         
@@ -87,6 +71,23 @@ class LoginViewController: UIViewController {
     @IBAction func signUp(_ sender: Any) {
         if let url = OTMModel.shared.getSignUpURL() {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
+    private func loginCompletionHandler(success: Bool, error: Error?) {
+        guard success else {
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.currentState = .alert(error: error)
+                }
+            }
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.currentState = .normal
+            self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
         }
     }
     

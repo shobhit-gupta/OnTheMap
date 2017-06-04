@@ -14,6 +14,7 @@ public extension Error_ {
     enum App: Error {
         case AddressNotFound
         case BadURL(urlString: String?)
+        case NotLoggedIn
         case UserDetailsMissing
         
         var localizedDescription: String {
@@ -29,6 +30,9 @@ public extension Error_ {
             case .UserDetailsMissing:
                 description = "Specify all the details before sharing."
                 
+            case .NotLoggedIn:
+                description = "Not logged in."
+                
             }
             
             return description
@@ -36,6 +40,28 @@ public extension Error_ {
         
     }
     
+}
+
+
+public extension Error_ {
+    
+    enum Facebook: Error {
+        case LoginCanceled
+        case GraphRequest(request: Any.Type)
+        
+        var localizedDescription: String {
+            var description : String
+            switch self {
+            case .LoginCanceled:
+                description = "User canceled login."
+                
+            case .GraphRequest(let requestType):
+                description = "Could not initialize graph request: \(requestType)"
+            }
+            
+            return description
+        }
+    }
     
 }
 
@@ -59,6 +85,12 @@ public extension Error {
             msg = error.localizedDescription
             
         } else if let error = self as? Error_.App {
+            msg = error.localizedDescription
+            
+        } else if let error = self as? Error_.Google {
+            msg = error.localizedDescription
+            
+        } else if let error = self as? Error_.Facebook {
             msg = error.localizedDescription
             
         } else {

@@ -25,6 +25,7 @@
 		EE204FA61DF6E05400D855BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA51DF6E05400D855BA /* Assets.xcassets */; };
 		EE204FA91DF6E05400D855BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE204FA71DF6E05400D855BA /* LaunchScreen.storyboard */; };
 		EE209F031DFEC77B00C82F5C /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */; };
+		EE7086791EE46D1500C851B0 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7086781EE46D1500C851B0 /* Facebook.swift */; };
 		EE78012F1ECC59A0008F0724 /* ArtKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78012E1ECC59A0008F0724 /* ArtKit.swift */; };
 		EE8AED651ED3E84800125126 /* SimpleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8AED641ED3E84800125126 /* SimpleAPI.swift */; };
 		EEA929811ECE024700C8A9B0 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */; };
@@ -131,6 +132,7 @@
 		EE204FA81DF6E05400D855BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE204FAA1DF6E05400D855BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE209F021DFEC77B00C82F5C /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
+		EE7086781EE46D1500C851B0 /* Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
 		EE78012E1ECC59A0008F0724 /* ArtKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtKit.swift; sourceTree = "<group>"; };
 		EE8AED641ED3E84800125126 /* SimpleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAPI.swift; sourceTree = "<group>"; };
 		EEA929621ECE024700C8A9B0 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -337,6 +339,14 @@
 			path = OnTheMap;
 			sourceTree = "<group>";
 		};
+		EE7086771EE46CA000C851B0 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				EE7086781EE46D1500C851B0 /* Facebook.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
 		EE7801301ECC59A4008F0724 /* ArtKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +492,7 @@
 			children = (
 				EE8AED641ED3E84800125126 /* SimpleAPI.swift */,
 				EEB0C79B1EE30C660072773F /* GoogleSignIn */,
+				EE7086771EE46CA000C851B0 /* Facebook */,
 				EEEF86FA1ED4B800004BB0D9 /* Udacity */,
 			);
 			path = API;
@@ -826,6 +837,7 @@
 				EEF4DA441ED2AB0700DE0988 /* Network.swift in Sources */,
 				EEA9298B1ECE024700C8A9B0 /* UIColor+Ease.swift in Sources */,
 				EE17322D1DFADA4700978508 /* OTMMapViewAnnotation.swift in Sources */,
+				EE7086791EE46D1500C851B0 /* Facebook.swift in Sources */,
 				EEEF87041EDBE929004BB0D9 /* Dictionary+Ease.swift in Sources */,
 				EEA9298F1ECE024700C8A9B0 /* Basic+Random.swift in Sources */,
 				EEA929871ECE024700C8A9B0 /* Array+Ease.swift in Sources */,
