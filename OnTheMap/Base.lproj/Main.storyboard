@@ -243,26 +243,12 @@
                                 </subviews>
                                 <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-2S-FFP" customClass="BusyView" customModule="OnTheMap" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="outerIndicatorImage" value="LoadingIcon"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="innerIndicatorImage" value="PinIcon"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Please Wait"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="Logging In..."/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jbQ-Yy-oDT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="6U9-z6-3Qi"/>
-                            <constraint firstItem="PuU-2S-FFP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Git-1U-YZR"/>
-                            <constraint firstItem="PuU-2S-FFP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UBu-xm-DoJ"/>
-                            <constraint firstItem="PuU-2S-FFP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uoe-SA-6jj"/>
                             <constraint firstAttribute="bottom" secondItem="jbQ-Yy-oDT" secondAttribute="bottom" constant="20" symbolic="YES" id="dXq-lm-EpW"/>
                             <constraint firstItem="jbQ-Yy-oDT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="ddv-jb-HSf"/>
-                            <constraint firstItem="PuU-2S-FFP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8v-wp-PhV"/>
                             <constraint firstAttribute="trailing" secondItem="jbQ-Yy-oDT" secondAttribute="trailing" constant="20" symbolic="YES" id="mNZ-EQ-VAk"/>
                         </constraints>
                         <variation key="default">
@@ -277,7 +263,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="busyView" destination="PuU-2S-FFP" id="36z-l4-w1d"/>
                         <outlet property="emailTextField" destination="Xgp-oh-FOC" id="1Ey-Tk-dPT"/>
                         <outlet property="facebookSignIn" destination="vzt-0Q-VqM" id="0eO-GY-Bjt"/>
                         <outlet property="googleSignIn" destination="41t-B5-rQt" id="9nQ-wm-r7M"/>
@@ -420,13 +405,16 @@
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UPi-Lv-gv4" userLabel="Add Link Stack View">
                                 <rect key="frame" x="0.0" y="-1" width="320" height="570"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://" placeholder="Tap to add link" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58k-ce-JPQ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://" placeholder="Add link to share" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="58k-ce-JPQ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
                                         <color key="backgroundColor" red="0.25490196079999999" green="0.45882352939999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="send"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="uuh-9Q-xt6" id="wur-ha-22Y"/>
                                         </connections>
@@ -445,7 +433,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="383-9B-jPK" userLabel="Form Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="334"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uen-88-NTQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uen-88-NTQ" userLabel="AddressLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
@@ -476,15 +464,15 @@ today?</string>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap Here To Add Your Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-bb-1ne" userLabel="Address Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Your Location" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-bb-1ne" userLabel="Address Text Field">
                                                 <rect key="frame" x="0.0" y="85" width="320" height="249"/>
                                                 <color key="backgroundColor" red="0.25490196078431371" green="0.45882352941176469" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="search"/>
-                                                <variation key="heightClass=compact-widthClass=compact">
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
                                                     <outlet property="delegate" destination="uuh-9Q-xt6" id="glt-jP-jah"/>
@@ -609,12 +597,15 @@ today?</string>
                     <connections>
                         <outlet property="addLinkStackView" destination="UPi-Lv-gv4" id="OKA-Co-TEX"/>
                         <outlet property="addLocationStackView" destination="tRj-AV-aEs" id="AOO-G3-PTm"/>
+                        <outlet property="addressLabel" destination="uen-88-NTQ" id="atC-ow-auR"/>
                         <outlet property="addressTextField" destination="Kxx-bb-1ne" id="RsT-Xb-nXi"/>
                         <outlet property="busyView" destination="lkK-CH-OTR" id="8DU-ez-rWk"/>
                         <outlet property="cancelButton" destination="jSD-n9-0NS" id="Sxi-vZ-2eS"/>
                         <outlet property="linkTextField" destination="58k-ce-JPQ" id="RH0-Np-doD"/>
                         <outlet property="mapView" destination="q59-LG-9Mv" id="TN8-GF-chk"/>
                         <outlet property="overlaySubmitStackView" destination="kqf-ZU-nS7" id="oH5-oi-nRl"/>
+                        <outlet property="submitAddress" destination="vmm-NQ-izJ" id="Sux-6b-QCR"/>
+                        <outlet property="submitLink" destination="aP1-So-Wrw" id="mmz-Hp-0ls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qx-Yg-50W" userLabel="First Responder" sceneMemberID="firstResponder"/>
