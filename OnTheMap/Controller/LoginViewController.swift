@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PureLayout
+
 
 class LoginViewController: UIViewController {
     
@@ -14,7 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var rootStackView: UIStackView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var busyView: BusyView!
     
     @IBOutlet weak var googleSignIn: UIButton!
     @IBOutlet weak var facebookSignIn: UIButton!
@@ -32,6 +33,8 @@ class LoginViewController: UIViewController {
             updateUI()
         }
     }
+    
+    fileprivate var busyView: BusyView!
     
     
     // MARK: UIViewController Methods
@@ -114,8 +117,16 @@ extension LoginViewController {
     
     
     private func setupBusyView() {
+        let properties = OverlayType.Properties(color: ArtKit.primaryColor.withAlphaComponent(0.2),
+                                                blur: OverlayType.Properties.Blur(style: .regular,
+                                                                                  isVibrant: false))
+        busyView = BusyView(frame: CGRect.zero, properties: properties)
+        busyView.isHidden = true
         busyView.outerIndicatorImage = Default.BusyView.OuterIndicatorImage
         busyView.innerIndicatorImage = Default.BusyView.InnerIndicatorImage
+        
+        view.addSubview(busyView)
+        busyView.autoPinEdgesToSuperviewEdges()
     }
     
     

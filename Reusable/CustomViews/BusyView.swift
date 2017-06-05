@@ -42,6 +42,8 @@ open class BusyView: OverlayView {
     fileprivate let innerIndicator = CustomActivityIndicatorView(frame: CGRect.zero)
     fileprivate let containerStackView = UIStackView(frame: CGRect.zero)
     
+    fileprivate var overlayType: OverlayType?
+    
     private var shouldSetupConstraints = true
     
     
@@ -57,6 +59,12 @@ open class BusyView: OverlayView {
         setupView()
     }
 
+    
+    public init(frame: CGRect, properties: OverlayType.Properties) {
+        super.init(frame: frame)
+        setupView(with: properties)
+    }
+    
     
     // MARK: UIView Methods
     override open func updateConstraints() {
@@ -77,8 +85,8 @@ open class BusyView: OverlayView {
 //******************************************************************************
 fileprivate extension BusyView {
 
-    fileprivate func setupView() {
-        setupOverlay()
+    fileprivate func setupView(with properties: OverlayType.Properties? = nil) {
+        setupOverlay(with: properties)
         setupLabels()
         setupIndicators()
         setupContainerStackView()
@@ -143,18 +151,22 @@ fileprivate extension BusyView {
     
     
     private func setupLabel(_ label: UILabel) {
-        label.textColor = Default.BusyView.Label.Text.Color
+        if overlayType?.properties.blur?.style == .dark {
+            label.textColor = Default.BusyView.Label.Text.LightColor
+        } else {
+            label.textColor = Default.BusyView.Label.Text.DarkColor
+        }
         label.textAlignment = Default.BusyView.Label.Text.Alignment
         label.numberOfLines = Default.BusyView.Label.NumberOfLines
         label.shadowOffset = Default.BusyView.Label.ShadowOffset
     }
     
     
-    private func setupOverlay() {
-        let properties = OverlayType.Properties(color: Default.BusyView.Overlay.BackgroundColor,
-                                                blur: OverlayType.Properties.Blur(style: Default.BusyView.Overlay.BlurEffectStyle,
-                                                                                  isVibrant: false))
-        _ = setupOverlay(withDesired: properties)
+    private func setupOverlay(with properties: OverlayType.Properties? = nil) {
+        let properties = properties ?? OverlayType.Properties(color: Default.BusyView.Overlay.BackgroundColor,
+                                                              blur: OverlayType.Properties.Blur(style: Default.BusyView.Overlay.BlurEffectStyle,
+                                                                                                isVibrant: false))
+        overlayType = setupOverlay(withDesired: properties)
         
     }
     
@@ -240,7 +252,8 @@ public extension Default {
             static let ShadowOffset = CGSize(width: 0.0, height: -1.0)
             
             enum Text {
-                static let Color: UIColor = ArtKit.secondaryColor // UIColor.white
+                static let LightColor: UIColor = UIColor.white
+                static let DarkColor: UIColor = UIColor.black
                 static let Alignment: NSTextAlignment = .center
             }
             
