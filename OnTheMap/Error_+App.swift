@@ -14,12 +14,8 @@ public extension Error_ {
     enum App: Error {
         case AddressNotFound
         case BadURL(urlString: String?)
+        case NotLoggedIn
         case UserDetailsMissing
-        
-        var localizedDescriptionVerbose: String {
-            let description = String(describing: self) + " " + localizedDescription
-            return description
-        }
         
         var localizedDescription: String {
             var description : String
@@ -34,13 +30,15 @@ public extension Error_ {
             case .UserDetailsMissing:
                 description = "Specify all the details before sharing."
                 
+            case .NotLoggedIn:
+                description = "Not logged in."
+                
             }
             
             return description
         }
         
     }
-    
     
 }
 
@@ -64,6 +62,12 @@ public extension Error {
             msg = error.localizedDescription
             
         } else if let error = self as? Error_.App {
+            msg = error.localizedDescription
+            
+        } else if let error = self as? Error_.Google {
+            msg = error.localizedDescription
+            
+        } else if let error = self as? Error_.Facebook {
             msg = error.localizedDescription
             
         } else {

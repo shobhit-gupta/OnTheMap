@@ -24,17 +24,23 @@ public extension Error_ {
 
 public extension Error {
     
-    public func info() -> String {
+    public func info(verbose: Bool = false) -> String {
         let description: String
         let objectDescription = String(describing: self)
         let localizedDescription = self.localizedDescription
         
-        if localizedDescription == ""  || objectDescription.contains(localizedDescription) {
+        if !verbose && localizedDescription.length() > 0 {
+            description = localizedDescription
+        
+        } else if localizedDescription == ""  || objectDescription.contains(localizedDescription) {
             description = objectDescription
+        
         } else if localizedDescription.contains(objectDescription) {
             description = localizedDescription
+        
         } else {
             description = objectDescription + ": " + localizedDescription
+        
         }
         
         return description
@@ -52,10 +58,6 @@ public extension Error_ {
         case UnexpectedSegueSender(identifier: String?, sender: Any.Type, expected: Any.Type)
         case UnexpectedCurrentState(state: String)
         
-        var localizedDescriptionVerbose: String {
-            let description = String(describing: self) + " " + localizedDescription
-            return description
-        }
         
         // TODO: Use localized String xml file (Maybe later if there's a need for it.)
         var localizedDescription: String {

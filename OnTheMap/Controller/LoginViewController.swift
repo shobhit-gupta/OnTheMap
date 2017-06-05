@@ -16,6 +16,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var busyView: BusyView!
     
+    @IBOutlet weak var googleSignIn: UIButton!
+    @IBOutlet weak var facebookSignIn: UIButton!
+    
     
     // MARK: Private variables and types
     fileprivate enum State {
@@ -35,6 +38,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupDelegates()
     }
     
     
@@ -46,29 +50,19 @@ class LoginViewController: UIViewController {
     // MARK: IBActions
     @IBAction func signIn(_ sender: Any) {
         
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            // Get rid of keyboard if it still showing
-            hideKeyboard()
+        // Get rid of keyboard if it still showing
+        hideKeyboard()
+        currentState = .busy(title: Default.BusyView.LoggingIn.Title, subtitle: Default.BusyView.LoggingIn.Subtitle)
+        
+        if facebookSignIn === sender as? UIButton {
+            OTMModel.shared.loginWithFacebook(viewController: self, completion: loginCompletionHandler(success:error:))
             
-            currentState = .busy(title: Default.BusyView.LoggingIn.Title, subtitle: Default.BusyView.LoggingIn.Subtitle)
+        } else if googleSignIn === sender as? UIButton {
+            OTMModel.shared.loginWithGoogle(completion: loginCompletionHandler(success:error:))
             
-            OTMModel.shared.login(userName: email, password: password, completion: { (success, error) in
-                
-                guard success else {
-                    if let error = error {
-                        DispatchQueue.main.async {
-                            self.currentState = .alert(error: error)
-                        }
-                    }
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    self.currentState = .normal
-                    self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
-                }
-                
-            })
+        } else if let email = emailTextField.text, let password = passwordTextField.text {
+            OTMModel.shared.login(userName: email, password: password, completion: loginCompletionHandler(success:error:))
+        
         }
         
     }
@@ -77,6 +71,23 @@ class LoginViewController: UIViewController {
     @IBAction func signUp(_ sender: Any) {
         if let url = OTMModel.shared.getSignUpURL() {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
+    private func loginCompletionHandler(success: Bool, error: Error?) {
+        guard success else {
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.currentState = .alert(error: error)
+                }
+            }
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.currentState = .normal
+            self.performSegue(withIdentifier: Default.Segues.FromLogin.ToTabbedView.rawValue, sender: nil)
         }
     }
     
@@ -92,6 +103,7 @@ extension LoginViewController {
     fileprivate func setupUI() {
         setupStackView()
         setupBusyView()
+        setupGoogle()
     }
     
     
@@ -104,6 +116,11 @@ extension LoginViewController {
     private func setupBusyView() {
         busyView.outerIndicatorImage = Default.BusyView.OuterIndicatorImage
         busyView.innerIndicatorImage = Default.BusyView.InnerIndicatorImage
+    }
+    
+    
+    private func setupGoogle() {
+        googleSignIn.isEnabled = OTMModel.shared.isGoogleSignInAvailable
     }
     
     
@@ -131,6 +148,19 @@ extension LoginViewController {
     
     
 }
+
+
+//******************************************************************************
+//               MARK: OrderedViewsRespondToReturnKey Protocol
+//******************************************************************************
+extension LoginViewController {
+    
+    fileprivate func setupDelegates() {
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+    
+}
+
 
 
 //******************************************************************************
@@ -192,3 +222,18 @@ extension LoginViewController {
         passwordTextField.resignFirstResponder()
     }
 }
+
+
+//******************************************************************************
+//                           MARK: Google Sign In
+//******************************************************************************
+extension LoginViewController: GIDSignInUIDelegate {}
+
+
+
+
+
+
+
+
+

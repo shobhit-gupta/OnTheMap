@@ -64,7 +64,7 @@ class InformationPostingViewController: UIViewController {
     
     @IBAction func submit(_ sender: Any) {
         guard case InformationPostingState.addLink(let mapString, let latitude, let longitude) = currentState else {
-            print(Error_.General.UnexpectedCurrentState(state: "\(currentState)").localizedDescriptionVerbose)
+            print(Error_.General.UnexpectedCurrentState(state: "\(currentState)").info())
             return
         }
         

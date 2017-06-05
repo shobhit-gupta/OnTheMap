@@ -38,7 +38,8 @@ class OTMNavigationItemController: OTMNavigationItemDelegate {
     
     
     func shouldDisplayLogoutButton() -> Bool {
-        return OTMModel.shared.loginMethod == .udacity
+        //return OTMModel.shared.loginMethod == .udacity || OTMModel.shared.loginMethod == .google
+        return true
     }
     
     

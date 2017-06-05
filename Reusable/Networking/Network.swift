@@ -287,12 +287,6 @@ public extension Error_.Network {
         case NotAnImage(url: URL)
         case UnacceptableStatusCode(Int?, acceptedStatusCodes: [CountableClosedRange<Int>], url: URL)
         
-        
-        var localizedDescriptionVerbose: String {
-            let description = String(describing: self) + " " + localizedDescription
-            return description
-        }
-        
         var localizedDescription: String {
             var description : String
             switch self {
@@ -324,11 +318,6 @@ public extension Error_.Network {
     enum Request: Error {
         case NoURLFound(in: URLRequest)
         case ToJSONConversionFailed(from: Any)
-        
-        var localizedDescriptionVerbose: String {
-            let description = String(describing: self) + " " + localizedDescription
-            return description
-        }
         
         var localizedDescription: String {
             var description : String
