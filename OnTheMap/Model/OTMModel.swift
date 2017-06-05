@@ -9,6 +9,7 @@
 import Foundation
 import FacebookLogin
 import FBSDKCoreKit
+import FacebookCore
 
 
 class OTMModel: NSObject {
@@ -215,30 +216,31 @@ extension OTMModel: GIDSignInDelegate {
 extension OTMModel{
     
     public func loginWithFacebook(viewController: UIViewController, completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
-        let loginManager = LoginManager()
-        loginManager.logIn([.publicProfile], viewController: viewController) { loginResult in
-            
-            switch loginResult {
-            case .failed(let error):
+        Facebook.loginWithFacebook(viewController: viewController) { (success, grantedPermissions, _, _, error) in
+            guard success else {
                 completion(false, error)
-                
-            case .cancelled:
-                completion(false, Error_.Facebook.LoginCanceled)
-                
-            case .success:
-                FBSDKProfile.loadCurrentProfile(completion: { (profile, error) in
-                    guard let profile = profile, error == nil else {
-                        completion(false, error)
-                        return
-                    }
-                    
-                    self.student = Udacity.Student(uniqueKey: profile.userID, firstName: profile.firstName, lastName: profile.lastName)
-                    self.loginMethod = .facebook
-                    completion(true, nil)
-                })
-                
+                return
             }
+            
+            guard let grantedPermissions = grantedPermissions,
+                grantedPermissions.contains(Permission(name: "public_profile")) else {
+                    completion(false, Error_.Facebook.PermissionDenied(permission: .publicProfile))
+                    return
+            }
+            
+            FBSDKProfile.loadCurrentProfile(completion: { (profile, error) in
+                guard let profile = profile, error == nil else {
+                    completion(false, error)
+                    return
+                }
+                
+                self.student = Udacity.Student(uniqueKey: profile.userID, firstName: profile.firstName, lastName: profile.lastName)
+                self.loginMethod = .facebook
+                completion(true, nil)
+            })
+            
         }
+        
     }
     
     

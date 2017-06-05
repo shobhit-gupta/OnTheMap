@@ -43,29 +43,6 @@ public extension Error_ {
 }
 
 
-public extension Error_ {
-    
-    enum Facebook: Error {
-        case LoginCanceled
-        case GraphRequest(request: Any.Type)
-        
-        var localizedDescription: String {
-            var description : String
-            switch self {
-            case .LoginCanceled:
-                description = "User canceled login."
-                
-            case .GraphRequest(let requestType):
-                description = "Could not initialize graph request: \(requestType)"
-            }
-            
-            return description
-        }
-    }
-    
-}
-
-
 public extension Error {
     
     private var message: String {
