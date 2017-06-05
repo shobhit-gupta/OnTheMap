@@ -26,7 +26,7 @@ public extension Default {
     
     
     enum MapView {
-        static let Title = "Students On the Map"
+        static let Title = "Students Map"
         
         enum Annotation {
             static let ReusableCellId = "StudentLocationAnnotation"
