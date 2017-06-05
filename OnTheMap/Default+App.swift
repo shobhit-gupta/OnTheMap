@@ -47,6 +47,59 @@ public extension Default {
     
     enum InfoPostingView {
         static let Id = "InformationPostingView"
+        
+        enum Address {
+            static let Placeholder = "Add Your Location"
+            
+            enum Label {
+                static let Font = UIFont(name: "Helvetica-Light", size: 20)!
+                static let NumberOfLines = 0
+                static let StressedFont = UIFont(name: "Helvetica", size: 20)!
+                static let StressedRange = NSRange(location: 14, length: 8)
+                
+                enum Text {
+                    static let Value = "Where are you\nstudying\ntoday?"
+                    static let Color = ArtKit.secondaryColor
+                    static let Alignment: NSTextAlignment = .center
+                }
+            }
+        }
+        
+        
+        enum Link {
+            static let Placeholder = "Add link to share"
+        }
+        
+        
+        enum TextField {
+            static let BackgroundColor = ArtKit.shadowOfPrimaryColor
+            static let TextColor = ArtKit.secondaryColor
+            static let KeyboardAppearance: UIKeyboardAppearance = .dark
+            
+            enum Placeholder {
+                static let TextColor = ArtKit.highlightOfPrimaryColor
+                
+                enum Shadow {
+                    static let Offset = CGSize(width: 0.0, height: 2.0)
+                    static let BlurRandius: CGFloat = 4.0
+                }
+            }
+        }
+        
+        
+        enum Button {
+            enum Cancel {
+                enum Color {
+                    static let Normal = ArtKit.shadowOfSecondaryColor
+                }
+            }
+            
+            enum Color {
+                static let Normal = ArtKit.primaryColor
+                static let Highlighted = ArtKit.highlightOfPrimaryColor
+            }
+        }
+        
     }
     
     
