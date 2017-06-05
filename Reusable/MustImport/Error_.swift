@@ -24,17 +24,23 @@ public extension Error_ {
 
 public extension Error {
     
-    public func info() -> String {
+    public func info(verbose: Bool = false) -> String {
         let description: String
         let objectDescription = String(describing: self)
         let localizedDescription = self.localizedDescription
         
-        if localizedDescription == ""  || objectDescription.contains(localizedDescription) {
+        if !verbose && localizedDescription.length() > 0 {
+            description = localizedDescription
+        
+        } else if localizedDescription == ""  || objectDescription.contains(localizedDescription) {
             description = objectDescription
+        
         } else if localizedDescription.contains(objectDescription) {
             description = localizedDescription
+        
         } else {
             description = objectDescription + ": " + localizedDescription
+        
         }
         
         return description
