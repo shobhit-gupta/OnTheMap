@@ -1,6 +1,6 @@
 # iOS App: On The Map
 
-## Status: Front end complete
+## Status: Outdone specs offered by Udacity
 
 ## About:
 A portfolio app to share location and a link with fellow Udacians.
@@ -19,3 +19,8 @@ A portfolio app to share location and a link with fellow Udacians.
 - Select the "OnTheMap" target.
 - In General (tab) -> Identity (section) change the bundle identifier to your own bundle identifier.
 - Build
+
+### Specs: 
+https://review.udacity.com/#!/rubrics/21/view
+
+* Will update README in detail soon.
