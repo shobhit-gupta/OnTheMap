@@ -33,3 +33,5 @@ An app to share a location on the map and a link with fellow Udacians.
 - Select the "OnTheMap" target.
 - In General (tab) -> Identity (section) change the bundle identifier to your own bundle identifier.
 - Build
+
+
